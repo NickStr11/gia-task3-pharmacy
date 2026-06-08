@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Задание №3 по всем 35 билетам · Технология ЛФ · Фармация</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>:root{--bg:#fff;--bg-tint:#fafafa;--ink:#0a0a0a;--ink-2:#3a3a3a;--ink-3:#6a6a6a;--ink-4:#9a9a9a;--line:#e6e6e6;--line-strong:#cfcfcf;--accent:#0F62FE;--accent-soft:#e8efff;--warn:#b25400;--warn-soft:#fff4e6;--sans:'Inter',-apple-system,system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--col:880px;}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);}
+body{font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+.page{max-width:var(--col);margin:0 auto;padding:80px 32px 140px;}
+header.doc{border-top:1px solid var(--ink);padding-top:28px;margin-bottom:56px;}
+header.doc .meta{font-family:var(--mono);font-size:12px;color:var(--ink-3);letter-spacing:.02em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;margin-bottom:30px;}
+header.doc h1{font-weight:500;font-size:38px;line-height:1.15;margin:0 0 12px;letter-spacing:-.015em;}
+header.doc .sub{color:var(--ink-3);font-size:17px;max-width:660px;margin:0 0 24px;}
+.navwrap{margin-top:24px;border-top:1px solid var(--line);padding-top:18px;line-height:2.1;}
+.navlbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-right:8px;}
+.navchip{display:inline-block;font-family:var(--mono);font-size:12px;width:30px;text-align:center;padding:3px 0;border:1px solid var(--line-strong);border-radius:3px;color:var(--ink-2);text-decoration:none;margin:0 3px 4px 0;}
+.navchip:hover{border-color:var(--accent);color:var(--accent);}
+.card{margin-top:36px;padding-top:30px;border-top:1px solid var(--line-strong);}
+.card:first-of-type{margin-top:40px;}
+.card{scroll-margin-top:24px;}
+.card-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;}
+.card-head .bn{font-weight:600;font-size:23px;letter-spacing:-.01em;}
+.card-head .bgrp{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);}
+.lf{color:var(--ink-2);font-size:15px;margin:4px 0 16px;max-width:680px;}
+.recipe{border:1px solid var(--ink);background:var(--bg-tint);padding:16px 20px;margin:14px 0 18px;font-family:var(--mono);font-size:13.5px;line-height:1.75;}
+.recipe .rx-head{color:var(--accent);font-weight:500;}
+.recipe .rx-sep{color:var(--ink-4);font-size:12px;}
+
+.recipe .rx{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.85fr);gap:16px;align-items:start;}
+.recipe .rx .lat{min-width:0;}
+.recipe .rx .ru{font-family:var(--sans);font-size:12px;line-height:1.45;color:var(--ink-3);}
+.recipe .rx-head .ru{color:var(--ink-2);font-weight:500;}
+.recipe .rx-sep{grid-template-columns:1fr;}
+.recipe .rx-sep .ru{display:none;}
+@media (max-width:720px){
+.recipe .rx{grid-template-columns:1fr;gap:2px;}
+.recipe .rx .ru{padding-left:10px;border-left:1px solid var(--line);}
+.recipe .rx-sep .ru{display:none;}
+}
+
+.part{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);}
+.part .plbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);padding-top:3px;}
+.part .pbody{font-size:14.5px;color:var(--ink-2);}
+.part .pbody ol.tech{margin:0;padding-left:18px;}
+.part .pbody ol.tech li{margin:5px 0;}
+.part .pbody b,.lf b{color:var(--ink);font-weight:600;}
+.callout{border-left:2px solid var(--accent);padding:12px 18px;background:var(--accent-soft);margin:14px 0;font-size:14px;color:var(--ink);}
+.callout.warn{border-left-color:var(--warn);background:var(--warn-soft);}
+.callout .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px;font-weight:500;}
+.callout.warn .lbl{color:var(--warn);}
+.callout b{font-weight:600;}
+footer.doc{margin-top:80px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--ink-4);letter-spacing:.05em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;}
+::selection{background:var(--accent);color:#fff;}
+@media (max-width:720px){
+.page{padding:40px 18px 70px;}
+header.doc h1{font-size:26px;}
+.part{grid-template-columns:1fr;gap:4px;}
+.part .plbl{padding-top:0;}
+.recipe{font-size:12.5px;}
+}
+@media print{
+@page{margin:14mm 12mm;}
+.page{padding:0;max-width:100%;}
+.navwrap{display:none;}
+.card{page-break-inside:avoid;border-top:1px solid var(--line-strong);}
+.recipe,.callout,.part{page-break-inside:avoid;}
+header.doc{margin-bottom:28px;}
+a{color:var(--ink);}
+}
+</style></head><body>
+<div class="page">
+<header class="doc">
+<div class="meta"><span>шпаргалка · задание №3 · все билеты</span><span>ГИА · 33.02.01 Фармация</span><span>для: Никита</span><span>экзамен: 24.06.2026</span></div>
+<h1>Задание №3 — изготовление лекарственной формы. Все 35 билетов.</h1>
+<p class="sub">По каждому билету: рецепт на латыни, расчёты, дозовый контроль (где есть ядовитые/сильнодействующие), пошаговая технология и оценка качества. Нормативная база: действующий Приказ Минздрава РФ №249н от 22.05.2023, ГФ X/XV и учебники аптечной технологии.</p>
+<div class="navwrap"><span class="navlbl">Билеты:</span> <a class="navchip" href="#b1">1</a> <a class="navchip" href="#b2">2</a> <a class="navchip" href="#b3">3</a> <a class="navchip" href="#b4">4</a> <a class="navchip" href="#b5">5</a> <a class="navchip" href="#b6">6</a> <a class="navchip" href="#b7">7</a> <a class="navchip" href="#b8">8</a> <a class="navchip" href="#b9">9</a> <a class="navchip" href="#b10">10</a> <a class="navchip" href="#b11">11</a> <a class="navchip" href="#b12">12</a> <a class="navchip" href="#b13">13</a> <a class="navchip" href="#b14">14</a> <a class="navchip" href="#b15">15</a> <a class="navchip" href="#b16">16</a> <a class="navchip" href="#b17">17</a> <a class="navchip" href="#b18">18</a> <a class="navchip" href="#b19">19</a> <a class="navchip" href="#b20">20</a> <a class="navchip" href="#b21">21</a> <a class="navchip" href="#b22">22</a> <a class="navchip" href="#b23">23</a> <a class="navchip" href="#b24">24</a> <a class="navchip" href="#b25">25</a> <a class="navchip" href="#b26">26</a> <a class="navchip" href="#b27">27</a> <a class="navchip" href="#b28">28</a> <a class="navchip" href="#b29">29</a> <a class="navchip" href="#b30">30</a> <a class="navchip" href="#b31">31</a> <a class="navchip" href="#b32">32</a> <a class="navchip" href="#b33">33</a> <a class="navchip" href="#b34">34</a> <a class="navchip" href="#b35">35</a></div>
+</header>
+<section class="card" id="b1">
+<div class="card-head"><span class="bn">Билет 1</span><span class="bgrp">Порошок · ядовитое (сп.А)</span></div>
+<p class="lf">Порошок дозированный (разделённый) для приёма внутрь. Содержит атропина сульфат — список А (ядовитое).</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Atropini sulfatis 0,0003</span><span class="ru">Возьми: атропина сульфата 0,0003 г</span></div><div class="rx"><span class="lat">Anaesthesini 0,15</span><span class="ru">Анестезина 0,15 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 30</span><span class="ru">Выдай такие дозы числом 30</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день</span></div></div>
+<div class="callout warn"><span class="lbl">дозовый контроль</span>Атропина сульфат (сп.А): ВРД 0,001 г, ВСД 0,003 г. Прописано: разовая 0,0003 &lt; 0,001 ✓; суточная 0,0003×3 = 0,0009 &lt; 0,003 ✓. <b>Дозы не превышены.</b> Доза &lt;0,05 г на весь объём → берут не само вещество, а <b>тритурацию 1:100</b> (растирание с молочным сахаром).</div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Атропина сульфата: 0,0003 × 30 = 0,009 г (это &lt;0,05 г → вводят через тритурацию 1:100). Анестезина: 0,15 × 30 = 4,5 г. Масса 1 порошка (с тритурацией 1:100): анестезин 0,15 + тритурация 0,03 = ≈0,18 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Проверить дозы ядовитого (см. выше), оформление как для сп.А.</li><li>Взять готовую тритурацию атропина сульфата 1:100 (или приготовить): на 30 доз нужно 0,009 г атропина = 0,9 г тритурации.</li><li>В ступке измельчить и затереть поры анестезином (его больше).</li><li>Добавить тритурацию атропина, тщательно смешать от меньшего к большему до однородности.</li><li>Развесить на ручных весах по ≈0,18 г, упаковать в вощёные/парафинированные капсулы.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК (заполняют сразу), однородность, отклонение в массе (для 0,1–0,3 г допускается ±10%). Этикетки: «Внутреннее», «Обращаться осторожно» (ядовитое). Хранить под замком.</div></div>
+</section>
+<section class="card" id="b2">
+<div class="card-head"><span class="bn">Билет 2</span><span class="bgrp">Порошок · сильнодейств. (сп.Б)</span></div>
+<p class="lf">Порошок дозированный для приёма внутрь. Содержит экстракт белладонны (красавки) — список Б.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Extracti Belladonnae 0,01</span><span class="ru">Возьми: экстракта красавки 0,01 г</span></div><div class="rx"><span class="lat">Bismuthi subnitratis</span><span class="ru">Висмута нитрата основного</span></div><div class="rx"><span class="lat">Natrii hydrocarbonatis ana 0,2</span><span class="ru">Натрия гидрокарбоната поровну по 0,2 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 10</span><span class="ru">Выдай такие дозы числом 10</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день</span></div></div>
+<div class="callout warn"><span class="lbl">дозовый контроль</span>Экстракт красавки <b>густой</b> (сп.Б): ВРД 0,05 г, ВСД 0,15 г. Прописано: разовая 0,01 &lt; 0,05 ✓; суточная 0,03 &lt; 0,15 ✓. <b>Не превышено.</b></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Экстракт белладонны густой: 0,01 × 10 = 0,1 г. Висмута нитрат основной: 0,2 × 10 = 2,0 г. Натрия гидрокарбонат: 0,2 × 10 = 2,0 г (ana = поровну). Масса 1 порошка ≈ 0,41 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Густой экстракт белладонны вводят в виде раствора густого экстракта (1:2 вода-спирт-глицерин): на 0,1 г экстракта взять 0,2 мл раствора.</li><li>В ступке затереть поры и измельчить висмута нитрат и натрия гидрокарбонат.</li><li>Добавить раствор густого экстракта, смешать; при налипании слегка подсушить.</li><li>Развесить по ≈0,41 г, упаковать в простые капсулы.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, отклонение в массе (±5% для массы &gt;0,3 г). Этикетки: «Внутреннее», «Обращаться осторожно».</div></div>
+</section>
+<section class="card" id="b3">
+<div class="card-head"><span class="bn">Билет 3</span><span class="bgrp">Присыпка (порошок наружный)</span></div>
+<p class="lf">Сложный порошок недозированный для наружного применения — присыпка.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Zinci oxydi 5,0</span><span class="ru">Возьми: цинка оксида 5,0 г</span></div><div class="rx"><span class="lat">Acidi borici 1,0</span><span class="ru">Кислоты борной 1,0 г</span></div><div class="rx"><span class="lat">Talci 4,0</span><span class="ru">Талька 4,0 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da. Signa: Присыпка.</span><span class="ru">Выдай. Обозначь: присыпка</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Общая масса 10,0 г. Деления на дозы нет. Концентрации: цинка оксид 50%, кислота борная 10%, тальк 40%.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Первой измельчить кислоту борную (её меньше всего и она кристаллическая) — уменьшаем потери в порах ступки.</li><li>Добавлять от меньшего количества к большему: затем цинка оксид, затем тальк.</li><li>Растереть до однородного тончайшего порошка, при необходимости просеять через сито.</li><li>Пересыпать в банку/пакет.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность (нет крупинок), цвет белый. Этикетка «Наружное».</div></div>
+</section>
+<section class="card" id="b4">
+<div class="card-head"><span class="bn">Билет 4</span><span class="bgrp">Порошок дозированный</span></div>
+<p class="lf">Порошок дозированный для приёма внутрь (витаминный). Ядовитых/сильнодействующих нет.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Acidi ascorbinici 0,1</span><span class="ru">Возьми: кислоты аскорбиновой 0,1 г</span></div><div class="rx"><span class="lat">Glucosi 0,2</span><span class="ru">Глюкозы 0,2 г</span></div><div class="rx"><span class="lat">Riboflavini 0,01</span><span class="ru">Рибофлавина 0,01 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 30</span><span class="ru">Выдай такие дозы числом 30</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Аскорбиновая к-та: 0,1×30 = 3,0 г. Глюкоза: 0,2×30 = 6,0 г <i>(с учётом влаги ~10%: 6,0 × 1,11 ≈ 6,66 г водной глюкозы)</i>. Рибофлавин: 0,01×30 = 0,3 г. Масса 1 порошка с пересчётом глюкозы ≈ <b>0,332 г</b> (без пересчёта — 0,31 г).</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Первым измельчить рибофлавин (его меньше всего, к тому же красящий) — растереть с частью глюкозы.</li><li>Добавлять от меньшего к большему: аскорбиновую кислоту, затем глюкозу.</li><li>Смешать до однородности, развесить по ≈0,31 г, упаковать в капсулы.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, равномерная жёлтая окраска (рибофлавин), отклонение в массе <b>±5%</b> (масса больше 0,3 г). Этикетка «Внутреннее», «Хранить в сухом, защищённом от света месте».</div></div>
+</section>
+<section class="card" id="b5">
+<div class="card-head"><span class="bn">Билет 5</span><span class="bgrp">Порошок · с летучим/жидким</span></div>
+<p class="lf">Порошок дозированный для приёма внутрь с трудноизмельчаемым (камфора) и жидким (настойка) компонентом.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Camphorae 0,1</span><span class="ru">Возьми: камфоры 0,1 г</span></div><div class="rx"><span class="lat">Tincturae Leonuri guttam 1</span><span class="ru">Настойки пустырника 1 каплю</span></div><div class="rx"><span class="lat">Sacchari 0,2</span><span class="ru">Сахара 0,2 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 6</span><span class="ru">Выдай такие дозы числом 6</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Камфора: 0,1×6 = 0,6 г. Сахар: 0,2×6 = 1,2 г. Настойки пустырника: 1 капля × 6 = 6 капель на всю массу. Масса 1 порошка ≈ 0,3 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Камфору измельчить в ступке с несколькими каплями спирта этилового (сама не растирается — крошится).</li><li>Добавить сахар, перемешать, дать спирту улетучиться (подсушить).</li><li>В последнюю очередь по каплям добавить настойку пустырника (6 капель), перемешать и снова подсушить.</li><li>Развесить по ≈0,3 г, упаковать в пергамент/вощёные капсулы (камфора летучая).</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, запах камфоры. Этикетки «Внутреннее», «Хранить в прохладном месте».</div></div>
+</section>
+<section class="card" id="b6">
+<div class="card-head"><span class="bn">Билет 6</span><span class="bgrp">Порошок дозированный</span></div>
+<p class="lf">Порошок дозированный для приёма внутрь (витаминный).</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Acidi ascorbinici 0,1</span><span class="ru">Возьми: кислоты аскорбиновой 0,1 г</span></div><div class="rx"><span class="lat">Glucosi 0,2</span><span class="ru">Глюкозы 0,2 г</span></div><div class="rx"><span class="lat">Thiamini bromidi 0,05</span><span class="ru">Тиамина бромида 0,05 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 6</span><span class="ru">Выдай такие дозы числом 6</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Аскорбиновая к-та: 0,6 г. Глюкоза: 1,2 г <i>(с учётом влаги ≈1,33 г водной)</i>. Тиамина бромид: 0,3 г. Масса 1 порошка с пересчётом глюкозы ≈ <b>0,372 г</b> (без пересчёта — 0,35 г).</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Первым измельчить тиамина бромид (меньшее количество) с частью глюкозы.</li><li>Добавить аскорбиновую кислоту, затем остальную глюкозу — от меньшего к большему.</li><li>Смешать до однородности, развесить по ≈0,35 г в капсулы.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, отклонение в массе <b>±5%</b> (масса больше 0,3 г). «Внутреннее», «Хранить в сухом, защищённом от света».</div></div>
+</section>
+<section class="card" id="b7">
+<div class="card-head"><span class="bn">Билет 7</span><span class="bgrp">Порошок · сильнодейств. (сп.Б)</span></div>
+<p class="lf">Порошок дозированный для приёма внутрь. Содержит димедрол — список Б.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Dimedroli 0,05</span><span class="ru">Возьми: димедрола 0,05 г</span></div><div class="rx"><span class="lat">Sacchari 0,2</span><span class="ru">Сахара 0,2 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 10</span><span class="ru">Выдай такие дозы числом 10</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 2 раза в день.</span><span class="ru">Обозначь: по 1 порошку 2 раза в день</span></div></div>
+<div class="callout warn"><span class="lbl">дозовый контроль</span>Димедрол (сп.Б): ВРД 0,1 г, ВСД 0,25 г. Прописано: разовая 0,05 &lt; 0,1 ✓; суточная 0,05×2 = 0,1 &lt; 0,25 ✓. <b>Не превышено.</b></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Димедрол: 0,05×10 = 0,5 г. Сахар: 0,2×10 = 2,0 г. Масса 1 порошка ≈ 0,25 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Проверить дозы (сильнодействующее).</li><li>Затереть поры ступки сахаром, добавить димедрол.</li><li>Смешать от меньшего к большему до однородности, развесить по ≈0,25 г в капсулы.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, отклонение ±10%. «Внутреннее», «Обращаться осторожно».</div></div>
+</section>
+<section class="card" id="b8">
+<div class="card-head"><span class="bn">Билет 8</span><span class="bgrp">Порошок дозированный</span></div>
+<p class="lf">Порошок дозированный для приёма внутрь (антацидный). Ядовитых нет.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Magnesii oxydi</span><span class="ru">Возьми: магния оксида</span></div><div class="rx"><span class="lat">Bismuthi subnitratis</span><span class="ru">Висмута нитрата основного</span></div><div class="rx"><span class="lat">Natrii hydrocarbonatis ana 0,3</span><span class="ru">Натрия гидрокарбоната поровну по 0,3 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 6</span><span class="ru">Выдай такие дозы числом 6</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день перед едой.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день перед едой</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Каждого вещества: 0,3×6 = 1,8 г (ana — поровну). Масса 1 порошка = 0,9 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Измельчить и смешать равные количества от труднее измельчаемого.</li><li>Магния оксид лёгкий и пылит — вводить осторожно (можно последним).</li><li>Смешать до однородности, развесить по 0,9 г в капсулы.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, отклонение ±5% (масса &gt;0,3 г). «Внутреннее».</div></div>
+</section>
+<section class="card" id="b9">
+<div class="card-head"><span class="bn">Билет 9</span><span class="bgrp">Раствор водный · окислитель</span></div>
+<p class="lf">Водный раствор для наружного применения (калия перманганат — сильный окислитель).</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Kalii permanganatis 0,1% — 300 ml</span><span class="ru">Возьми: раствора калия перманганата 0,1% — 300 мл</span></div><div class="rx"><span class="lat">Da. Signa: Для промывания ран.</span><span class="ru">Выдай. Обозначь: для промывания ран</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Калия перманганата: 0,1% × 300 мл = 0,3 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Калия перманганат растворить ОТДЕЛЬНО в части горячей очищенной воды при перемешивании (растворяется медленно).</li><li>Профильтровать через вату/стекловату — НЕ через бумагу (окисляет её).</li><li>Довести водой до 300 мл.</li><li>Посуда чистая, без органических загрязнений (окислитель).</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, цвет (тёмно-фиолетовый). «Наружное», «Хранить в защищённом от света месте».</div></div>
+</section>
+<section class="card" id="b10">
+<div class="card-head"><span class="bn">Билет 10</span><span class="bgrp">Раствор Люголя (с глицерином)</span></div>
+<p class="lf">Раствор Люголя для смазывания (наружный) — это глицериновый раствор йода (не водный).</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Lugoli 25 ml</span><span class="ru">Возьми: раствора Люголя 25 мл</span></div><div class="rx"><span class="lat">Da. Signa: Для смазывания зева.</span><span class="ru">Выдай. Обозначь: для смазывания зева</span></div><div class="rx rx-sep"><span class="lat">— — — состав (для смазывания):</span><span class="ru"></span></div><div class="rx"><span class="lat">Iodi 1,0 / Kalii iodidi 2,0 / Aquae 3,0 / Glycerini 94,0</span><span class="ru">Состав раствора для смазывания: йод / калия йодид / вода / глицерин</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">«Для смазывания» = состав с глицерином, на 100 г: йод 1, калия йодид 2, вода 3, глицерин 94. На 25,0 (÷4): йод 0,25 г; калия йодид 0,5 г; вода 0,75 г; глицерин 23,5 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Калия йодид растворить в воде (минимум, по прописи 0,75 г) — получаем концентрированный раствор йодида.</li><li>В этом растворе растворить йод (йод растворяется только в растворе йодида!).</li><li>Добавить глицерин, перемешать до однородного бурого раствора.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, бурый цвет. «Наружное», «Хранить в защищённом от света».</div></div>
+</section>
+<section class="card" id="b11">
+<div class="card-head"><span class="bn">Билет 11</span><span class="bgrp">Микстура (раствор с настойками)</span></div>
+<p class="lf">Микстура — жидкая ЛФ для приёма внутрь: раствор солей + настойки. Содержит анальгин (сп.Б) и настойку красавки.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Analgini 3,0</span><span class="ru">Возьми: анальгина 3,0 г</span></div><div class="rx"><span class="lat">Glucosi 2,0</span><span class="ru">Глюкозы 2,0 г</span></div><div class="rx"><span class="lat">Tincturae Belladonnae 8 ml</span><span class="ru">Настойки красавки 8 мл</span></div><div class="rx"><span class="lat">Tincturae Valerianae 10 ml</span><span class="ru">Настойки валерианы 10 мл</span></div><div class="rx"><span class="lat">Aquae purificatae 200 ml</span><span class="ru">Воды очищенной 200 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 столовой ложке 3 раза в день.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 столовой ложке 3 раза в день</span></div></div>
+<div class="callout warn"><span class="lbl">дозовый контроль</span>Анальгин (сп.Б): ВРД 1,0 / ВСД 3,0. Минимальный итоговый объём: 200 + 8 + 10 = <b>218 мл</b> (без учёта КУО). Разовая доза анальгина: 3,0×15/218 ≈ 0,206 г; суточная ≈0,619 г — не превышено. Настойка красавки: 8×15/218 ≈ <b>0,55 мл</b> на приём; в сутки ≈<b>1,65 мл</b>. При ВРД 0,5 мл и ВСД 1,5 мл дозы <b>превышены</b>: нужна проверка/подтверждение врача.</div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Объём всего минимум ≈ 200 + 18 (настойки) = <b>218 мл</b> (без учёта КУО растворённых веществ). Столовая ложка = 15 мл. Анальгина на приём: 3,0×15/218 ≈ 0,206 г. Настойки красавки на приём: 8×15/218 ≈ 0,55 мл (примерно 25 капель, если 0,5 мл ≈23 капли).</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>В мерной посуде в воде очищенной (200 мл) растворить анальгин и глюкозу.</li><li>Профильтровать раствор во флакон для отпуска.</li><li>Добавить настойки (спиртовые) в последнюю очередь — сначала с меньшим содержанием спирта, затем с большим.</li><li>Укупорить, оформить.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, цвет. «Внутреннее», «Обращаться осторожно» (настойка красавки), «Хранить в прохладном месте», «Перед употреблением взбалтывать» (если выпадет осадок от настоек).</div></div>
+</section>
+<section class="card" id="b12">
+<div class="card-head"><span class="bn">Билет 12</span><span class="bgrp">Микстура (раствор камфоры)</span></div>
+<p class="lf">Жидкая ЛФ для приёма внутрь. Камфора в воде почти нерастворима — вводят через спирт (получается мутноватая «камфорная вода»).</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Camphorae 2,0</span><span class="ru">Возьми: камфоры 2,0 г</span></div><div class="rx"><span class="lat">Aquae purificatae 180 ml</span><span class="ru">Воды очищенной 180 мл</span></div><div class="rx"><span class="lat">Tincturae Leonuri 6 ml</span><span class="ru">Настойки пустырника 6 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 столовой ложке 3 раза в день.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 столовой ложке 3 раза в день</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Объём ≈ 186 мл. Столовая ложка 15 мл. Камфоры на приём ≈ 2,0×15/186 ≈ 0,16 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Камфору растворить в минимальном количестве спирта этилового.</li><li>Полученный спиртовой раствор тонкой струёй при энергичном взбалтывании влить в воду очищенную (камфора выделяется в виде мельчайшей мути).</li><li>Добавить настойку пустырника, перемешать.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, опалесценция (мутноватая), запах камфоры. «Внутреннее», «Перед употреблением взбалтывать», «Хранить в прохладном».</div></div>
+</section>
+<section class="card" id="b13">
+<div class="card-head"><span class="bn">Билет 13</span><span class="bgrp">Микстура на настое</span></div>
+<p class="lf">Микстура: настой валерианы (водное извлечение) + соль + настойка.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Infusi rhizomatum cum radicibus Valerianae 180 ml</span><span class="ru">Возьми: настоя корневищ с корнями валерианы 180 мл</span></div><div class="rx rx-sep"><span class="lat">(ex 6,0 — 180 ml)</span><span class="ru">Из 6,0 г сырья до 180 мл настоя</span></div><div class="rx"><span class="lat">Natrii bromidi 2,0</span><span class="ru">Натрия бромида 2,0 г</span></div><div class="rx"><span class="lat">Tincturae Leonuri 10 ml</span><span class="ru">Настойки пустырника 10 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 столовой ложке 3 раза в день.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 столовой ложке 3 раза в день</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Настой валерианы 1:30 → сырья 6,0 на 180 мл воды. Натрия бромид 2,0 растворяют в готовом настое. Итог ≈190 мл.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Приготовить настой валерианы: 6,0 измельчённого сырья залить водой, на водяной бане 15 мин, охладить 45 мин, процедить, довести водой до 180 мл.</li><li>В тёплом/охлаждённом настое растворить натрия бромид, профильтровать.</li><li>Добавить настойку пустырника, перемешать.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, цвет, запах валерианы. «Внутреннее», «Хранить в прохладном» (настой портится, срок 2–3 дня).</div></div>
+</section>
+<section class="card" id="b14">
+<div class="card-head"><span class="bn">Билет 14</span><span class="bgrp">Раствор HCl (разведение)</span></div>
+<p class="lf">Водный раствор кислоты хлористоводородной для приёма внутрь. Готовят разведением стандартной кислоты.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Acidi hydrochlorici 2% — 100 ml</span><span class="ru">Возьми: раствора кислоты хлористоводородной 2% — 100 мл</span></div><div class="rx"><span class="lat">Da. Signa: По 1 чайной ложке 3 раза в день перед едой.</span><span class="ru">Выдай. Обозначь: по 1 чайной ложке 3 раза в день перед едой</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Берут <b>разведённую</b> кислоту хлористоводородную 8,3% и принимают её за 100%. X = 100 × 2/100 = <b>2 мл</b> разведённой кислоты + воды до 100 мл (≈98 мл).</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Отмерить ≈98 мл воды очищенной во флакон.</li><li>Добавить 2 мл разведённой кислоты хлористоводородной (кислоту — В воду, не наоборот!).</li><li>Перемешать, довести водой до 100 мл.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность. «Внутреннее», «Обращаться осторожно», «Хранить в прохладном».</div></div>
+</section>
+<section class="card" id="b15">
+<div class="card-head"><span class="bn">Билет 15</span><span class="bgrp">Раствор формальдегида (из формалина)</span></div>
+<p class="lf">Водный раствор для наружного применения. Готовят разведением формалина.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Formaldehydi 25% — 500 ml</span><span class="ru">Возьми: раствора формальдегида 25% — 500 мл</span></div><div class="rx"><span class="lat">Da. Signa: Для обмывания ног, по 1 ст. ложке на стакан воды.</span><span class="ru">Выдай. Обозначь: для обмывания ног, по 1 столовой ложке на стакан воды</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Формалин = стандартный раствор формальдегида 36,5–37,5% (берём 37%). «Раствор формальдегида 25%» (химич. название) → пересчёт на формалин: X = 500 × 25/37 = <b>338 мл формалина</b> + воды очищенной до 500 мл (≈162 мл).</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Отмерить ≈162 мл воды очищенной.</li><li>Добавить 338 мл формалина, перемешать, довести до 500 мл.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, резкий запах. «Наружное», «Обращаться осторожно».</div></div>
+</section>
+<section class="card" id="b16">
+<div class="card-head"><span class="bn">Билет 16</span><span class="bgrp">Раствор спиртовой</span></div>
+<p class="lf">Спиртовой раствор для наружного применения.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Acidi salicylici 0,5</span><span class="ru">Возьми: кислоты салициловой 0,5 г</span></div><div class="rx"><span class="lat">Spiritus aethylici 70% — 50 ml</span><span class="ru">Спирта этилового 70% — 50 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: Протирать ступни ног.</span><span class="ru">Смешай. Выдай. Обозначь: протирать ступни ног</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Кислота салициловая 0,5 в 50 мл спирта = 1%. Спирт — наружный, обычно 70%.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>В отмеренном спирте этиловом растворить салициловую кислоту при перемешивании.</li><li>Профильтровать через вату.</li><li>Перелить во флакон.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность. «Наружное», «Огнеопасно», «Беречь от детей».</div></div>
+</section>
+<section class="card" id="b17">
+<div class="card-head"><span class="bn">Билет 17</span><span class="bgrp">Раствор масляный</span></div>
+<p class="lf">Масляный раствор для наружного применения (капли в нос). Ментол растворим в маслах.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Mentholi 0,2</span><span class="ru">Возьми: ментола 0,2 г</span></div><div class="rx"><span class="lat">Olei Vaselini 20,0</span><span class="ru">Масла вазелинового 20,0 г</span></div><div class="rx"><span class="lat">Misce. Da. Signa: Капли в нос.</span><span class="ru">Смешай. Выдай. Обозначь: капли в нос</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Ментол 0,2 в 20,0 масла = 1%.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Отвесить вазелиновое масло 20,0; можно слегка подогреть на водяной бане (40–50 °C).</li><li>Растворить ментол 0,2 при перемешивании до полного растворения.</li><li>Фильтровать не нужно (растворяется без остатка). Перелить во флакон.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, запах ментола. «Наружное», «Хранить в прохладном, защищённом от света».</div></div>
+</section>
+<section class="card" id="b18">
+<div class="card-head"><span class="bn">Билет 18</span><span class="bgrp">Раствор-коллоид (желатин)</span></div>
+<p class="lf">Водный раствор желатина (коллоид) для приёма внутрь + сироп как вкусовая добавка.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Gelatinae 4% — 100 ml</span><span class="ru">Возьми: раствора желатина 4% — 100 мл</span></div><div class="rx"><span class="lat">Sirupi simplicis 5 ml</span><span class="ru">Сиропа простого 5 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 столовой ложке через один час.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 столовой ложке через один час</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Желатина 4,0 на 100 мл раствора. Сироп простой 5 мл — корригент; после добавления сиропа итоговый объём около 105 мл.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Желатин залить частью холодной воды очищенной, оставить для набухания на 30–40 мин.</li><li>Нагреть на водяной бане до полного растворения (НЕ кипятить — желатин разрушается).</li><li>Процедить, довести водой раствор желатина до 100 мл.</li><li>Добавить сахарный сироп 5 мл, перемешать.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность. «Внутреннее», «Хранить в прохладном» (желатин — питательная среда, быстро портится; свежеприготовленный).</div></div>
+</section>
+<section class="card" id="b19">
+<div class="card-head"><span class="bn">Билет 19</span><span class="bgrp">Слизь крахмальная</span></div>
+<p class="lf">Крахмальная слизь (защитная ЛФ) + растворённая соль, для клизм.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Mucilaginis Amyli 100,0</span><span class="ru">Возьми: слизи крахмальной 100,0 г</span></div><div class="rx"><span class="lat">Natrii bromidi 2,0</span><span class="ru">Натрия бромида 2,0 г</span></div><div class="rx"><span class="lat">Misce. Da. Signa: Использовать на 3 клизмы.</span><span class="ru">Смешай. Выдай. Обозначь: использовать на 3 клизмы</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Крахмальная слизь — стандарт 2%: крахмала 2,0 на 100,0. Натрия бромид 2,0 растворяют в готовой слизи.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Крахмал 2,0 взмучить в части ХОЛОДНОЙ воды очищенной (≈8 мл, 1:4).</li><li>Тонкой струёй при помешивании влить в оставшуюся КИПЯЩУЮ воду, прокипятить 1–2 мин до образования прозрачной слизи.</li><li>В тёплой слизи растворить натрия бромид.</li><li>Довести до 100,0.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, без комков. «Наружное» (для клизм), свежеприготовленная.</div></div>
+</section>
+<section class="card" id="b20">
+<div class="card-head"><span class="bn">Билет 20</span><span class="bgrp">Раствор протаргола</span></div>
+<p class="lf">Водный раствор протаргола (серебра протеинат) для наружного применения — примочка.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Protargoli 0,3% — 50 ml</span><span class="ru">Возьми: раствора протаргола 0,3% — 50 мл</span></div><div class="rx"><span class="lat">Da. Signa: Примочка.</span><span class="ru">Выдай. Обозначь: примочка</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Протаргола: 0,3% × 50 мл = 0,15 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Отмерить всю воду очищенную (≈50 мл) в широкий сосуд.</li><li>Протаргол НАСЫПАТЬ тонким слоем на ПОВЕРХНОСТЬ воды и оставить на 15–20 мин БЕЗ перемешивания — он сам набухает и растворяется. НЕ взбалтывать (даёт пену) и НЕ нагревать.</li><li>Процедить через вату.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, цвет (жёлто-бурый). «Наружное», «Хранить в защищённом от света месте» (свежеприготовленный).</div></div>
+</section>
+<section class="card" id="b21">
+<div class="card-head"><span class="bn">Билет 21</span><span class="bgrp">Раствор колларгола</span></div>
+<p class="lf">Водный раствор колларгола (серебро коллоидное) для наружного применения.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Collargoli 2% — 200 ml</span><span class="ru">Возьми: раствора колларгола 2% — 200 мл</span></div><div class="rx"><span class="lat">Da. Signa: Для спринцеваний.</span><span class="ru">Выдай. Обозначь: для спринцеваний</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Колларгола: 2% × 200 мл = 4,0 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Колларгол РАСТЕРЕТЬ в ступке с небольшим количеством воды (примерно равным массе колларгола) до растворения.</li><li>Добавить остальную воду очищенную до 200 мл.</li><li>Процедить через вату.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность (без осадка), цвет. «Наружное», «Хранить в защищённом от света».</div></div>
+</section>
+<section class="card" id="b22">
+<div class="card-head"><span class="bn">Билет 22</span><span class="bgrp">Раствор водно-глицериновый</span></div>
+<p class="lf">Водно-глицериновый раствор ихтиола для наружного применения (тампоны).</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Ichthyoli 2% — 10 ml</span><span class="ru">Возьми: раствора ихтиола 2% — 10 мл</span></div><div class="rx"><span class="lat">Glycerini 10,0</span><span class="ru">Глицерина 10,0 г</span></div><div class="rx"><span class="lat">Misce. Da. Signa: Для тампонов.</span><span class="ru">Смешай. Выдай. Обозначь: для тампонов</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Ихтиола: 2% × 10 мл = 0,2 г (в 10 мл воды). + глицерин 10,0.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Ихтиол растворить/растереть с водой очищенной (10 мл) — растворим в воде и глицерине.</li><li>Добавить глицерин 10,0, перемешать до однородности.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, тёмный цвет, запах ихтиола. «Наружное».</div></div>
+</section>
+<section class="card" id="b23">
+<div class="card-head"><span class="bn">Билет 23</span><span class="bgrp">Суспензия (микстура)</span></div>
+<p class="lf">Суспензия для приёма внутрь: висмута нитрат основной в воде не растворяется → взвесь.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Bismuthi subnitratis 4,0</span><span class="ru">Возьми: висмута нитрата основного 4,0 г</span></div><div class="rx"><span class="lat">Aquae purificatae 200 ml</span><span class="ru">Воды очищенной 200 мл</span></div><div class="rx"><span class="lat">Sirupi simplicis 10 ml</span><span class="ru">Сиропа простого 10 мл</span></div><div class="rx"><span class="lat">Glycerini 15,0</span><span class="ru">Глицерина 15,0 г</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 десертной ложке 3 раза в день.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 десертной ложке 3 раза в день</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Висмута нитрат 4,0 — нерастворим (суспензия). Объём ≈225 мл.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Висмута нитрат основной растереть в ступке с частью воды (или с глицерином как вспом. жидкостью) до тончайшей взвеси.</li><li>Постепенно добавить остальную воду, сироп и глицерин (повышает вязкость, стабилизирует взвесь).</li><li>Перенести во флакон.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность взвеси, ресуспендируемость. «Внутреннее», «Перед употреблением взбалтывать», «Хранить в прохладном».</div></div>
+</section>
+<section class="card" id="b24">
+<div class="card-head"><span class="bn">Билет 24</span><span class="bgrp">Болтушка (суспензия наружная)</span></div>
+<p class="lf">Суспензия для наружного применения (болтушка) спирто-водная: сера не растворяется.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Sulfuris depurati 50,0</span><span class="ru">Возьми: серы очищенной 50,0 г</span></div><div class="rx"><span class="lat">Resorcini 2,0</span><span class="ru">Резорцина 2,0 г</span></div><div class="rx"><span class="lat">Spiritus aethylici 96% — 50 ml</span><span class="ru">Спирта этилового 96% — 50 мл</span></div><div class="rx"><span class="lat">Aquae purificatae 200 ml</span><span class="ru">Воды очищенной 200 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: Для протирания кожи лица.</span><span class="ru">Смешай. Выдай. Обозначь: для протирания кожи лица</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Сера очищенная 50,0 — нерастворима; твёрдая фаза значительно больше 3%, поэтому суспензию готовят <b>по массе</b>, а не как разбавленный раствор по объёму. Резорцин 2,0 растворим. Спирт 96% — 50 мл, вода — 200 мл; итог указывают как массу/объём по прописи, без пересчёта в условные «≈250 мл» как основного контроля.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Резорцин растворить в воде очищенной.</li><li>Серу очищенную как гидрофобное вещество тщательно растереть в ступке с частью спирта как смачивающей жидкостью до тончайшей пульпы.</li><li>Постепенно добавить раствор резорцина при растирании, затем оставшийся спирт.</li><li>Перенести во флакон, оформить как концентрированную суспензию для наружного применения.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, ресуспендируемость. «Наружное», «Перед употреблением взбалтывать», «Огнеопасно».</div></div>
+</section>
+<section class="card" id="b25">
+<div class="card-head"><span class="bn">Билет 25</span><span class="bgrp">Эмульсия масляная</span></div>
+<p class="lf">Масляная эмульсия для приёма внутрь, камфора растворена в масляной фазе.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Emulsi oleosi 120,0</span><span class="ru">Возьми: эмульсии масляной 120,0 г</span></div><div class="rx"><span class="lat">Camphorae 1,5</span><span class="ru">Камфоры 1,5 г</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 столовой ложке 3 раза в день.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 столовой ложке 3 раза в день</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Эмульсия масляная по умолчанию 10% (1:10): масла 12,0; эмульгатор (желатоза) 6,0 (½ от масла); вода для первичной эмульсии ≈9 мл; вода для разбавления — до 120,0. Камфору 1,5 растворяют в масле.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Камфору 1,5 растворить в отвешенном масле (12,0).</li><li>Приготовить первичную эмульсию (корпус): масло+камфора + желатоза 6,0 + вода ≈9 мл, растереть в ступке до характерного потрескивания.</li><li>Постепенно разбавить водой очищенной до 120,0 при перемешивании.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, отсутствие расслоения. «Внутреннее», «Перед употреблением взбалтывать», «Хранить в прохладном» (свежеприготовленная).</div></div>
+</section>
+<section class="card" id="b26">
+<div class="card-head"><span class="bn">Билет 26</span><span class="bgrp">Эмульсия семенная</span></div>
+<p class="lf">Семенная эмульсия (из семян тыквы). Эмульгатор — собственные белки семян.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Emulsi seminum Cucurbitae 80,0</span><span class="ru">Возьми: эмульсии семян тыквы 80,0 г</span></div><div class="rx"><span class="lat">Da. Signa: На один приём натощак.</span><span class="ru">Выдай. Обозначь: на один приём натощак</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Семенная эмульсия по умолчанию 1:10: семян тыквы 8,0 на 80,0 эмульсии. Дополнительный эмульгатор не нужен.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Семена тыквы очистить, растереть в ступке.</li><li>Постепенно, порциями, добавлять воду очищенную, продолжая растирать — образуется эмульсия.</li><li>Процедить, довести водой до 80,0.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность. «Внутреннее», свежеприготовленная (быстро портится), «Хранить в прохладном».</div></div>
+</section>
+<section class="card" id="b27">
+<div class="card-head"><span class="bn">Билет 27</span><span class="bgrp">Мазь комбинированная</span></div>
+<p class="lf">Мазь для наружного применения (нос): ментол + цинка оксид на вазелине.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Mentholi 0,1</span><span class="ru">Возьми: ментола 0,1 г</span></div><div class="rx"><span class="lat">Zinci oxydi 1,0</span><span class="ru">Цинка оксида 1,0 г</span></div><div class="rx"><span class="lat">Vaselini 8,0</span><span class="ru">Вазелина 8,0 г</span></div><div class="rx"><span class="lat">Misce fiat unguentum</span><span class="ru">Смешай, чтобы получилась мазь</span></div><div class="rx"><span class="lat">Da. Signa: Мазь для носа.</span><span class="ru">Выдай. Обозначь: мазь для носа</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Общая масса 9,1 г. Цинка оксид — суспензионный компонент (~11%), ментол — растворяется в основе.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Цинка оксид измельчить, растереть с частью основы (или с маслом вазелиновым) — суспензионная часть.</li><li>Ментол растворить в небольшом количестве слегка расплавленного вазелина.</li><li>Объединить с остальным вазелином, смешать до однородной мази.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность (нет крупинок), мягкая консистенция. «Наружное», «Хранить в прохладном».</div></div>
+</section>
+<section class="card" id="b28">
+<div class="card-head"><span class="bn">Билет 28</span><span class="bgrp">Мазь (готовая, дозирование)</span></div>
+<p class="lf">Готовая цинковая мазь (официнальная 10%) — отвесить и оформить.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Unguenti Zinci 10,0</span><span class="ru">Возьми: мази цинковой 10,0 г</span></div><div class="rx"><span class="lat">Da. Signa: Смазывать поражённые места.</span><span class="ru">Выдай. Обозначь: смазывать поражённые места</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Цинковая мазь = цинка оксид 10% + вазелин 90%. Если готовить: цинка оксид 1,0 + вазелин 9,0 = 10,0.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Если есть готовая мазь — отвесить 10,0 в баночку.</li><li>Если готовить: цинка оксид 1,0 растереть с частью вазелина (или каплей масла вазелинового), добавить остальной вазелин до 10,0, смешать до однородности.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность. «Наружное».</div></div>
+</section>
+<section class="card" id="b29">
+<div class="card-head"><span class="bn">Билет 29</span><span class="bgrp">Мазь (ксероформ)</span></div>
+<p class="lf">Суспензионная мазь с ксероформом для наружного применения.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Unguenti Xeroformii 10,0</span><span class="ru">Возьми: мази ксероформа 10,0 г</span></div><div class="rx"><span class="lat">Da. Signa: Смазывать поражённые места.</span><span class="ru">Выдай. Обозначь: смазывать поражённые места</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Ксероформовая мазь по умолчанию официнальная <b>10%</b>: ксероформ 1,0 + вазелин 9,0 = 10,0. Если методичка требует 3%, это должно быть явно указано как отдельная концентрация.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Ксероформ измельчить, растереть с частью основы (вазелин) — суспензионный тип.</li><li>Добавить остальной вазелин до 10,0, смешать до однородности.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, жёлтый цвет. «Наружное».</div></div>
+</section>
+<section class="card" id="b30">
+<div class="card-head"><span class="bn">Билет 30</span><span class="bgrp">Суппозитории</span></div>
+<p class="lf">Суппозитории (ректальные свечи) на масле какао, метод выкатывания.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Anaesthesini 0,15</span><span class="ru">Возьми: анестезина 0,15 г</span></div><div class="rx"><span class="lat">Olei Cacao 1,0</span><span class="ru">Масла какао 1,0 г</span></div><div class="rx"><span class="lat">Misce fiat suppositorium</span><span class="ru">Смешай, чтобы получился суппозиторий</span></div><div class="rx"><span class="lat">Da tales doses numero 5</span><span class="ru">Выдай такие дозы числом 5</span></div><div class="rx"><span class="lat">Signa: По 1 суппозиторию 2 раза в день.</span><span class="ru">Обозначь: по 1 суппозиторию 2 раза в день</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">На 5 свечей: анестезин 0,15×5 = 0,75 г; масло какао 1,0×5 = 5,0 г. Масса 1 свечи ≈ 1,15 г.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Анестезин измельчить в мельчайший порошок.</li><li>Масло какао натереть (на тёрке), смешать с анестезином, добавить при необходимости несколько капель связующего, вымесить пластичную массу.</li><li>Выкатать стержень, разделить на 5 равных частей, сформировать суппозитории (метод выкатывания). Альтернатива — метод выливания в формы.</li><li>Завернуть каждую в вощёную бумагу.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, одинаковая масса и форма, отсутствие воздушных полостей. Этикетки: «Наружное»/«Ректально», «Хранить в прохладном месте» (масло какао плавится), «Беречь от детей».</div></div>
+</section>
+<section class="card" id="b31">
+<div class="card-head"><span class="bn">Билет 31</span><span class="bgrp">Раствор глюкозы (внутрь, новорождённому)</span></div>
+<p class="lf">Водный раствор глюкозы для приёма внутрь новорождённому — повышенные требования к чистоте.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Glucosi 5% — 50 ml</span><span class="ru">Возьми: раствора глюкозы 5% — 50 мл</span></div><div class="rx"><span class="lat">Da. Signa: Для питья новорождённому.</span><span class="ru">Выдай. Обозначь: для питья новорождённому</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Глюкозы (безводной): 5% × 50 мл = 2,5 г. С учётом влаги (~10%): 2,5 × 1,11 ≈ 2,78 г водной глюкозы. Воды очищенной до 50 мл.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Глюкозу (с учётом влажности) растворить в части воды очищенной.</li><li>Профильтровать, довести водой до 50 мл.</li><li>Для новорождённого готовить в асептических условиях; раствор должен быть стерильным.</li><li><b>Режим стерилизации указать по действующей методичке/ОФС</b>; без режима разбор неполный.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, бесцветность. Стерильность (для новорождённого). «Внутреннее», «Хранить в прохладном».</div></div>
+</section>
+<section class="card" id="b32">
+<div class="card-head"><span class="bn">Билет 32</span><span class="bgrp">Микстура детская · ПРОВЕРКА ДОЗ</span></div>
+<p class="lf">Раствор (микстура) для приёма внутрь ребёнку 11 мес. Содержит анальгин и димедрол (сп.Б).</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Analgini 5% — 200 ml</span><span class="ru">Возьми: раствора анальгина 5% — 200 мл</span></div><div class="rx"><span class="lat">Dimedroli 1,0</span><span class="ru">Димедрола 1,0 г</span></div><div class="rx"><span class="lat">Acidi ascorbinici 0,1</span><span class="ru">Кислоты аскорбиновой 0,1 г</span></div><div class="rx"><span class="lat">Sirupi simplicis 20 ml</span><span class="ru">Сиропа простого 20 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 десертной ложке ребёнку 11 мес.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 десертной ложке ребёнку 11 мес.</span></div></div>
+<div class="callout warn"><span class="lbl">дозовый контроль</span><b>⚠ ОПАСНО — это «ловушка» билета.</b> Если считать первую строку как готовый 5% раствор анальгина 200 мл и затем добавлять сироп, итоговый объём минимум ≈220 мл. На 10 мл: анальгин 10,0×10/220 ≈0,455 г; димедрол 1,0×10/220 ≈0,045 г. Если считать грубо от 200 мл — 0,5 г и 0,05 г. В обоих вариантах для ребёнка 11 мес. дозы недопустимы без подтверждения врача. Действия фармацевта: не изготавливать молча, уведомить врача, требовать подтверждение дозы.</div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Анальгина в 200 мл 5% раствора: 10,0 г. Сироп простой 20 мл даёт итоговый объём минимум ≈220 мл (без учёта КУО твёрдых веществ). Десертная ложка = 10 мл. На приём: анальгина ≈0,455 г (или 0,5 г при грубом расчёте на 200 мл); димедрола ≈0,045 г (или 0,05 г при грубом расчёте на 200 мл). В любом варианте нужна врачебная проверка доз.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>СНАЧАЛА проверить дозы — здесь требуется подтверждение врача.</li><li>Определить трактовку прописи: 200 мл уже готового 5% раствора анальгина или итоговый объём микстуры.</li><li>При письменном подтверждении и выбранной трактовке: растворить димедрол и аскорбиновую кислоту в растворе анальгина/воде, профильтровать, добавить сахарный сироп.</li><li>Не доводить механически «до 200 мл» после добавления сиропа, если первая строка рецепта означает готовый 5% раствор анальгина 200 мл.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность. «Внутреннее», «Обращаться осторожно», «Хранить в прохладном» (анальгин/аскорбинка окисляются).</div></div>
+</section>
+<section class="card" id="b33">
+<div class="card-head"><span class="bn">Билет 33</span><span class="bgrp">Капли антибиотик (асептика)</span></div>
+<p class="lf">Раствор антибиотика (бензилпенициллин) — капли в нос, готовят асептически.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Benzylpenicillini-natrii 500 000 ED</span><span class="ru">Возьми: бензилпенициллина натриевой соли 500 000 ЕД</span></div><div class="rx"><span class="lat">Solutionis Natrii chloridi 0,9% q.s. ad 20 ml</span><span class="ru">Раствора натрия хлорида 0,9% сколько нужно до 20 мл</span></div><div class="rx"><span class="lat">Da. Signa: Капли в нос.</span><span class="ru">Выдай. Обозначь: капли в нос</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">500 000 ЕД в 20 мл → 25 000 ЕД/мл. Растворитель — изотонический раствор натрия хлорида 0,9% «сколько потребуется до 20 мл».</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Работа в АСЕПТИЧЕСКИХ условиях.</li><li>В стерильный флакон с бензилпенициллином добавить стерильный изотонический раствор натрия хлорида до 20 мл.</li><li>Осторожно растворить (не встряхивать сильно — пенится/инактивируется). НЕ нагревать и НЕ стерилизовать (пенициллин термолабилен — разрушается).</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность. Свежеприготовленный. «Капли в нос» (наружное), «Хранить в прохладном/холодильнике».</div></div>
+</section>
+<section class="card" id="b34">
+<div class="card-head"><span class="bn">Билет 34</span><span class="bgrp">Раствор для инъекций (стерильный)</span></div>
+<p class="lf">Раствор натрия гидрокарбоната для внутривенного капельного введения — стерильная инъекционная ЛФ.</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Natrii hydrocarbonatis 5% — 100 ml</span><span class="ru">Возьми: раствора натрия гидрокарбоната 5% — 100 мл</span></div><div class="rx"><span class="lat">Sterilisetur!</span><span class="ru">Простерилизуй!</span></div><div class="rx"><span class="lat">Da. Signa: Для внутривенного капельного введения.</span><span class="ru">Выдай. Обозначь: для внутривенного капельного введения</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Натрия гидрокарбоната: 5% × 100 мл = 5,0 г (марки «для инъекций»/х.ч.). Растворитель — вода для инъекций.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Растворять при 15–20 °C, НЕ нагревать (сода разлагается: NaHCO₃ → Na₂CO₃ + H₂O + CO₂↑).</li><li>Не взбалтывать сильно (потеря CO₂), использовать воду для инъекций.</li><li>Профильтровать (стерильный фильтр), флакон заполнить ДОВЕРХУ (без воздуха — меньше потерь CO₂ и сдвига pH), герметично укупорить.</li><li>Стерилизовать паром 120 °C — 8 мин.</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">Стерильность, прозрачность, отсутствие механических включений, pH, герметичность укупорки. «Для инъекций».</div></div>
+</section>
+<section class="card" id="b35">
+<div class="card-head"><span class="bn">Билет 35</span><span class="bgrp">Мазь (готовая, дозирование)</span></div>
+<p class="lf">Готовая цинковая мазь (официнальная 10%) — отвесить и оформить. (То же, что билет 28.)</p>
+<div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Unguenti Zinci 10,0</span><span class="ru">Возьми: мази цинковой 10,0 г</span></div><div class="rx"><span class="lat">Da. Signa: Смазывать поражённые места.</span><span class="ru">Выдай. Обозначь: смазывать поражённые места</span></div></div>
+<div class="part"><div class="plbl">Расчёты</div><div class="pbody">Цинковая мазь = цинка оксид 10% + вазелин 90%. Если готовить: цинка оксид 1,0 + вазелин 9,0.</div></div>
+<div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Отвесить 10,0 готовой цинковой мази в баночку (или приготовить: цинка оксид 1,0 растереть с вазелином до 10,0).</li></ol></div></div>
+<div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность. «Наружное».</div></div>
+</section>
+<footer class="doc"><span>задание №3 · 35 билетов · v2 исправлено</span><span>нормативная база: Приказ №249н от 22.05.2023, ГФ X/XV, ФТ Краснюк</span><span>чистовая версия</span></footer>
+</div></body></html>
