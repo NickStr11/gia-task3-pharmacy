@@ -1,85 +1,102 @@
-﻿<!DOCTYPE html>
-
-<html lang="ru"><head><meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Задание №3 по всем 35 билетам · Технология ЛФ · Фармация</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<style>:root{--bg:#fff;--bg-tint:#fafafa;--ink:#0a0a0a;--ink-2:#3a3a3a;--ink-3:#6a6a6a;--ink-4:#9a9a9a;--line:#e6e6e6;--line-strong:#cfcfcf;--accent:#0F62FE;--accent-soft:#e8efff;--warn:#b25400;--warn-soft:#fff4e6;--sans:'Inter',-apple-system,system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--col:880px;}
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);}
-body{font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ГИА Фармация · Полные шпаргалки по 35 билетам</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#fff;--bg-tint:#fafafa;--ink:#0a0a0a;--ink-2:#343434;--ink-3:#686868;--ink-4:#999;--line:#e6e6e6;--line-strong:#cfcfcf;--accent:#0F62FE;--accent-soft:#e8efff;--warn:#b25400;--warn-soft:#fff4e6;--sans:'Inter',-apple-system,system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--col:940px;}
+*{box-sizing:border-box;} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);overflow-x:hidden;} body{font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-wrap:anywhere;}
 .page{max-width:var(--col);margin:0 auto;padding:80px 32px 140px;}
 header.doc{border-top:1px solid var(--ink);padding-top:28px;margin-bottom:56px;}
-header.doc .meta{font-family:var(--mono);font-size:12px;color:var(--ink-3);letter-spacing:.02em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;margin-bottom:30px;}
-header.doc h1{font-weight:500;font-size:38px;line-height:1.15;margin:0 0 12px;letter-spacing:-.015em;}
-header.doc .sub{color:var(--ink-3);font-size:17px;max-width:660px;margin:0 0 24px;}
-.navwrap{margin-top:24px;border-top:1px solid var(--line);padding-top:18px;line-height:2.1;}
-.navlbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-right:8px;}
-.navchip{display:inline-block;font-family:var(--mono);font-size:12px;width:30px;text-align:center;padding:3px 0;border:1px solid var(--line-strong);border-radius:3px;color:var(--ink-2);text-decoration:none;margin:0 3px 4px 0;}
-.navchip:hover{border-color:var(--accent);color:var(--accent);}
-.card{margin-top:36px;padding-top:30px;border-top:1px solid var(--line-strong);}
-.card:first-of-type{margin-top:40px;}
-.card{scroll-margin-top:24px;}
-.card-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;}
-.card-head .bn{font-weight:600;font-size:23px;letter-spacing:-.01em;}
-.card-head .bgrp{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);}
-.lf{color:var(--ink-2);font-size:15px;margin:4px 0 16px;max-width:680px;}
-.recipe{border:1px solid var(--ink);background:var(--bg-tint);padding:16px 20px;margin:14px 0 18px;font-family:var(--mono);font-size:13.5px;line-height:1.75;}
-.recipe .rx-head{color:var(--accent);font-weight:500;}
-.recipe .rx-sep{color:var(--ink-4);font-size:12px;}
-
-.recipe .rx{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.85fr);gap:16px;align-items:start;}
-.recipe .rx .lat{min-width:0;}
-.recipe .rx .ru{font-family:var(--sans);font-size:12px;line-height:1.45;color:var(--ink-3);}
-.recipe .rx-head .ru{color:var(--ink-2);font-weight:500;}
-.recipe .rx-sep{grid-template-columns:1fr;}
-.recipe .rx-sep .ru{display:none;}
-@media (max-width:720px){
-.recipe .rx{grid-template-columns:1fr;gap:2px;}
-.recipe .rx .ru{padding-left:10px;border-left:1px solid var(--line);}
-.recipe .rx-sep .ru{display:none;}
-}
-
-.part{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);}
-.part .plbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);padding-top:3px;}
-.part .pbody{font-size:14.5px;color:var(--ink-2);}
-.part .pbody ol.tech{margin:0;padding-left:18px;}
-.part .pbody ol.tech li{margin:5px 0;}
-.part .pbody b,.lf b{color:var(--ink);font-weight:600;}
-.callout{border-left:2px solid var(--accent);padding:12px 18px;background:var(--accent-soft);margin:14px 0;font-size:14px;color:var(--ink);}
-.callout.warn{border-left-color:var(--warn);background:var(--warn-soft);}
-.callout .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px;font-weight:500;}
-.callout.warn .lbl{color:var(--warn);}
-.callout b{font-weight:600;}
-footer.doc{margin-top:80px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--ink-4);letter-spacing:.05em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;}
-::selection{background:var(--accent);color:#fff;}
-@media (max-width:720px){
-.page{padding:40px 18px 70px;}
-header.doc h1{font-size:26px;}
-.part{grid-template-columns:1fr;gap:4px;}
-.part .plbl{padding-top:0;}
-.recipe{font-size:12.5px;}
-}
-@media print{
-@page{margin:14mm 12mm;}
-.page{padding:0;max-width:100%;}
-.navwrap{display:none;}
-.card{page-break-inside:avoid;border-top:1px solid var(--line-strong);}
-.recipe,.callout,.part{page-break-inside:avoid;}
-header.doc{margin-bottom:28px;}
-a{color:var(--ink);}
-}
-</style></head><body>
+.meta{font-family:var(--mono);font-size:12px;color:var(--ink-3);letter-spacing:.02em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;margin-bottom:30px;}
+h1{font-weight:500;font-size:40px;line-height:1.15;margin:0 0 12px;letter-spacing:-.015em;} .sub{color:var(--ink-3);font-size:17px;max-width:720px;}
+.navwrap{margin-top:24px;border-top:1px solid var(--line);padding-top:18px;line-height:2.15;} .navlbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-right:8px;}
+.navchip{display:inline-block;font-family:var(--mono);font-size:12px;width:32px;text-align:center;padding:3px 0;border:1px solid var(--line-strong);border-radius:3px;color:var(--ink-2);text-decoration:none;margin:0 3px 5px 0;} .navchip:hover{border-color:var(--accent);color:var(--accent);}
+.ticket{margin-top:76px;padding-top:32px;border-top:1px solid var(--ink);scroll-margin-top:20px;}
+.section-label{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink-3);text-transform:uppercase;margin-bottom:18px;} .section-label .num{color:var(--ink);font-weight:500;white-space:nowrap;} .section-label span:nth-child(2){min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;} .section-label .line{flex:1;height:1px;background:var(--line);}
+h2{font-weight:500;font-size:25px;line-height:1.28;letter-spacing:-.01em;margin:0 0 16px;} h3{font-weight:600;font-size:16px;margin:26px 0 6px;} .lead{color:var(--ink-2);max-width:760px;margin:0 0 14px;}
+ul{padding-left:20px;color:var(--ink-2);font-size:15px;} li{margin:5px 0;}
+.ticket-top{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0 30px;} .ticket-top div{border-top:1px solid var(--line);padding-top:12px;color:var(--ink-2);font-size:14px;} .ticket-top span{display:block;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:4px;}
+.qa{margin-top:34px;padding-top:24px;border-top:1px solid var(--line);} .qa h2{font-size:21px;margin-bottom:14px;}
+.callout{border-left:2px solid var(--accent);padding:12px 18px;background:var(--accent-soft);margin:18px 0;font-size:14px;color:var(--ink);} .callout.warn{border-left-color:var(--warn);background:var(--warn-soft);} .callout .lbl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px;font-weight:500;} .callout.warn .lbl{color:var(--warn);}
+.recipe{border:1px solid var(--ink);background:var(--bg-tint);padding:16px 20px;margin:14px 0 18px;font-family:var(--mono);font-size:13.5px;line-height:1.75;} .recipe .rx{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.85fr);gap:16px;align-items:start;} .recipe .rx .ru{font-family:var(--sans);font-size:12px;line-height:1.45;color:var(--ink-3);} .recipe .rx-head{color:var(--accent);font-weight:500;}
+.part{display:grid;grid-template-columns:132px 1fr;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);} .plbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);padding-top:3px;} .pbody{font-size:14.5px;color:var(--ink-2);} .tech{margin:0;padding-left:18px;}
+.task3-card .card-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;} .task3-card .bn{font-weight:600;font-size:20px;} .task3-card .bgrp{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);} .task3-card .lf{color:var(--ink-2);font-size:15px;margin:4px 0 16px;}
+.step-box{border:1px solid var(--ink);padding:22px 24px;margin-top:32px;} .step-box h3{margin-top:0;font-size:18px;} .step-box ol{padding-left:20px;margin-bottom:0;font-size:15px;color:var(--ink-2);}
+footer.doc{margin-top:90px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--ink-4);letter-spacing:.05em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;}
+@media(max-width:720px){.page{width:100%;max-width:100%;padding:42px 18px 80px;} .meta{display:grid;grid-template-columns:1fr;gap:8px;} h1{font-size:26px;max-width:100%;} h2{font-size:21px;max-width:100%;} .sub{font-size:15.5px;} .section-label span:nth-child(2){display:none;} .navchip{width:30px;margin-right:2px;} .ticket-top{grid-template-columns:1fr;} .part{grid-template-columns:1fr;gap:4px;} .recipe{padding:14px 14px;} .recipe .rx{grid-template-columns:1fr;gap:2px;}}
+@media print{@page{margin:14mm 12mm;} .page{padding:0;max-width:100%;} .navwrap{display:none;} .ticket{page-break-before:always;margin-top:0;} .ticket:first-of-type{page-break-before:auto;} .qa,.callout,.recipe,.part,.step-box{page-break-inside:avoid;}}
+</style>
+</head>
+<body>
 <div class="page">
 <header class="doc">
-<div class="meta"><span>шпаргалка · задание №3 · все билеты</span><span>ГИА · 33.02.01 Фармация</span><span>для: Никита</span><span>экзамен: 24.06.2026</span></div>
-<h1>Задание №3 — изготовление лекарственной формы. Все 35 билетов.</h1>
-<p class="sub">По каждому билету: рецепт на латыни, расчёты, дозовый контроль (где есть ядовитые/сильнодействующие), пошаговая технология и оценка качества. Нормативная база: действующий Приказ Минздрава РФ №249н от 22.05.2023, ГФ X/XV и учебники аптечной технологии.</p>
-<div class="navwrap"><span class="navlbl">Билеты:</span> <a class="navchip" href="#b1">1</a> <a class="navchip" href="#b2">2</a> <a class="navchip" href="#b3">3</a> <a class="navchip" href="#b4">4</a> <a class="navchip" href="#b5">5</a> <a class="navchip" href="#b6">6</a> <a class="navchip" href="#b7">7</a> <a class="navchip" href="#b8">8</a> <a class="navchip" href="#b9">9</a> <a class="navchip" href="#b10">10</a> <a class="navchip" href="#b11">11</a> <a class="navchip" href="#b12">12</a> <a class="navchip" href="#b13">13</a> <a class="navchip" href="#b14">14</a> <a class="navchip" href="#b15">15</a> <a class="navchip" href="#b16">16</a> <a class="navchip" href="#b17">17</a> <a class="navchip" href="#b18">18</a> <a class="navchip" href="#b19">19</a> <a class="navchip" href="#b20">20</a> <a class="navchip" href="#b21">21</a> <a class="navchip" href="#b22">22</a> <a class="navchip" href="#b23">23</a> <a class="navchip" href="#b24">24</a> <a class="navchip" href="#b25">25</a> <a class="navchip" href="#b26">26</a> <a class="navchip" href="#b27">27</a> <a class="navchip" href="#b28">28</a> <a class="navchip" href="#b29">29</a> <a class="navchip" href="#b30">30</a> <a class="navchip" href="#b31">31</a> <a class="navchip" href="#b32">32</a> <a class="navchip" href="#b33">33</a> <a class="navchip" href="#b34">34</a> <a class="navchip" href="#b35">35</a></div>
+  <div class="meta"><span>ГИА · 33.02.01 Фармация</span><span>35 билетов · полная шпаргалка</span><span>обновлено: 2026-06-08</span></div>
+  <h1>Полный разбор 35 билетов ГИА по фармации.</h1>
+  <p class="sub">Формат как в примере билета 17: первый вопрос, второй вопрос, изготовление лекарственной формы и короткий скелет ответа. Нормативная база для изготовления ЛП: Приказ Минздрава РФ №249н от 22.05.2023, ГФ и учебники аптечной технологии.</p>
+  <div class="navwrap"><span class="navlbl">Билеты:</span> <a href="#b1" class="navchip">1</a> <a href="#b2" class="navchip">2</a> <a href="#b3" class="navchip">3</a> <a href="#b4" class="navchip">4</a> <a href="#b5" class="navchip">5</a> <a href="#b6" class="navchip">6</a> <a href="#b7" class="navchip">7</a> <a href="#b8" class="navchip">8</a> <a href="#b9" class="navchip">9</a> <a href="#b10" class="navchip">10</a> <a href="#b11" class="navchip">11</a> <a href="#b12" class="navchip">12</a> <a href="#b13" class="navchip">13</a> <a href="#b14" class="navchip">14</a> <a href="#b15" class="navchip">15</a> <a href="#b16" class="navchip">16</a> <a href="#b17" class="navchip">17</a> <a href="#b18" class="navchip">18</a> <a href="#b19" class="navchip">19</a> <a href="#b20" class="navchip">20</a> <a href="#b21" class="navchip">21</a> <a href="#b22" class="navchip">22</a> <a href="#b23" class="navchip">23</a> <a href="#b24" class="navchip">24</a> <a href="#b25" class="navchip">25</a> <a href="#b26" class="navchip">26</a> <a href="#b27" class="navchip">27</a> <a href="#b28" class="navchip">28</a> <a href="#b29" class="navchip">29</a> <a href="#b30" class="navchip">30</a> <a href="#b31" class="navchip">31</a> <a href="#b32" class="navchip">32</a> <a href="#b33" class="navchip">33</a> <a href="#b34" class="navchip">34</a> <a href="#b35" class="navchip">35</a></div>
 </header>
-<section class="card" id="b1">
+
+<section class="ticket" id="b1">
+  <div class="section-label"><span class="num">[ билет 01 ]</span><span>Пути введения лекарственных средств</span><span class="line"></span></div>
+  <h2>Билет №1. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Пути введения лекарственных средств. Механизмы всасывания лекарственных средств. Достоинства и недостатки.</div>
+    <div><span>Вопрос 2</span>Виды аптечных организаций и их характеристика.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Пути введения лекарственных средств. Механизмы всасывания лекарственных средств. Достоинства и недостатки.</h2>
+    <p class="lead">Лекарство должно попасть к месту действия: через рот, под язык, через кожу, инъекцией, ингаляцией и т.д. В ответе важно связать путь введения со скоростью эффекта, безопасностью и удобством.</p>
+<h3>Пути введения</h3>
+<ul>
+<li>Энтеральные: внутрь, сублингвально, ректально. Через ЖКТ или слизистые.</li>
+<li>Парентеральные: внутривенно, внутримышечно, подкожно, внутрикожно. Минуют ЖКТ, требуют стерильности.</li>
+<li>Наружные и местные: кожа, слизистые, глаз, нос, ухо.</li>
+<li>Ингаляционные: через дыхательные пути, быстрый эффект и местное действие в бронхах.</li>
+</ul>
+<h3>Всасывание</h3>
+<ul>
+<li>Пассивная диффузия: по градиенту концентрации, основной механизм для многих ЛС.</li>
+<li>Фильтрация: через поры мембран, зависит от размера молекулы.</li>
+<li>Активный транспорт: с затратой энергии, может насыщаться и конкурировать.</li>
+<li>Факторы: липофильность, ионизация, pH среды, кровоснабжение, лекарственная форма, пища.</li>
+</ul>
+<h3>Плюсы и минусы</h3>
+<ul>
+<li>Внутрь: удобно и безопасно, но медленнее; возможен эффект первого прохождения через печень.</li>
+<li>Сублингвально: быстро, минует печень; подходит не для всех веществ.</li>
+<li>Инъекции: быстро и точно, но боль, стерильность, риск осложнений.</li>
+<li>Наружно: меньше системных побочек, но ограничено местом нанесения.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Виды аптечных организаций и их характеристика.</h2>
+    <p class="lead">Аптечные организации отличаются задачами: одни только отпускают готовые препараты, другие ещё изготавливают лекарства, третьи работают при медорганизациях.</p>
+<h3>Основные виды</h3>
+<ul>
+<li>Аптека готовых лекарственных форм: розничный отпуск готовых ЛП и товаров аптечного ассортимента.</li>
+<li>Производственная аптека: изготовление ЛП по рецептам и требованиям, контроль качества, отпуск.</li>
+<li>Аптечный пункт: структурная единица с более ограниченным набором функций.</li>
+<li>Аптека медицинской организации: обеспечение отделений, работа по требованиям.</li>
+</ul>
+<h3>Характеристика</h3>
+<ul>
+<li>Нужна лицензия на фармацевтическую деятельность.</li>
+<li>Должны быть помещения, оборудование, персонал, условия хранения.</li>
+<li>При изготовлении действует Приказ №249н и фармакопейные требования.</li>
+<li>Для населения важны отпуск, консультация, хранение, качество и маркировка.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 1</span><span class="bgrp">Порошок · ядовитое (сп.А)</span></div>
 <p class="lf">Порошок дозированный (разделённый) для приёма внутрь. Содержит атропина сульфат — список А (ядовитое).</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Atropini sulfatis 0,0003</span><span class="ru">Возьми: атропина сульфата 0,0003 г</span></div><div class="rx"><span class="lat">Anaesthesini 0,15</span><span class="ru">Анестезина 0,15 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 30</span><span class="ru">Выдай такие дозы числом 30</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день</span></div></div>
@@ -87,8 +104,68 @@ a{color:var(--ink);}
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Атропина сульфата: 0,0003 × 30 = 0,009 г (это &lt;0,05 г → вводят через тритурацию 1:100). Анестезина: 0,15 × 30 = 4,5 г. Масса 1 порошка (с тритурацией 1:100): анестезин 0,15 + тритурация 0,03 = ≈0,18 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Проверить дозы ядовитого (см. выше), оформление как для сп.А.</li><li>Взять готовую тритурацию атропина сульфата 1:100 (или приготовить): на 30 доз нужно 0,009 г атропина = 0,9 г тритурации.</li><li>В ступке измельчить и затереть поры анестезином (его больше).</li><li>Добавить тритурацию атропина, тщательно смешать от меньшего к большему до однородности.</li><li>Развесить на ручных весах по ≈0,18 г, упаковать в вощёные/парафинированные капсулы.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК (заполняют сразу), однородность, отклонение в массе (для 0,1–0,3 г допускается ±10%). Этикетки: «Внутреннее», «Обращаться осторожно» (ядовитое). Хранить под замком.</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Назвать классификацию путей.</li><li>Объяснить 2-3 механизма всасывания.</li><li>Сравнить плюсы/минусы на примерах.</li><li>Назвать виды.</li><li>Сказать, что отличает производственную аптеку.</li><li>Закончить лицензией, персоналом и хранением.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b2">
+
+<section class="ticket" id="b2">
+  <div class="section-label"><span class="num">[ билет 02 ]</span><span>Местные анестетики</span><span class="line"></span></div>
+  <h2>Билет №2. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Местные анестетики. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Фармацевтическая деятельность и ее виды.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Местные анестетики. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Местные анестетики временно выключают болевую чувствительность в месте введения. Главное: блокируют натриевые каналы нерва, поэтому импульс боли не проводится.</p>
+<h3>Классификация и примеры</h3>
+<ul>
+<li>Эфиры: прокаин/новокаин, бензокаин/анестезин, тетракаин/дикаин.</li>
+<li>Амиды: лидокаин, артикаин, мепивакаин, бупивакаин.</li>
+<li>По применению: поверхностная, инфильтрационная, проводниковая, спинальная/эпидуральная анестезия.</li>
+</ul>
+<h3>Механизм и эффекты</h3>
+<ul>
+<li>Блок потенциалзависимых Na+-каналов.</li>
+<li>Импульс по нервному волокну не проходит.</li>
+<li>Сначала исчезает боль, затем температурная, тактильная чувствительность.</li>
+</ul>
+<h3>Показания, НЭ, противопоказания</h3>
+<ul>
+<li>Показания: стоматология, малые операции, блокады, диагностические процедуры.</li>
+<li>НЭ: аллергия чаще у эфиров, онемение, головокружение, судороги при передозировке, угнетение сердца.</li>
+<li>Противопоказания: аллергия, тяжёлые нарушения проводимости сердца, инфекция в месте введения для некоторых техник.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Фармацевтическая деятельность и ее виды.</h2>
+    <p class="lead">Фармацевтическая деятельность — это не только продажа. Это весь легальный цикл обращения лекарств на уровне аптек и организаций.</p>
+<h3>Виды деятельности</h3>
+<ul>
+<li>Розничная торговля ЛП и товарами аптечного ассортимента.</li>
+<li>Хранение, перевозка, отпуск лекарственных препаратов.</li>
+<li>Изготовление ЛП аптечными организациями при наличии соответствующих условий.</li>
+<li>Оптовая торговля — для организаций с отдельной лицензией.</li>
+</ul>
+<h3>Что обязательно</h3>
+<ul>
+<li>Лицензия.</li>
+<li>Квалифицированный персонал.</li>
+<li>Соблюдение правил хранения и отпуска.</li>
+<li>Документация, учёт, контроль качества, фармконсультирование.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 2</span><span class="bgrp">Порошок · сильнодейств. (сп.Б)</span></div>
 <p class="lf">Порошок дозированный для приёма внутрь. Содержит экстракт белладонны (красавки) — список Б.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Extracti Belladonnae 0,01</span><span class="ru">Возьми: экстракта красавки 0,01 г</span></div><div class="rx"><span class="lat">Bismuthi subnitratis</span><span class="ru">Висмута нитрата основного</span></div><div class="rx"><span class="lat">Natrii hydrocarbonatis ana 0,2</span><span class="ru">Натрия гидрокарбоната поровну по 0,2 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 10</span><span class="ru">Выдай такие дозы числом 10</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день</span></div></div>
@@ -96,40 +173,347 @@ a{color:var(--ink);}
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Экстракт белладонны густой: 0,01 × 10 = 0,1 г. Висмута нитрат основной: 0,2 × 10 = 2,0 г. Натрия гидрокарбонат: 0,2 × 10 = 2,0 г (ana = поровну). Масса 1 порошка ≈ 0,41 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Густой экстракт белладонны вводят в виде раствора густого экстракта (1:2 вода-спирт-глицерин): на 0,1 г экстракта взять 0,2 мл раствора.</li><li>В ступке затереть поры и измельчить висмута нитрат и натрия гидрокарбонат.</li><li>Добавить раствор густого экстракта, смешать; при налипании слегка подсушить.</li><li>Развесить по ≈0,41 г, упаковать в простые капсулы.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, отклонение в массе (±5% для массы &gt;0,3 г). Этикетки: «Внутреннее», «Обращаться осторожно».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Класс → механизм Na+-каналов → примеры → применение → аллергия/токсичность.</li><li>Дать определение.</li><li>Перечислить виды.</li><li>Назвать обязательные условия.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b3">
+
+<section class="ticket" id="b3">
+  <div class="section-label"><span class="num">[ билет 03 ]</span><span>Холиноблокаторы: неселективные и селективные, номенклатура</span><span class="line"></span></div>
+  <h2>Билет №3. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Холиноблокаторы: неселективные и селективные, номенклатура. Фармакологические эффекты, показания к применению, нежелательные эффекты, противопоказания (на примере атропина сульфата).</div>
+    <div><span>Вопрос 2</span>Правила розничной торговли лекарственными средствами.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Холиноблокаторы: неселективные и селективные, номенклатура. Фармакологические эффекты, показания к применению, нежелательные эффекты, противопоказания (на примере атропина сульфата).</h2>
+    <p class="lead">Холиноблокаторы блокируют действие ацетилхолина на холинорецепторы. В билете фокус на атропине: это неселективный М-холиноблокатор.</p>
+<h3>Классификация</h3>
+<ul>
+<li>М-холиноблокаторы неселективные: атропин, скополамин, платифиллин.</li>
+<li>Селективные: ипратропий/тиотропий преимущественно бронхи; пирензепин преимущественно желудок.</li>
+<li>Н-холиноблокаторы отдельно: ганглиоблокаторы и миорелаксанты, если нужно упомянуть.</li>
+</ul>
+<h3>Эффекты атропина</h3>
+<ul>
+<li>Мидриаз, паралич аккомодации, повышение внутриглазного давления.</li>
+<li>Сухость во рту, снижение секреции бронхов/желудка/пота.</li>
+<li>Тахикардия, расслабление гладких мышц ЖКТ и бронхов.</li>
+<li>Снижает тонус блуждающего нерва.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: брадикардия, премедикация, спазмы, отравление ФОС/М-холиномиметиками, офтальмология.</li>
+<li>НЭ: сухость, тахикардия, запор, задержка мочи, светобоязнь.</li>
+<li>Противопоказания: глаукома, аденома простаты с задержкой мочи, тахиаритмии.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Правила розничной торговли лекарственными средствами.</h2>
+    <p class="lead">Розничная торговля ЛС — это отпуск населению с соблюдением рецептурного режима, правил хранения, маркировки и консультации.</p>
+<h3>Главные правила</h3>
+<ul>
+<li>Только при наличии лицензии.</li>
+<li>Рецептурные препараты — по рецепту, безрецептурные — без рецепта.</li>
+<li>Нельзя отпускать ЛП с истёкшим сроком годности, нарушенной упаковкой, сомнительным качеством.</li>
+<li>Покупателю дают информацию о способе применения, хранении, противопоказаниях в пределах компетенции.</li>
+</ul>
+<h3>Организация отпуска</h3>
+<ul>
+<li>Соблюдение температурного режима.</li>
+<li>Раздельное хранение по группам и условиям.</li>
+<li>Проверка маркировки и срока годности.</li>
+<li>Работа с системой маркировки/прослеживаемости, где применимо.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 3</span><span class="bgrp">Присыпка (порошок наружный)</span></div>
 <p class="lf">Сложный порошок недозированный для наружного применения — присыпка.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Zinci oxydi 5,0</span><span class="ru">Возьми: цинка оксида 5,0 г</span></div><div class="rx"><span class="lat">Acidi borici 1,0</span><span class="ru">Кислоты борной 1,0 г</span></div><div class="rx"><span class="lat">Talci 4,0</span><span class="ru">Талька 4,0 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da. Signa: Присыпка.</span><span class="ru">Выдай. Обозначь: присыпка</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Общая масса 10,0 г. Деления на дозы нет. Концентрации: цинка оксид 50%, кислота борная 10%, тальк 40%.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Первой измельчить кислоту борную (её меньше всего и она кристаллическая) — уменьшаем потери в порах ступки.</li><li>Добавлять от меньшего количества к большему: затем цинка оксид, затем тальк.</li><li>Растереть до однородного тончайшего порошка, при необходимости просеять через сито.</li><li>Пересыпать в банку/пакет.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность (нет крупинок), цвет белый. Этикетка «Наружное».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Сказать: блокирует М-рецепторы.</li><li>Разложить эффекты по органам.</li><li>Назвать атропин и главные противопоказания.</li><li>Лицензия → рецептурный режим → качество → консультация.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b4">
+
+<section class="ticket" id="b4">
+  <div class="section-label"><span class="num">[ билет 04 ]</span><span>Альфа и бета-адреномиметики</span><span class="line"></span></div>
+  <h2>Билет №4. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Альфа и бета-адреномиметики. Номенклатура, фармакологические эффекты, показания к применению, нежелательные эффекты, противопоказания (на примере эпинефрина гидрохлорида).</div>
+    <div><span>Вопрос 2</span>Лицензирование фармацевтической деятельности.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Альфа и бета-адреномиметики. Номенклатура, фармакологические эффекты, показания к применению, нежелательные эффекты, противопоказания (на примере эпинефрина гидрохлорида).</h2>
+    <p class="lead">Адреномиметики возбуждают адренорецепторы. Эпинефрин/адреналин действует почти на все: α1, α2, β1, β2, поэтому эффект мощный и системный.</p>
+<h3>Классификация</h3>
+<ul>
+<li>α-адреномиметики: фенилэфрин, ксилометазолин, нафазолин.</li>
+<li>β-адреномиметики: добутамин β1; сальбутамол/формотерол β2.</li>
+<li>α+β: эпинефрин, норэпинефрин.</li>
+</ul>
+<h3>Эпинефрин: эффекты</h3>
+<ul>
+<li>α1: сосудосуживающий эффект, повышение давления, уменьшение отёка.</li>
+<li>β1: усиление силы и частоты сердечных сокращений.</li>
+<li>β2: бронхорасширение, расслабление матки, гипергликемия.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: анафилактический шок, остановка сердца, бронхоспазм, добавка к местным анестетикам.</li>
+<li>НЭ: тахикардия, аритмии, повышение АД, тревога, тремор.</li>
+<li>Противопоказания/осторожность: ИБС, аритмии, выраженная гипертензия, тиреотоксикоз.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Лицензирование фармацевтической деятельности.</h2>
+    <p class="lead">Лицензирование подтверждает, что аптека имеет право заниматься фармацевтической деятельностью и соответствует обязательным требованиям.</p>
+<h3>Что проверяют</h3>
+<ul>
+<li>Помещения и зоны хранения/отпуска.</li>
+<li>Оборудование, холодильники, термометры, средства контроля.</li>
+<li>Квалификацию персонала и аккредитацию специалистов.</li>
+<li>Санитарный режим, документацию, систему качества.</li>
+</ul>
+<h3>Виды работ в лицензии</h3>
+<ul>
+<li>Розничная торговля.</li>
+<li>Хранение.</li>
+<li>Перевозка при необходимости.</li>
+<li>Изготовление лекарственных препаратов — если аптека производственная.</li>
+</ul>
+<h3>Ответственность</h3>
+<ul>
+<li>Работа без лицензии или с нарушением лицензионных требований влечёт административные меры.</li>
+<li>Лицензия должна соответствовать фактически выполняемым работам.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 4</span><span class="bgrp">Порошок дозированный</span></div>
 <p class="lf">Порошок дозированный для приёма внутрь (витаминный). Ядовитых/сильнодействующих нет.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Acidi ascorbinici 0,1</span><span class="ru">Возьми: кислоты аскорбиновой 0,1 г</span></div><div class="rx"><span class="lat">Glucosi 0,2</span><span class="ru">Глюкозы 0,2 г</span></div><div class="rx"><span class="lat">Riboflavini 0,01</span><span class="ru">Рибофлавина 0,01 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 30</span><span class="ru">Выдай такие дозы числом 30</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Аскорбиновая к-та: 0,1×30 = 3,0 г. Глюкоза: 0,2×30 = 6,0 г <i>(с учётом влаги ~10%: 6,0 × 1,11 ≈ 6,66 г водной глюкозы)</i>. Рибофлавин: 0,01×30 = 0,3 г. Масса 1 порошка с пересчётом глюкозы ≈ <b>0,332 г</b> (без пересчёта — 0,31 г).</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Первым измельчить рибофлавин (его меньше всего, к тому же красящий) — растереть с частью глюкозы.</li><li>Добавлять от меньшего к большему: аскорбиновую кислоту, затем глюкозу.</li><li>Смешать до однородности, развесить по ≈0,31 г, упаковать в капсулы.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, равномерная жёлтая окраска (рибофлавин), отклонение в массе <b>±5%</b> (масса больше 0,3 г). Этикетка «Внутреннее», «Хранить в сухом, защищённом от света месте».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Рецепторы → эффекты → где применяют → чем опасен.</li><li>Лицензия = право работать.</li><li>Условия: помещение, оборудование, персонал, документы.</li><li>Изготовление указывается отдельно.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b5">
+
+<section class="ticket" id="b5">
+  <div class="section-label"><span class="num">[ билет 05 ]</span><span>Альфа 1,2-адреномиметики (деконгестанты)</span><span class="line"></span></div>
+  <h2>Билет №5. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Альфа 1,2-адреномиметики (деконгестанты). Классификация, номенклатура, фармакологические эффекты, показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Контроль за качеством и сертификация лекарственных средств.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Альфа 1,2-адреномиметики (деконгестанты). Классификация, номенклатура, фармакологические эффекты, показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Деконгестанты — сосудосуживающие средства для носа. Они стимулируют α1/α2-рецепторы сосудов слизистой, убирают отёк и заложенность.</p>
+<h3>Примеры</h3>
+<ul>
+<li>Ксилометазолин, оксиметазолин, нафазолин, фенилэфрин.</li>
+<li>Формы: капли/спреи в нос, иногда комбинированные средства.</li>
+</ul>
+<h3>Механизм и эффекты</h3>
+<ul>
+<li>Суживают сосуды слизистой носа.</li>
+<li>Уменьшают отёк, гиперемию, количество отделяемого.</li>
+<li>Облегчают носовое дыхание, но причину инфекции не лечат.</li>
+</ul>
+<h3>Показания и безопасность</h3>
+<ul>
+<li>Показания: ринит, синусит, евстахиит/отит как вспомогательно.</li>
+<li>НЭ: сухость, жжение, тахикардия, повышение АД, медикаментозный ринит.</li>
+<li>Не применять долго: обычно не более 3-5, максимум 5-7 дней по инструкции.</li>
+<li>Осторожно: гипертензия, тиреотоксикоз, глаукома, дети.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Контроль за качеством и сертификация лекарственных средств.</h2>
+    <p class="lead">Качество лекарств контролируется на всех этапах: производство, регистрация, поступление в аптеку, хранение и отпуск.</p>
+<h3>Контроль качества</h3>
+<ul>
+<li>Государственная регистрация ЛП.</li>
+<li>Соответствие фармакопейным статьям/НД.</li>
+<li>Приёмочный контроль в аптеке: описание, упаковка, маркировка, документы.</li>
+<li>Контроль условий хранения и сроков годности.</li>
+</ul>
+<h3>Сертификация/документы</h3>
+<ul>
+<li>Для лекарств важны регистрационное удостоверение, документы качества серии, прослеживаемость.</li>
+<li>Для части товаров аптечного ассортимента могут быть декларации/сертификаты соответствия.</li>
+<li>Маркировка защищает от фальсификата и помогает прослеживать движение упаковки.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 5</span><span class="bgrp">Порошок · с летучим/жидким</span></div>
 <p class="lf">Порошок дозированный для приёма внутрь с трудноизмельчаемым (камфора) и жидким (настойка) компонентом.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Camphorae 0,1</span><span class="ru">Возьми: камфоры 0,1 г</span></div><div class="rx"><span class="lat">Tincturae Leonuri guttam 1</span><span class="ru">Настойки пустырника 1 каплю</span></div><div class="rx"><span class="lat">Sacchari 0,2</span><span class="ru">Сахара 0,2 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 6</span><span class="ru">Выдай такие дозы числом 6</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Камфора: 0,1×6 = 0,6 г. Сахар: 0,2×6 = 1,2 г. Настойки пустырника: 1 капля × 6 = 6 капель на всю массу. Масса 1 порошка ≈ 0,3 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Камфору измельчить в ступке с несколькими каплями спирта этилового (сама не растирается — крошится).</li><li>Добавить сахар, перемешать, дать спирту улетучиться (подсушить).</li><li>В последнюю очередь по каплям добавить настойку пустырника (6 капель), перемешать и снова подсушить.</li><li>Развесить по ≈0,3 г, упаковать в пергамент/вощёные капсулы (камфора летучая).</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, запах камфоры. Этикетки «Внутреннее», «Хранить в прохладном месте».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Деконгестант = α-адреномиметик в нос.</li><li>Эффект: сосуды сузились → отёк ушёл.</li><li>Главный риск: зависимость/медикаментозный ринит.</li><li>Не говорить только «сертификат».</li><li>Качество = регистрация + серия + приёмка + хранение.</li><li>В аптеке ключевой — приёмочный контроль.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b6">
+
+<section class="ticket" id="b6">
+  <div class="section-label"><span class="num">[ билет 06 ]</span><span>Транквилизаторы</span><span class="line"></span></div>
+  <h2>Билет №6. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Транквилизаторы. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Хранение и уничтожение рецептов в аптечной организации.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Транквилизаторы. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Транквилизаторы — анксиолитики: уменьшают тревогу, страх, напряжение. Классика — бензодиазепины, которые усиливают тормозное действие ГАМК.</p>
+<h3>Классификация и примеры</h3>
+<ul>
+<li>Бензодиазепины: диазепам, феназепам, лоразепам, алпразолам.</li>
+<li>Небензодиазепиновые анксиолитики: буспирон, гидроксизин, мебикар/адаптол.</li>
+<li>По эффекту: анксиолитический, седативный, снотворный, миорелаксирующий, противосудорожный.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>Бензодиазепины усиливают действие ГАМК-А рецепторов.</li>
+<li>В ЦНС усиливается торможение: тревога и возбуждение снижаются.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: тревожные расстройства, панические состояния, премедикация, судороги, абстиненция.</li>
+<li>НЭ: сонливость, заторможенность, нарушение координации, амнезия, привыкание и зависимость.</li>
+<li>Противопоказания: миастения, тяжёлая дыхательная недостаточность, алкогольное опьянение, беременность/лактация с осторожностью.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Хранение и уничтожение рецептов в аптечной организации.</h2>
+    <p class="lead">Рецепты в аптеке хранятся и уничтожаются по установленному порядку. Детальные сроки зависят от формы бланка и группы препарата, поэтому на экзамене лучше говорить по категориям.</p>
+<h3>Хранение</h3>
+<ul>
+<li>Рецепты, остающиеся в аптеке, регистрируют и хранят отдельно.</li>
+<li>Наркотические/психотропные и ПКУ-препараты — самый строгий режим.</li>
+<li>Льготные рецепты и обычные рецептурные бланки имеют свои сроки хранения.</li>
+<li>Доступ к архиву рецептов ограничивают.</li>
+</ul>
+<h3>Уничтожение</h3>
+<ul>
+<li>После истечения срока хранения уничтожают комиссионно.</li>
+<li>Составляют акт уничтожения.</li>
+<li>Нельзя просто выбросить рецепты: это медицинская и персональная информация.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 6</span><span class="bgrp">Порошок дозированный</span></div>
 <p class="lf">Порошок дозированный для приёма внутрь (витаминный).</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Acidi ascorbinici 0,1</span><span class="ru">Возьми: кислоты аскорбиновой 0,1 г</span></div><div class="rx"><span class="lat">Glucosi 0,2</span><span class="ru">Глюкозы 0,2 г</span></div><div class="rx"><span class="lat">Thiamini bromidi 0,05</span><span class="ru">Тиамина бромида 0,05 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 6</span><span class="ru">Выдай такие дозы числом 6</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Аскорбиновая к-та: 0,6 г. Глюкоза: 1,2 г <i>(с учётом влаги ≈1,33 г водной)</i>. Тиамина бромид: 0,3 г. Масса 1 порошка с пересчётом глюкозы ≈ <b>0,372 г</b> (без пересчёта — 0,35 г).</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Первым измельчить тиамина бромид (меньшее количество) с частью глюкозы.</li><li>Добавить аскорбиновую кислоту, затем остальную глюкозу — от меньшего к большему.</li><li>Смешать до однородности, развесить по ≈0,35 г в капсулы.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, отклонение в массе <b>±5%</b> (масса больше 0,3 г). «Внутреннее», «Хранить в сухом, защищённом от света».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Сказать: против тревоги.</li><li>Механизм: ГАМК-А.</li><li>Опасность: сонливость + зависимость.</li><li>Формы разные → сроки разные.</li><li>Хранить отдельно.</li><li>Уничтожение комиссией по акту.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b7">
+
+<section class="ticket" id="b7">
+  <div class="section-label"><span class="num">[ билет 07 ]</span><span>Снотворные средства</span><span class="line"></span></div>
+  <h2>Билет №7. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Снотворные средства. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Задачи и функции аптечной организации.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Снотворные средства. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Снотворные облегчают наступление и поддержание сна. Важно отделить их от транквилизаторов: часть препаратов пересекается, но цель здесь — сон.</p>
+<h3>Группы</h3>
+<ul>
+<li>Бензодиазепины: нитразепам, диазепам.</li>
+<li>Z-препараты: зопиклон, золпидем.</li>
+<li>Барбитураты сейчас почти не используют как снотворные из-за опасности.</li>
+<li>Мелатонин и его аналоги — регуляция циркадных ритмов.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>Бензодиазепины/Z-препараты усиливают ГАМК-ергическое торможение.</li>
+<li>Барбитураты сильнее угнетают ЦНС и опаснее при передозировке.</li>
+<li>Мелатонин действует через мелатониновые рецепторы.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: кратковременная терапия бессонницы, нарушение засыпания.</li>
+<li>НЭ: дневная сонливость, снижение внимания, падения, привыкание, синдром отмены.</li>
+<li>Противопоказания: апноэ сна, тяжёлая дыхательная недостаточность, алкоголь, работа с механизмами.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Задачи и функции аптечной организации.</h2>
+    <p class="lead">Аптека не просто продаёт: она обеспечивает население лекарствами, хранит их правильно, консультирует и отвечает за качество отпуска.</p>
+<h3>Задачи</h3>
+<ul>
+<li>Обеспечение населения и медорганизаций лекарственными препаратами.</li>
+<li>Отпуск рецептурных и безрецептурных ЛП.</li>
+<li>Фармконсультирование.</li>
+<li>Изготовление ЛП при наличии производственной функции.</li>
+<li>Соблюдение качества, сроков и условий хранения.</li>
+</ul>
+<h3>Функции</h3>
+<ul>
+<li>Приёмка товара.</li>
+<li>Хранение.</li>
+<li>Реализация/отпуск.</li>
+<li>Учёт и отчётность.</li>
+<li>Санитарный режим.</li>
+<li>Информирование населения.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 7</span><span class="bgrp">Порошок · сильнодейств. (сп.Б)</span></div>
 <p class="lf">Порошок дозированный для приёма внутрь. Содержит димедрол — список Б.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Dimedroli 0,05</span><span class="ru">Возьми: димедрола 0,05 г</span></div><div class="rx"><span class="lat">Sacchari 0,2</span><span class="ru">Сахара 0,2 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 10</span><span class="ru">Выдай такие дозы числом 10</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 2 раза в день.</span><span class="ru">Обозначь: по 1 порошку 2 раза в день</span></div></div>
@@ -137,32 +521,284 @@ a{color:var(--ink);}
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Димедрол: 0,05×10 = 0,5 г. Сахар: 0,2×10 = 2,0 г. Масса 1 порошка ≈ 0,25 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Проверить дозы (сильнодействующее).</li><li>Затереть поры ступки сахаром, добавить димедрол.</li><li>Смешать от меньшего к большему до однородности, развесить по ≈0,25 г в капсулы.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, отклонение ±10%. «Внутреннее», «Обращаться осторожно».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Классы → ГАМК/мелатонин → бессонница → сонливость и зависимость.</li><li>Обеспечить → сохранить качество → отпустить правильно → проконсультировать.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b8">
+
+<section class="ticket" id="b8">
+  <div class="section-label"><span class="num">[ билет 08 ]</span><span>Нейролептики</span><span class="line"></span></div>
+  <h2>Билет №8. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Нейролептики. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Требования, предъявляемые к помещениям и оборудованию аптечных организаций.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Нейролептики. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Нейролептики — антипсихотические средства. Основная идея: снижают психомоторное возбуждение, бред, галлюцинации; ключевой механизм — блокада D2-рецепторов.</p>
+<h3>Классификация</h3>
+<ul>
+<li>Типичные: хлорпромазин/аминазин, галоперидол, трифтазин.</li>
+<li>Атипичные: клозапин, рисперидон, оланзапин, кветиапин.</li>
+<li>Типичные чаще дают экстрапирамидные нарушения; атипичные чаще метаболические.</li>
+</ul>
+<h3>Механизм и эффекты</h3>
+<ul>
+<li>Блокада D2-рецепторов в ЦНС.</li>
+<li>Антипсихотический, седативный, противорвотный эффекты.</li>
+<li>Могут влиять на вегетативную нервную систему и гормоны.</li>
+</ul>
+<h3>Показания и НЭ</h3>
+<ul>
+<li>Показания: шизофрения, психозы, мания, возбуждение, тики, иногда рвота.</li>
+<li>НЭ: паркинсонизм, акатизия, дистония, сонливость, гипотензия, гиперпролактинемия.</li>
+<li>Опасное осложнение: злокачественный нейролептический синдром.</li>
+<li>Противопоказания/осторожность: кома, угнетение ЦНС, тяжёлые болезни печени/сердца.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Требования, предъявляемые к помещениям и оборудованию аптечных организаций.</h2>
+    <p class="lead">Помещения и оборудование аптеки должны обеспечивать качество, безопасность хранения и нормальную работу персонала.</p>
+<h3>Помещения</h3>
+<ul>
+<li>Торговый зал/зона обслуживания.</li>
+<li>Материальные комнаты/зоны хранения.</li>
+<li>Зоны приёмки товара.</li>
+<li>Для производственной аптеки — ассистентская, моечная, асептический блок и др. по профилю работ.</li>
+<li>Санитарно-бытовые помещения для персонала.</li>
+</ul>
+<h3>Оборудование</h3>
+<ul>
+<li>Стеллажи, шкафы, сейфы для отдельных групп.</li>
+<li>Холодильники для термолабильных ЛП.</li>
+<li>Термометры/гигрометры и журналы контроля.</li>
+<li>Весы, мерная посуда, производственное оборудование — если изготавливают ЛП.</li>
+</ul>
+<h3>Требования</h3>
+<ul>
+<li>Раздельное хранение, чистота, вентиляция, освещение.</li>
+<li>Защита от доступа посторонних.</li>
+<li>Соблюдение температурного и влажностного режима.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 8</span><span class="bgrp">Порошок дозированный</span></div>
 <p class="lf">Порошок дозированный для приёма внутрь (антацидный). Ядовитых нет.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Magnesii oxydi</span><span class="ru">Возьми: магния оксида</span></div><div class="rx"><span class="lat">Bismuthi subnitratis</span><span class="ru">Висмута нитрата основного</span></div><div class="rx"><span class="lat">Natrii hydrocarbonatis ana 0,3</span><span class="ru">Натрия гидрокарбоната поровну по 0,3 г</span></div><div class="rx"><span class="lat">Misce fiat pulvis</span><span class="ru">Смешай, чтобы получился порошок</span></div><div class="rx"><span class="lat">Da tales doses numero 6</span><span class="ru">Выдай такие дозы числом 6</span></div><div class="rx"><span class="lat">Signa: По 1 порошку 3 раза в день перед едой.</span><span class="ru">Обозначь: по 1 порошку 3 раза в день перед едой</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Каждого вещества: 0,3×6 = 1,8 г (ana — поровну). Масса 1 порошка = 0,9 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Измельчить и смешать равные количества от труднее измельчаемого.</li><li>Магния оксид лёгкий и пылит — вводить осторожно (можно последним).</li><li>Смешать до однородности, развесить по 0,9 г в капсулы.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, отклонение ±5% (масса &gt;0,3 г). «Внутреннее».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Нейролептик = антипсихотик.</li><li>D2-блокада.</li><li>Побочки: ЭПС + седативность + метаболика.</li><li>Помещения по функциям.</li><li>Оборудование для хранения и контроля.</li><li>Производственная аптека требует дополнительных зон.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b9">
+
+<section class="ticket" id="b9">
+  <div class="section-label"><span class="num">[ билет 09 ]</span><span>Антидепрессанты</span><span class="line"></span></div>
+  <h2>Билет №9. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Антидепрессанты. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Правила приемки товаров аптечного ассортимента. Приёмочный контроль. Показатели: «Описание», «Упаковка», «Маркировка». Сопроводительные документы.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Антидепрессанты. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Антидепрессанты повышают активность моноаминовых медиаторов в ЦНС: серотонина, норадреналина, дофамина. Нужны не для «настроения на час», а для курсового лечения.</p>
+<h3>Группы</h3>
+<ul>
+<li>СИОЗС: флуоксетин, сертралин, пароксетин, эсциталопрам.</li>
+<li>СИОЗСиН: венлафаксин, дулоксетин.</li>
+<li>Трициклические: амитриптилин, имипрамин.</li>
+<li>ИМАО: моклобемид и др., сейчас реже.</li>
+<li>Другие: миртазапин, тразодон.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>Блокируют обратный захват серотонина/норадреналина или тормозят разрушение медиаторов.</li>
+<li>Клинический эффект развивается не сразу, часто через 2-4 недели.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: депрессия, тревожные расстройства, панические атаки, ОКР, хроническая боль у некоторых групп.</li>
+<li>НЭ: тошнота, бессонница/сонливость, сексуальная дисфункция, сухость во рту, набор веса.</li>
+<li>Риски: серотониновый синдром при сочетаниях, суицидальные мысли в начале терапии у молодых.</li>
+<li>Противопоказания зависят от группы; ИМАО нельзя сочетать с многими препаратами и продуктами.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Правила приемки товаров аптечного ассортимента. Приёмочный контроль. Показатели: «Описание», «Упаковка», «Маркировка». Сопроводительные документы.</h2>
+    <p class="lead">Приёмочный контроль — фильтр на входе: аптека проверяет, можно ли принять товар и отпускать его дальше.</p>
+<h3>Что проверяют</h3>
+<ul>
+<li>Описание: внешний вид, лекарственная форма, отсутствие видимых дефектов.</li>
+<li>Упаковка: целостность, герметичность, соответствие количеству.</li>
+<li>Маркировка: название, дозировка, серия, срок годности, производитель, условия хранения.</li>
+<li>Сопроводительные документы: накладные, документы качества, регистрационные сведения при необходимости.</li>
+</ul>
+<h3>Если есть нарушение</h3>
+<ul>
+<li>Товар изолируют.</li>
+<li>Оформляют расхождения/акт.</li>
+<li>Не допускают к реализации до выяснения.</li>
+<li>Сообщают поставщику и действуют по внутреннему порядку.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 9</span><span class="bgrp">Раствор водный · окислитель</span></div>
 <p class="lf">Водный раствор для наружного применения (калия перманганат — сильный окислитель).</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Kalii permanganatis 0,1% — 300 ml</span><span class="ru">Возьми: раствора калия перманганата 0,1% — 300 мл</span></div><div class="rx"><span class="lat">Da. Signa: Для промывания ран.</span><span class="ru">Выдай. Обозначь: для промывания ран</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Калия перманганата: 0,1% × 300 мл = 0,3 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Калия перманганат растворить ОТДЕЛЬНО в части горячей очищенной воды при перемешивании (растворяется медленно).</li><li>Профильтровать через вату/стекловату — НЕ через бумагу (окисляет её).</li><li>Довести водой до 300 мл.</li><li>Посуда чистая, без органических загрязнений (окислитель).</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, цвет (тёмно-фиолетовый). «Наружное», «Хранить в защищённом от света месте».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Группы → моноамины → эффект не сразу → НЭ и серотониновый синдром.</li><li>Описание → упаковка → маркировка → документы.</li><li>При дефекте — изоляция и акт.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b10">
+
+<section class="ticket" id="b10">
+  <div class="section-label"><span class="num">[ билет 10 ]</span><span>Муколитические средства</span><span class="line"></span></div>
+  <h2>Билет №10. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Муколитические средства. Номенклатура, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Рецепт. Функции. Правила выписывания лекарственных препаратов.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Муколитические средства. Номенклатура, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Муколитики разжижают мокроту и облегчают её выведение. Их дают при влажном кашле с вязкой мокротой, а не для подавления кашлевого рефлекса.</p>
+<h3>Примеры</h3>
+<ul>
+<li>Ацетилцистеин, карбоцистеин.</li>
+<li>Амброксол, бромгексин.</li>
+<li>Гвайфенезин — отхаркивающее/муколитическое действие.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>Ацетилцистеин разрывает дисульфидные связи мукополисахаридов мокроты.</li>
+<li>Амброксол стимулирует образование сурфактанта и мукоцилиарный клиренс.</li>
+<li>Итог: мокрота становится менее вязкой и легче отходит.</li>
+</ul>
+<h3>Показания и НЭ</h3>
+<ul>
+<li>Показания: бронхит, пневмония, ХОБЛ, бронхоэктазы, муковисцидоз — если мокрота вязкая.</li>
+<li>НЭ: тошнота, изжога, аллергия, бронхоспазм у чувствительных пациентов.</li>
+<li>Противопоказания/осторожность: язвенная болезнь, кровохарканье, бронхиальная астма без контроля.</li>
+<li>Не сочетать бездумно с противокашлевыми: мокрота будет образовываться, но кашель подавлен.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Рецепт. Функции. Правила выписывания лекарственных препаратов.</h2>
+    <p class="lead">Рецепт — письменное/электронное назначение врача и основание для отпуска рецептурного препарата.</p>
+<h3>Функции рецепта</h3>
+<ul>
+<li>Медицинская: назначение лечения.</li>
+<li>Юридическая: основание отпуска.</li>
+<li>Технологическая: задание на изготовление.</li>
+<li>Финансовая/учётная: особенно для льготных и ПКУ-препаратов.</li>
+</ul>
+<h3>Правила выписывания</h3>
+<ul>
+<li>Пишется разборчиво, с данными пациента и врача.</li>
+<li>Указывают ЛП, дозировку, лекарственную форму, количество, способ применения.</li>
+<li>Используются утверждённые формы рецептурных бланков.</li>
+<li>Исправления и сокращения допустимы только в пределах правил; сигнатура должна быть понятна пациенту.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 10</span><span class="bgrp">Раствор Люголя (с глицерином)</span></div>
 <p class="lf">Раствор Люголя для смазывания (наружный) — это глицериновый раствор йода (не водный).</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Lugoli 25 ml</span><span class="ru">Возьми: раствора Люголя 25 мл</span></div><div class="rx"><span class="lat">Da. Signa: Для смазывания зева.</span><span class="ru">Выдай. Обозначь: для смазывания зева</span></div><div class="rx rx-sep"><span class="lat">— — — состав (для смазывания):</span><span class="ru"></span></div><div class="rx"><span class="lat">Iodi 1,0 / Kalii iodidi 2,0 / Aquae 3,0 / Glycerini 94,0</span><span class="ru">Состав раствора для смазывания: йод / калия йодид / вода / глицерин</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">«Для смазывания» = состав с глицерином, на 100 г: йод 1, калия йодид 2, вода 3, глицерин 94. На 25,0 (÷4): йод 0,25 г; калия йодид 0,5 г; вода 0,75 г; глицерин 23,5 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Калия йодид растворить в воде (минимум, по прописи 0,75 г) — получаем концентрированный раствор йодида.</li><li>В этом растворе растворить йод (йод растворяется только в растворе йодида!).</li><li>Добавить глицерин, перемешать до однородного бурого раствора.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, бурый цвет. «Наружное», «Хранить в защищённом от света».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Муколитик = делает мокроту жидкой.</li><li>Показание: влажный кашель с вязкой мокротой.</li><li>Не путать с противокашлевыми.</li><li>Рецепт = назначение + юридическое основание.</li><li>Форма бланка зависит от препарата.</li><li>Сигнатура должна быть понятна.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b11">
+
+<section class="ticket" id="b11">
+  <div class="section-label"><span class="num">[ билет 11 ]</span><span>Противокашлевые средства</span><span class="line"></span></div>
+  <h2>Билет №11. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Противокашлевые средства. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Формы рецептурных бланков и сроки их хранения в аптечных организациях.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Противокашлевые средства. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Противокашлевые подавляют кашлевой рефлекс. Их используют при сухом мучительном кашле, когда мокроту выводить нечего.</p>
+<h3>Классификация</h3>
+<ul>
+<li>Центрального действия наркотические: кодеин — сейчас строго ограничен.</li>
+<li>Центрального действия ненаркотические: бутамират, глауцин, окселадин.</li>
+<li>Периферического действия: преноксдиазин — снижает чувствительность рецепторов дыхательных путей.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>Центральные уменьшают возбудимость кашлевого центра.</li>
+<li>Периферические уменьшают раздражение кашлевых рецепторов.</li>
+<li>Не лечат причину кашля, а уменьшают симптом.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: сухой непродуктивный кашель, коклюш, кашель перед процедурами.</li>
+<li>НЭ: сонливость, тошнота, аллергия; кодеин — угнетение дыхания, запор, зависимость.</li>
+<li>Противопоказание: влажный кашель с мокротой, потому мокрота будет задерживаться.</li>
+<li>Осторожно: дети, беременность, дыхательная недостаточность.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Формы рецептурных бланков и сроки их хранения в аптечных организациях.</h2>
+    <p class="lead">Рецептурные бланки отличаются по группам препаратов. От формы зависит оформление, срок действия, хранение в аптеке и строгий учёт.</p>
+<h3>Основные формы</h3>
+<ul>
+<li>Обычные рецептурные препараты — форма 107-1/у.</li>
+<li>Препараты, подлежащие ПКУ, и отдельные группы — форма 148-1/у-88.</li>
+<li>Льготные рецепты — отдельные формы для бесплатного/льготного отпуска.</li>
+<li>Наркотические и психотропные — специальные бланки строгой отчётности.</li>
+</ul>
+<h3>Хранение</h3>
+<ul>
+<li>Часть рецептов возвращают пациенту, часть остаётся в аптеке.</li>
+<li>Срок хранения зависит от формы и категории препарата.</li>
+<li>Хранят по группам, обеспечивают защиту персональных данных.</li>
+<li>После срока хранения уничтожают комиссионно по акту.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 11</span><span class="bgrp">Микстура (раствор с настойками)</span></div>
 <p class="lf">Микстура — жидкая ЛФ для приёма внутрь: раствор солей + настойки. Содержит анальгин (сп.Б) и настойку красавки.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Analgini 3,0</span><span class="ru">Возьми: анальгина 3,0 г</span></div><div class="rx"><span class="lat">Glucosi 2,0</span><span class="ru">Глюкозы 2,0 г</span></div><div class="rx"><span class="lat">Tincturae Belladonnae 8 ml</span><span class="ru">Настойки красавки 8 мл</span></div><div class="rx"><span class="lat">Tincturae Valerianae 10 ml</span><span class="ru">Настойки валерианы 10 мл</span></div><div class="rx"><span class="lat">Aquae purificatae 200 ml</span><span class="ru">Воды очищенной 200 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 столовой ложке 3 раза в день.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 столовой ложке 3 раза в день</span></div></div>
@@ -170,168 +806,1491 @@ a{color:var(--ink);}
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Объём всего минимум ≈ 200 + 18 (настойки) = <b>218 мл</b> (без учёта КУО растворённых веществ). Столовая ложка = 15 мл. Анальгина на приём: 3,0×15/218 ≈ 0,206 г. Настойки красавки на приём: 8×15/218 ≈ 0,55 мл (примерно 25 капель, если 0,5 мл ≈23 капли).</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>В мерной посуде в воде очищенной (200 мл) растворить анальгин и глюкозу.</li><li>Профильтровать раствор во флакон для отпуска.</li><li>Добавить настойки (спиртовые) в последнюю очередь — сначала с меньшим содержанием спирта, затем с большим.</li><li>Укупорить, оформить.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, цвет. «Внутреннее», «Обращаться осторожно» (настойка красавки), «Хранить в прохладном месте», «Перед употреблением взбалтывать» (если выпадет осадок от настоек).</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Сухой кашель — можно подавлять.</li><li>Влажный кашель — нельзя бездумно.</li><li>Кодеин = строгий контроль и риск зависимости.</li><li>Форма бланка зависит от препарата.</li><li>Часть рецептов остаётся в аптеке.</li><li>Сроки и уничтожение — по категории.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b12">
+
+<section class="ticket" id="b12">
+  <div class="section-label"><span class="num">[ билет 12 ]</span><span>Гипотензивные средства, влияющие на ренин-ангиотензиновую систему</span><span class="line"></span></div>
+  <h2>Билет №12. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Гипотензивные средства, влияющие на ренин-ангиотензиновую систему. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Отпуск лекарственных препаратов по рецептам врачей. Сроки обслуживания выписанных рецептов.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Гипотензивные средства, влияющие на ренин-ангиотензиновую систему. Номенклатура, классификация, механизм действия, показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Гипотензивные средства, влияющие на РААС, снижают давление через систему ренин → ангиотензин II → альдостерон. Это базовая группа при гипертонии и сердечной недостаточности.</p>
+<h3>Группы</h3>
+<ul>
+<li>Ингибиторы АПФ: эналаприл, лизиноприл, периндоприл, каптоприл.</li>
+<li>Блокаторы рецепторов ангиотензина II: лозартан, валсартан, телмисартан.</li>
+<li>Ингибитор ренина: алискирен — используется реже.</li>
+<li>Антагонисты альдостерона: спиронолактон, эплеренон — ближе к диуретикам, но связаны с РААС.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>ИАПФ уменьшают образование ангиотензина II.</li>
+<li>БРА блокируют AT1-рецепторы ангиотензина II.</li>
+<li>Меньше сосудосуживания и альдостерона → ниже давление и нагрузка на сердце.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: артериальная гипертензия, ХСН, нефропротекция при диабете, постинфарктные состояния.</li>
+<li>НЭ ИАПФ: сухой кашель, гиперкалиемия, гипотензия, ангиоотёк.</li>
+<li>НЭ БРА: гиперкалиемия, гипотензия; кашель реже.</li>
+<li>Противопоказания: беременность, двусторонний стеноз почечных артерий, выраженная гиперкалиемия.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Отпуск лекарственных препаратов по рецептам врачей. Сроки обслуживания выписанных рецептов.</h2>
+    <p class="lead">Отпуск по рецептам — это проверка рецепта, препарата, дозировки, срока действия и правил отпуска.</p>
+<h3>Что проверяет фармацевт</h3>
+<ul>
+<li>Форма рецепта подходит для препарата.</li>
+<li>Есть обязательные реквизиты: пациент, врач, подпись/печать/электронная подпись, дата.</li>
+<li>Доза, количество, способ применения.</li>
+<li>Срок действия рецепта не истёк.</li>
+</ul>
+<h3>Сроки обслуживания</h3>
+<ul>
+<li>Обычные рецепты обслуживают при наличии препарата сразу.</li>
+<li>При отсутствии препарата возможна отсроченная форма обслуживания по установленным правилам.</li>
+<li>Для льготных и жизненно необходимых препаратов действуют специальные сроки обеспечения.</li>
+<li>Нельзя отпускать препарат при неправильно оформленном рецепте без исправления/подтверждения.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 12</span><span class="bgrp">Микстура (раствор камфоры)</span></div>
 <p class="lf">Жидкая ЛФ для приёма внутрь. Камфора в воде почти нерастворима — вводят через спирт (получается мутноватая «камфорная вода»).</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Camphorae 2,0</span><span class="ru">Возьми: камфоры 2,0 г</span></div><div class="rx"><span class="lat">Aquae purificatae 180 ml</span><span class="ru">Воды очищенной 180 мл</span></div><div class="rx"><span class="lat">Tincturae Leonuri 6 ml</span><span class="ru">Настойки пустырника 6 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 столовой ложке 3 раза в день.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 столовой ложке 3 раза в день</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Объём ≈ 186 мл. Столовая ложка 15 мл. Камфоры на приём ≈ 2,0×15/186 ≈ 0,16 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Камфору растворить в минимальном количестве спирта этилового.</li><li>Полученный спиртовой раствор тонкой струёй при энергичном взбалтывании влить в воду очищенную (камфора выделяется в виде мельчайшей мути).</li><li>Добавить настойку пустырника, перемешать.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, опалесценция (мутноватая), запах камфоры. «Внутреннее», «Перед употреблением взбалтывать», «Хранить в прохладном».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>РААС повышает давление.</li><li>ИАПФ/БРА выключают эту систему.</li><li>Главные риски: кашель у ИАПФ, гиперкалиемия, беременность нельзя.</li><li>Проверить бланк и реквизиты.</li><li>Проверить дозу/срок.</li><li>Отпустить или оформить отсрочку/отказ по правилам.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b13">
+
+<section class="ticket" id="b13">
+  <div class="section-label"><span class="num">[ билет 13 ]</span><span>Антацидные средства</span><span class="line"></span></div>
+  <h2>Билет №13. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Антацидные средства. Классификация. Механизм действия, показания к применению, противопоказания, нежелательные эффекты.</div>
+    <div><span>Вопрос 2</span>Правила приемки товаров аптечного ассортимента. Приёмочный контроль. Показатели: «Описание», «Упаковка», «Маркировка». Сопроводительные документы.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Антацидные средства. Классификация. Механизм действия, показания к применению, противопоказания, нежелательные эффекты.</h2>
+    <p class="lead">Антациды нейтрализуют уже выделенную соляную кислоту в желудке. Это симптоматические средства: быстро облегчают изжогу, но не выключают секрецию кислоты надолго.</p>
+<h3>Классификация</h3>
+<ul>
+<li>Всасывающиеся: натрия гидрокарбонат, кальция карбонат — быстрые, но риск системных эффектов.</li>
+<li>Невсасывающиеся: алюминия гидроксид, магния гидроксид, фосфалюгель, альмагель, маалокс.</li>
+<li>Комбинированные: Al + Mg для баланса запор/послабление.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>Нейтрализация HCl в просвете желудка.</li>
+<li>Повышение pH, снижение активности пепсина.</li>
+<li>Некоторые средства обволакивают слизистую.</li>
+</ul>
+<h3>Показания и НЭ</h3>
+<ul>
+<li>Показания: изжога, гастрит с повышенной кислотностью, ГЭРБ как симптоматически, язвенная болезнь в составе терапии.</li>
+<li>НЭ: алюминий — запор; магний — диарея; кальций/натрий — отрыжка CO2, алкалоз при злоупотреблении.</li>
+<li>Противопоказания/осторожность: почечная недостаточность, гиперкальциемия, взаимодействия с антибиотиками/железом/сердечными гликозидами.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Правила приемки товаров аптечного ассортимента. Приёмочный контроль. Показатели: «Описание», «Упаковка», «Маркировка». Сопроводительные документы.</h2>
+    <p class="lead">Эта тема дублирует билет 9: приёмочный контроль защищает аптеку и пациента от некачественного товара.</p>
+<h3>Алгоритм</h3>
+<ul>
+<li>Сверить товар с накладной.</li>
+<li>Проверить описание, упаковку, маркировку.</li>
+<li>Проверить срок годности и условия транспортировки.</li>
+<li>Проверить сопроводительные документы.</li>
+<li>Занести данные во внутренний учёт.</li>
+</ul>
+<h3>Результат</h3>
+<ul>
+<li>Качественный товар допускают к хранению и реализации.</li>
+<li>Сомнительный товар помещают в карантинную зону.</li>
+<li>Расхождения оформляют актом и сообщают поставщику.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 13</span><span class="bgrp">Микстура на настое</span></div>
 <p class="lf">Микстура: настой валерианы (водное извлечение) + соль + настойка.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Infusi rhizomatum cum radicibus Valerianae 180 ml</span><span class="ru">Возьми: настоя корневищ с корнями валерианы 180 мл</span></div><div class="rx rx-sep"><span class="lat">(ex 6,0 — 180 ml)</span><span class="ru">Из 6,0 г сырья до 180 мл настоя</span></div><div class="rx"><span class="lat">Natrii bromidi 2,0</span><span class="ru">Натрия бромида 2,0 г</span></div><div class="rx"><span class="lat">Tincturae Leonuri 10 ml</span><span class="ru">Настойки пустырника 10 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 столовой ложке 3 раза в день.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 столовой ложке 3 раза в день</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Настой валерианы 1:30 → сырья 6,0 на 180 мл воды. Натрия бромид 2,0 растворяют в готовом настое. Итог ≈190 мл.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Приготовить настой валерианы: 6,0 измельчённого сырья залить водой, на водяной бане 15 мин, охладить 45 мин, процедить, довести водой до 180 мл.</li><li>В тёплом/охлаждённом настое растворить натрия бромид, профильтровать.</li><li>Добавить настойку пустырника, перемешать.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, цвет, запах валерианы. «Внутреннее», «Хранить в прохладном» (настой портится, срок 2–3 дня).</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Антацид = нейтрализует кислоту.</li><li>Быстро, но симптоматически.</li><li>Al крепит, Mg слабит.</li><li>Сказать алгоритм 5 шагов.</li><li>Дефектный товар не продаётся.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b14">
+
+<section class="ticket" id="b14">
+  <div class="section-label"><span class="num">[ билет 14 ]</span><span>Антисекреторные средства (ингибиторы протонной помпы, блокаторы Н2-гистаминовых рецепторов, м-холиноблокаторы)</span><span class="line"></span></div>
+  <h2>Билет №14. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Антисекреторные средства (ингибиторы протонной помпы, блокаторы Н2-гистаминовых рецепторов, м-холиноблокаторы). Механизм действия, показания к применению, противопоказания, нежелательные эффекты.</div>
+    <div><span>Вопрос 2</span>Понятие лекарственного препарата, лекарственного средства, лекарственной формы, фармацевтической субстанции, международного непатентованного, группировочного и торгового наименований.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Антисекреторные средства (ингибиторы протонной помпы, блокаторы Н2-гистаминовых рецепторов, м-холиноблокаторы). Механизм действия, показания к применению, противопоказания, нежелательные эффекты.</h2>
+    <p class="lead">Антисекреторные средства уменьшают образование соляной кислоты. Они действуют глубже антацидов: не нейтрализуют кислоту, а тормозят её секрецию.</p>
+<h3>Группы</h3>
+<ul>
+<li>Ингибиторы протонной помпы: омепразол, пантопразол, эзомепразол, рабепразол.</li>
+<li>H2-блокаторы: фамотидин, ранитидин исторически.</li>
+<li>М-холиноблокаторы: пирензепин; сейчас используются реже.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>ИПП блокируют H+/K+-АТФазу париетальных клеток — финальный этап секреции HCl.</li>
+<li>H2-блокаторы блокируют гистаминовые H2-рецепторы в желудке.</li>
+<li>М-холиноблокаторы уменьшают вагусную стимуляцию секреции.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: язвенная болезнь, ГЭРБ, эрозивный гастрит, эрадикация H. pylori, профилактика НПВС-гастропатии.</li>
+<li>НЭ ИПП: головная боль, ЖКТ-симптомы; при длительном приёме — риск дефицита Mg/B12, инфекции.</li>
+<li>H2-блокаторы: возможна толерантность, головная боль.</li>
+<li>Противопоказания зависят от препарата; осторожно при беременности, лактации, тяжёлой печёночной недостаточности.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Понятие лекарственного препарата, лекарственного средства, лекарственной формы, фармацевтической субстанции, международного непатентованного, группировочного и торгового наименований.</h2>
+    <p class="lead">Это базовые термины обращения лекарств. На экзамене важно не смешать вещество, препарат и форму.</p>
+<h3>Понятия</h3>
+<ul>
+<li>Лекарственное средство — вещество или комбинация веществ для профилактики, диагностики, лечения.</li>
+<li>Лекарственный препарат — ЛС в лекарственной форме, готовое к применению.</li>
+<li>Лекарственная форма — состояние/вид, удобный для применения: таблетки, растворы, мази и т.д.</li>
+<li>Фармацевтическая субстанция — действующее вещество для производства/изготовления ЛП.</li>
+</ul>
+<h3>Названия</h3>
+<ul>
+<li>МНН — международное непатентованное название действующего вещества: например, ибупрофен.</li>
+<li>Торговое название — бренд производителя: например, Нурофен.</li>
+<li>Группировочное название — используется, когда МНН нет или для комбинаций.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 14</span><span class="bgrp">Раствор HCl (разведение)</span></div>
 <p class="lf">Водный раствор кислоты хлористоводородной для приёма внутрь. Готовят разведением стандартной кислоты.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Acidi hydrochlorici 2% — 100 ml</span><span class="ru">Возьми: раствора кислоты хлористоводородной 2% — 100 мл</span></div><div class="rx"><span class="lat">Da. Signa: По 1 чайной ложке 3 раза в день перед едой.</span><span class="ru">Выдай. Обозначь: по 1 чайной ложке 3 раза в день перед едой</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Берут <b>разведённую</b> кислоту хлористоводородную 8,3% и принимают её за 100%. X = 100 × 2/100 = <b>2 мл</b> разведённой кислоты + воды до 100 мл (≈98 мл).</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Отмерить ≈98 мл воды очищенной во флакон.</li><li>Добавить 2 мл разведённой кислоты хлористоводородной (кислоту — В воду, не наоборот!).</li><li>Перемешать, довести водой до 100 мл.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность. «Внутреннее», «Обращаться осторожно», «Хранить в прохладном».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Антацид гасит кислоту, антисекреторный уменьшает её образование.</li><li>Главные — ИПП.</li><li>Показания: язва/ГЭРБ/H. pylori.</li><li>ЛС шире, ЛП конкретнее.</li><li>ЛФ — форма применения.</li><li>МНН ≠ торговое название.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b15">
+
+<section class="ticket" id="b15">
+  <div class="section-label"><span class="num">[ билет 15 ]</span><span>Гипогликемические средства</span><span class="line"></span></div>
+  <h2>Билет №15. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Гипогликемические средства. Классификация. Принципы назначения, нежелательные эффекты.</div>
+    <div><span>Вопрос 2</span>Обеспечение лекарственными средствами льготных категорий граждан.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Гипогликемические средства. Классификация. Принципы назначения, нежелательные эффекты.</h2>
+    <p class="lead">Гипогликемические средства снижают уровень глюкозы крови. В ответе важно не перечислять хаотично, а разделить: инсулины и пероральные/инъекционные неинсулиновые препараты.</p>
+<h3>Классификация</h3>
+<ul>
+<li>Инсулины: ультракороткие, короткие, средние, длительные.</li>
+<li>Секретагоги: производные сульфонилмочевины, глиниды — стимулируют выброс инсулина.</li>
+<li>Бигуанид: метформин — снижает инсулинорезистентность и продукцию глюкозы печенью.</li>
+<li>Ингибиторы ДПП-4, агонисты ГПП-1, ингибиторы SGLT2, тиазолидиндионы, ингибиторы α-глюкозидазы.</li>
+</ul>
+<h3>Принципы назначения</h3>
+<ul>
+<li>Тип 1 диабета — основа инсулин.</li>
+<li>Тип 2 — питание/нагрузка + метформин как частая стартовая база, дальше по показаниям.</li>
+<li>Учитывают HbA1c, риск гипогликемии, массу тела, почки, сердце, возраст.</li>
+<li>Самоконтроль глюкозы и обучение пациента обязательны.</li>
+</ul>
+<h3>Нежелательные эффекты</h3>
+<ul>
+<li>Главный риск инсулина и секретагогов — гипогликемия.</li>
+<li>Метформин: ЖКТ-симптомы, редко лактацидоз; противопоказан при тяжёлой почечной недостаточности.</li>
+<li>SGLT2: инфекции мочеполовых путей, обезвоживание.</li>
+<li>ГПП-1: тошнота, снижение аппетита; часто уменьшают вес.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Обеспечение лекарственными средствами льготных категорий граждан.</h2>
+    <p class="lead">Льготное обеспечение — система, при которой отдельные категории граждан получают лекарства бесплатно или со скидкой по установленным перечням.</p>
+<h3>Кто относится</h3>
+<ul>
+<li>Федеральные льготники.</li>
+<li>Региональные льготники.</li>
+<li>Пациенты с отдельными заболеваниями по программам обеспечения.</li>
+<li>Инвалиды, ветераны, дети и другие категории — по действующим нормативам.</li>
+</ul>
+<h3>Как работает</h3>
+<ul>
+<li>Врач выписывает льготный рецепт.</li>
+<li>Аптека отпускает препарат из перечня/по программе.</li>
+<li>Ведётся учёт рецептов и отпущенных ЛП.</li>
+<li>При отсутствии препарата возможна отсроченная выдача.</li>
+</ul>
+<h3>Что важно фармацевту</h3>
+<ul>
+<li>Проверить рецепт и право на льготу.</li>
+<li>Соблюдать сроки обслуживания.</li>
+<li>Не заменять препарат произвольно, если это запрещено назначением.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 15</span><span class="bgrp">Раствор формальдегида (из формалина)</span></div>
 <p class="lf">Водный раствор для наружного применения. Готовят разведением формалина.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Formaldehydi 25% — 500 ml</span><span class="ru">Возьми: раствора формальдегида 25% — 500 мл</span></div><div class="rx"><span class="lat">Da. Signa: Для обмывания ног, по 1 ст. ложке на стакан воды.</span><span class="ru">Выдай. Обозначь: для обмывания ног, по 1 столовой ложке на стакан воды</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Формалин = стандартный раствор формальдегида 36,5–37,5% (берём 37%). «Раствор формальдегида 25%» (химич. название) → пересчёт на формалин: X = 500 × 25/37 = <b>338 мл формалина</b> + воды очищенной до 500 мл (≈162 мл).</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Отмерить ≈162 мл воды очищенной.</li><li>Добавить 338 мл формалина, перемешать, довести до 500 мл.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, резкий запах. «Наружное», «Обращаться осторожно».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Инсулин отдельно.</li><li>Таблетки/инъекции неинсулиновые по механизму.</li><li>Главный контроль — гипогликемия и почки.</li><li>Категория граждан → льготный рецепт → отпуск → учёт.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b16">
+
+<section class="ticket" id="b16">
+  <div class="section-label"><span class="num">[ билет 16 ]</span><span>Лекарственные средства витаминов группы В</span><span class="line"></span></div>
+  <h2>Билет №16. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Лекарственные средства витаминов группы В. Номенклатура. Показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Законодательные основы фармацевтического консультирования.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Лекарственные средства витаминов группы В. Номенклатура. Показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Витамины группы B — водорастворимые коферменты. Они нужны для нервной системы, кроветворения, обмена белков/углеводов/жиров.</p>
+<h3>Номенклатура</h3>
+<ul>
+<li>B1 тиамин, B2 рибофлавин, B3/PP никотинамид, B5 пантотеновая кислота.</li>
+<li>B6 пиридоксин, B9 фолиевая кислота, B12 цианокобаламин.</li>
+<li>Комбинированные препараты: нейромультивит, мильгамма и аналоги.</li>
+</ul>
+<h3>Показания</h3>
+<ul>
+<li>Гипо- и авитаминозы.</li>
+<li>Невриты, невралгии, полинейропатии.</li>
+<li>Анемии: B12 и фолиевая кислота.</li>
+<li>Повышенная потребность: беременность, восстановление, неполноценное питание.</li>
+</ul>
+<h3>НЭ и противопоказания</h3>
+<ul>
+<li>Аллергические реакции, зуд, крапивница.</li>
+<li>B6 в высоких дозах длительно может давать нейропатию.</li>
+<li>Никотиновая кислота может вызывать приливы, зуд, влияние на печень.</li>
+<li>Противопоказания: гиперчувствительность; отдельные ограничения зависят от витамина и формы.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Законодательные основы фармацевтического консультирования.</h2>
+    <p class="lead">Фармконсультирование — профессиональная помощь покупателю в пределах компетенции фармацевта, без постановки диагноза.</p>
+<h3>Законодательная основа</h3>
+<ul>
+<li>Отпуск ЛП регулируется правилами отпуска и обращением лекарственных средств.</li>
+<li>Фармацевт обязан дать информацию о правильном применении, хранении, режиме дозирования по инструкции.</li>
+<li>Нельзя назначать рецептурные препараты вместо врача.</li>
+</ul>
+<h3>Что включает консультация</h3>
+<ul>
+<li>Уточнить симптомы и кому покупают препарат.</li>
+<li>Выявить красные флаги: беременность, ребёнок, высокая температура, кровь, сильная боль, хронические болезни.</li>
+<li>Предложить безрецептурное средство в рамках инструкции или направить к врачу.</li>
+<li>Объяснить способ применения, ограничения, хранение.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 16</span><span class="bgrp">Раствор спиртовой</span></div>
 <p class="lf">Спиртовой раствор для наружного применения.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Acidi salicylici 0,5</span><span class="ru">Возьми: кислоты салициловой 0,5 г</span></div><div class="rx"><span class="lat">Spiritus aethylici 70% — 50 ml</span><span class="ru">Спирта этилового 70% — 50 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: Протирать ступни ног.</span><span class="ru">Смешай. Выдай. Обозначь: протирать ступни ног</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Кислота салициловая 0,5 в 50 мл спирта = 1%. Спирт — наружный, обычно 70%.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>В отмеренном спирте этиловом растворить салициловую кислоту при перемешивании.</li><li>Профильтровать через вату.</li><li>Перелить во флакон.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность. «Наружное», «Огнеопасно», «Беречь от детей».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>B = обмен + нервы + кровь.</li><li>Назвать B1/B6/B12 обязательно.</li><li>Побочки в основном аллергия, но дозы тоже важны.</li><li>Консультация ≠ диагноз.</li><li>Безопасность и инструкция.</li><li>Красные флаги — к врачу.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b17">
+
+<section class="ticket" id="b17">
+  <div class="section-label"><span class="num">[ билет 17 ]</span><span>Пенициллины, классификация</span><span class="line"></span></div>
+  <h2>Билет №17. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Пенициллины, классификация. Спектр противомикробного действия. Показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Требования к персоналу аптечных организаций.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Пенициллины, классификация. Спектр противомикробного действия. Показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Пенициллины — β-лактамные бактерицидные антибиотики. Они нарушают синтез клеточной стенки бактерий, поэтому особенно активны против делящихся микроорганизмов.</p>
+<h3>Классификация</h3>
+<ul>
+<li>Природные: бензилпенициллин, феноксиметилпенициллин, бициллины.</li>
+<li>Пенициллиназоустойчивые: оксациллин.</li>
+<li>Аминопенициллины: ампициллин, амоксициллин.</li>
+<li>Антисинегнойные: карбенициллин, пиперациллин.</li>
+<li>Ингибиторозащищённые: амоксициллин/клавуланат, ампициллин/сульбактам.</li>
+</ul>
+<h3>Спектр и показания</h3>
+<ul>
+<li>Природные — грамположительные кокки, спирохеты, часть грамнегативных кокков.</li>
+<li>Аминопенициллины шире: часть грамотрицательных палочек.</li>
+<li>Защищённые работают против β-лактамазопродуцентов.</li>
+<li>Показания: ангина, пневмония, отит, инфекции кожи, сифилис, профилактика ревматизма, H. pylori в схемах.</li>
+</ul>
+<h3>НЭ и противопоказания</h3>
+<ul>
+<li>Главное — аллергия вплоть до анафилаксии.</li>
+<li>ЖКТ-нарушения, дисбактериоз, кандидоз.</li>
+<li>Противопоказание: аллергия на пенициллины; осторожно при аллергии на другие β-лактамы.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Требования к персоналу аптечных организаций.</h2>
+    <p class="lead">Персонал аптеки должен иметь профильное образование, допуск к работе, медосмотры и соблюдать санитарные/этические правила.</p>
+<h3>Квалификация</h3>
+<ul>
+<li>Фармацевт — СПО 33.02.01 «Фармация».</li>
+<li>Провизор — высшее фармацевтическое образование.</li>
+<li>Для самостоятельной работы нужна аккредитация специалиста.</li>
+<li>Периодическое повышение квалификации/НМО.</li>
+</ul>
+<h3>Медицинские и санитарные требования</h3>
+<ul>
+<li>Предварительные и периодические медосмотры.</li>
+<li>Личная медицинская книжка, где требуется.</li>
+<li>Спецодежда, гигиена рук, соблюдение санитарного режима.</li>
+</ul>
+<h3>Этика</h3>
+<ul>
+<li>Конфиденциальность.</li>
+<li>Корректное общение.</li>
+<li>Недопустимость навязывания и введения в заблуждение.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 17</span><span class="bgrp">Раствор масляный</span></div>
 <p class="lf">Масляный раствор для наружного применения (капли в нос). Ментол растворим в маслах.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Mentholi 0,2</span><span class="ru">Возьми: ментола 0,2 г</span></div><div class="rx"><span class="lat">Olei Vaselini 20,0</span><span class="ru">Масла вазелинового 20,0 г</span></div><div class="rx"><span class="lat">Misce. Da. Signa: Капли в нос.</span><span class="ru">Смешай. Выдай. Обозначь: капли в нос</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Ментол 0,2 в 20,0 масла = 1%.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Отвесить вазелиновое масло 20,0; можно слегка подогреть на водяной бане (40–50 °C).</li><li>Растворить ментол 0,2 при перемешивании до полного растворения.</li><li>Фильтровать не нужно (растворяется без остатка). Перелить во флакон.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, запах ментола. «Наружное», «Хранить в прохладном, защищённом от света».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>β-лактам → стенка бактерии → бактерицидно.</li><li>Группы с примерами.</li><li>Главная побочка — аллергия.</li><li>Образование → аккредитация → медосмотры → спецодежда → этика.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b18">
+
+<section class="ticket" id="b18">
+  <div class="section-label"><span class="num">[ билет 18 ]</span><span>Цефалоспорины, классификация</span><span class="line"></span></div>
+  <h2>Билет №18. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Цефалоспорины, классификация. Спектр противомикробного действия. Показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Информационные технологии и электронная коммерция на фармацевтическом рынке.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Цефалоспорины, классификация. Спектр противомикробного действия. Показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Цефалоспорины — β-лактамные антибиотики, близкие к пенициллинам, но делятся по поколениям. Чем выше поколение, тем шире активность против грамотрицательных бактерий, но это не абсолютное правило.</p>
+<h3>Поколения</h3>
+<ul>
+<li>I: цефазолин, цефалексин — грамположительные, хирургическая профилактика.</li>
+<li>II: цефуроксим, цефаклор — шире грам(-).</li>
+<li>III: цефотаксим, цефтриаксон, цефтазидим — тяжёлые инфекции, грамотрицательные.</li>
+<li>IV: цефепим — шире и устойчивее к β-лактамазам.</li>
+<li>V: цефтаролин — активность против MRSA у отдельных препаратов.</li>
+</ul>
+<h3>Механизм и спектр</h3>
+<ul>
+<li>Блокируют синтез клеточной стенки бактерий.</li>
+<li>Бактерицидные.</li>
+<li>Не действуют на вирусы; не все действуют на энтерококки/атипичных возбудителей.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: инфекции дыхательных путей, мочевых путей, кожи, сепсис, менингит, хирургическая профилактика.</li>
+<li>НЭ: аллергия, диарея, кандидоз, нарушения крови, местные реакции.</li>
+<li>Осторожно при аллергии на β-лактамы; возможна перекрёстная аллергия с пенициллинами.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Информационные технологии и электронная коммерция на фармацевтическом рынке.</h2>
+    <p class="lead">Информационные технологии в фармации — это электронные рецепты, маркировка, учёт, интернет-аптеки и дистанционный заказ.</p>
+<h3>ИТ в аптеке</h3>
+<ul>
+<li>Аптечные информационные системы.</li>
+<li>Электронные рецепты и электронный документооборот.</li>
+<li>Система маркировки и прослеживаемости.</li>
+<li>Онлайн-кассы, складской учёт, контроль сроков годности.</li>
+</ul>
+<h3>Электронная коммерция</h3>
+<ul>
+<li>Дистанционная торговля разрешена только при соблюдении специальных требований.</li>
+<li>Сайт/приложение не отменяет правил отпуска.</li>
+<li>Рецептурные препараты имеют ограничения по дистанционной продаже/доставке.</li>
+<li>Нужно обеспечить консультацию, достоверную информацию и условия хранения при доставке.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 18</span><span class="bgrp">Раствор-коллоид (желатин)</span></div>
 <p class="lf">Водный раствор желатина (коллоид) для приёма внутрь + сироп как вкусовая добавка.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Gelatinae 4% — 100 ml</span><span class="ru">Возьми: раствора желатина 4% — 100 мл</span></div><div class="rx"><span class="lat">Sirupi simplicis 5 ml</span><span class="ru">Сиропа простого 5 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 столовой ложке через один час.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 столовой ложке через один час</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Желатина 4,0 на 100 мл раствора. Сироп простой 5 мл — корригент; после добавления сиропа итоговый объём около 105 мл.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Желатин залить частью холодной воды очищенной, оставить для набухания на 30–40 мин.</li><li>Нагреть на водяной бане до полного растворения (НЕ кипятить — желатин разрушается).</li><li>Процедить, довести водой раствор желатина до 100 мл.</li><li>Добавить сахарный сироп 5 мл, перемешать.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность. «Внутреннее», «Хранить в прохладном» (желатин — питательная среда, быстро портится; свежеприготовленный).</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Цефалоспорины = β-лактамы по поколениям.</li><li>Механизм как у пенициллинов.</li><li>Побочки: аллергия + ЖКТ.</li><li>ИТ = учёт + рецепты + маркировка.</li><li>E-commerce возможна не для всего.</li><li>Правила отпуска сохраняются.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b19">
+
+<section class="ticket" id="b19">
+  <div class="section-label"><span class="num">[ билет 19 ]</span><span>Макролиды, классификация</span><span class="line"></span></div>
+  <h2>Билет №19. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Макролиды, классификация. Спектр противомикробного действия. Показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Санитарный режим аптечных организаций.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Макролиды, классификация. Спектр противомикробного действия. Показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Макролиды — антибиотики, которые блокируют синтез белка бактерий на 50S-субъединице рибосомы. Хороши против внутриклеточных и атипичных возбудителей.</p>
+<h3>Классификация и примеры</h3>
+<ul>
+<li>14-членные: эритромицин, кларитромицин.</li>
+<li>15-членные азалиды: азитромицин.</li>
+<li>16-членные: спирамицин, джозамицин.</li>
+</ul>
+<h3>Спектр и показания</h3>
+<ul>
+<li>Стрептококки, пневмококки, микоплазма, хламидия, легионелла.</li>
+<li>Показания: инфекции дыхательных путей, ЛОР-инфекции, хламидиоз, коклюш, альтернатива при аллергии на пенициллины.</li>
+<li>Кларитромицин/азитромицин входят в отдельные схемы, например при H. pylori по показаниям.</li>
+</ul>
+<h3>НЭ и противопоказания</h3>
+<ul>
+<li>НЭ: тошнота, боли в животе, диарея.</li>
+<li>Риск удлинения QT и аритмий.</li>
+<li>Лекарственные взаимодействия, особенно у эритромицина/кларитромицина через CYP3A4.</li>
+<li>Осторожно при тяжёлых болезнях печени и аритмиях.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Санитарный режим аптечных организаций.</h2>
+    <p class="lead">Санитарный режим нужен, чтобы не загрязнять лекарства, оборудование и рабочие зоны.</p>
+<h3>Что входит</h3>
+<ul>
+<li>Уборка помещений по графику.</li>
+<li>Дезинфекция поверхностей и оборудования.</li>
+<li>Личная гигиена персонала.</li>
+<li>Спецодежда и сменная обувь.</li>
+<li>Борьба с пылью, насекомыми, перекрёстным загрязнением.</li>
+</ul>
+<h3>Производственная аптека</h3>
+<ul>
+<li>Раздельные зоны для чистых/грязных операций.</li>
+<li>Обработка посуды и инвентаря.</li>
+<li>Асептические условия для стерильных/детских форм по требованиям.</li>
+<li>Контроль качества воды и изготовленных форм.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 19</span><span class="bgrp">Слизь крахмальная</span></div>
 <p class="lf">Крахмальная слизь (защитная ЛФ) + растворённая соль, для клизм.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Mucilaginis Amyli 100,0</span><span class="ru">Возьми: слизи крахмальной 100,0 г</span></div><div class="rx"><span class="lat">Natrii bromidi 2,0</span><span class="ru">Натрия бромида 2,0 г</span></div><div class="rx"><span class="lat">Misce. Da. Signa: Использовать на 3 клизмы.</span><span class="ru">Смешай. Выдай. Обозначь: использовать на 3 клизмы</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Крахмальная слизь — стандарт 2%: крахмала 2,0 на 100,0. Натрия бромид 2,0 растворяют в готовой слизи.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Крахмал 2,0 взмучить в части ХОЛОДНОЙ воды очищенной (≈8 мл, 1:4).</li><li>Тонкой струёй при помешивании влить в оставшуюся КИПЯЩУЮ воду, прокипятить 1–2 мин до образования прозрачной слизи.</li><li>В тёплой слизи растворить натрия бромид.</li><li>Довести до 100,0.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, без комков. «Наружное» (для клизм), свежеприготовленная.</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>50S → белок не синтезируется.</li><li>Атипичные возбудители.</li><li>Риски: ЖКТ, QT, взаимодействия.</li><li>Чистота помещений.</li><li>Гигиена персонала.</li><li>Особо строго в производственной аптеке.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b20">
+
+<section class="ticket" id="b20">
+  <div class="section-label"><span class="num">[ билет 20 ]</span><span>Сульфаниламиды, классификация</span><span class="line"></span></div>
+  <h2>Билет №20. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Сульфаниламиды, классификация. Спектр противомикробного действия. Показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Порядок назначения лекарственных препаратов.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Сульфаниламиды, классификация. Спектр противомикробного действия. Показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Сульфаниламиды нарушают синтез фолиевой кислоты у бактерий. Классический пример — ко-тримоксазол: сульфаметоксазол + триметоприм.</p>
+<h3>Классификация</h3>
+<ul>
+<li>Короткого/среднего действия: сульфадимезин и др. исторически.</li>
+<li>Комбинированные: ко-тримоксазол.</li>
+<li>Местные: сульфацетамид натрия в глазных каплях, серебра сульфадиазин для ожогов.</li>
+</ul>
+<h3>Механизм и спектр</h3>
+<ul>
+<li>Сульфаниламиды конкурируют с ПАБК и тормозят синтез фолатов.</li>
+<li>Триметоприм блокирует следующий этап — получается двойной блок.</li>
+<li>Спектр: часть грам+ и грам-, пневмоцисты, токсоплазмы для отдельных схем.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: инфекции мочевых путей, кишечные инфекции, пневмоцистная пневмония, токсоплазмоз — по конкретным препаратам.</li>
+<li>НЭ: аллергия, фотосенсибилизация, кристаллурия, угнетение кроветворения, синдром Стивенса-Джонсона.</li>
+<li>Противопоказания: беременность поздних сроков, новорождённые, тяжёлые болезни печени/почек, дефицит Г6ФД.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Порядок назначения лекарственных препаратов.</h2>
+    <p class="lead">Порядок назначения ЛП — это правила, по которым врач выбирает препарат, оформляет назначение и рецепт.</p>
+<h3>Назначение</h3>
+<ul>
+<li>Назначает медицинский работник в пределах полномочий.</li>
+<li>Учитываются диагноз, возраст, масса, противопоказания, взаимодействия.</li>
+<li>Препарат назначают по МНН, торговому названию — в установленных случаях.</li>
+<li>Указывается дозировка, кратность, путь введения, длительность.</li>
+</ul>
+<h3>Оформление</h3>
+<ul>
+<li>Назначение фиксируют в меддокументации.</li>
+<li>Рецепт оформляют на утверждённом бланке или электронно.</li>
+<li>Для отдельных групп есть ограничения по количеству и сроку действия.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 20</span><span class="bgrp">Раствор протаргола</span></div>
 <p class="lf">Водный раствор протаргола (серебра протеинат) для наружного применения — примочка.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Protargoli 0,3% — 50 ml</span><span class="ru">Возьми: раствора протаргола 0,3% — 50 мл</span></div><div class="rx"><span class="lat">Da. Signa: Примочка.</span><span class="ru">Выдай. Обозначь: примочка</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Протаргола: 0,3% × 50 мл = 0,15 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Отмерить всю воду очищенную (≈50 мл) в широкий сосуд.</li><li>Протаргол НАСЫПАТЬ тонким слоем на ПОВЕРХНОСТЬ воды и оставить на 15–20 мин БЕЗ перемешивания — он сам набухает и растворяется. НЕ взбалтывать (даёт пену) и НЕ нагревать.</li><li>Процедить через вату.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, цвет (жёлто-бурый). «Наружное», «Хранить в защищённом от света месте» (свежеприготовленный).</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Фолиевая кислота бактерий.</li><li>Ко-тримоксазол = двойной блок.</li><li>Главные риски: аллергия, кровь, кристаллурия.</li><li>Врач назначает.</li><li>МНН/доза/кратность/путь.</li><li>Рецепт по форме.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b21">
+
+<section class="ticket" id="b21">
+  <div class="section-label"><span class="num">[ билет 21 ]</span><span>Фторхинолоны, классификация</span><span class="line"></span></div>
+  <h2>Билет №21. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Фторхинолоны, классификация. Спектр противомикробного действия. Показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Порядок ценообразования на лекарственные средства.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Фторхинолоны, классификация. Спектр противомикробного действия. Показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Фторхинолоны — синтетические антибактериальные средства. Они блокируют ДНК-гиразу и топоизомеразу IV, поэтому бактерия не может нормально копировать ДНК.</p>
+<h3>Классификация и примеры</h3>
+<ul>
+<li>II поколение: ципрофлоксацин, офлоксацин.</li>
+<li>III: левофлоксацин.</li>
+<li>IV: моксифлоксацин.</li>
+<li>Ципрофлоксацин сильнее по грам(-), левофлоксацин/моксифлоксацин — респираторные фторхинолоны.</li>
+</ul>
+<h3>Спектр и показания</h3>
+<ul>
+<li>Грамотрицательные бактерии, часть грамположительных, некоторые атипичные.</li>
+<li>Показания: инфекции мочевых путей, дыхательных путей, кишечные инфекции, простатит, тяжёлые госпитальные инфекции — строго по показаниям.</li>
+<li>Не препараты для лёгкой простуды; используются осторожно из-за серьёзных НЭ.</li>
+</ul>
+<h3>НЭ и противопоказания</h3>
+<ul>
+<li>НЭ: поражение сухожилий вплоть до разрыва, QT, фотосенсибилизация, нарушения ЦНС, дисгликемия.</li>
+<li>Противопоказания/ограничения: беременность, лактация, детский возраст, эпилепсия/судорожная готовность, патология сухожилий.</li>
+<li>Не сочетать с антацидами/железом/кальцием одновременно — снижается всасывание.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Порядок ценообразования на лекарственные средства.</h2>
+    <p class="lead">Ценообразование на лекарства особенно важно для ЖНВЛП: государство регулирует предельные цены и надбавки.</p>
+<h3>Основы</h3>
+<ul>
+<li>Для ЖНВЛП регистрируются предельные отпускные цены производителя.</li>
+<li>Регионы устанавливают предельные оптовые и розничные надбавки.</li>
+<li>Аптека не должна превышать предельную розничную цену.</li>
+<li>Для не-ЖНВЛП цена формируется свободнее, но с учётом общих правил торговли.</li>
+</ul>
+<h3>Что проверяет аптека</h3>
+<ul>
+<li>Принадлежность к ЖНВЛП.</li>
+<li>Зарегистрированную цену.</li>
+<li>Размер надбавки.</li>
+<li>Корректность ценника и кассового отпуска.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 21</span><span class="bgrp">Раствор колларгола</span></div>
 <p class="lf">Водный раствор колларгола (серебро коллоидное) для наружного применения.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Collargoli 2% — 200 ml</span><span class="ru">Возьми: раствора колларгола 2% — 200 мл</span></div><div class="rx"><span class="lat">Da. Signa: Для спринцеваний.</span><span class="ru">Выдай. Обозначь: для спринцеваний</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Колларгола: 2% × 200 мл = 4,0 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Колларгол РАСТЕРЕТЬ в ступке с небольшим количеством воды (примерно равным массе колларгола) до растворения.</li><li>Добавить остальную воду очищенную до 200 мл.</li><li>Процедить через вату.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность (без осадка), цвет. «Наружное», «Хранить в защищённом от света».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>ДНК-гираза → бактерия не делится.</li><li>Сильные, но с серьёзными ограничениями.</li><li>Дети/беременность/сухожилия — помнить.</li><li>ЖНВЛП регулируются.</li><li>Цена производителя + надбавки.</li><li>Аптека не превышает предел.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b22">
+
+<section class="ticket" id="b22">
+  <div class="section-label"><span class="num">[ билет 22 ]</span><span>Противогрибковые средства, классификация</span><span class="line"></span></div>
+  <h2>Билет №22. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Противогрибковые средства, классификация. Спектр противогрибкового действия. Показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Предметно-количественный учет лекарственных средств.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Противогрибковые средства, классификация. Спектр противогрибкового действия. Показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Противогрибковые средства действуют на грибы, а не на бактерии. Основная мишень — клеточная мембрана гриба и её эргостерол.</p>
+<h3>Классификация</h3>
+<ul>
+<li>Полиены: нистатин, амфотерицин B — связываются с эргостеролом.</li>
+<li>Азолы: клотримазол, кетоконазол, флуконазол, итраконазол — тормозят синтез эргостерола.</li>
+<li>Аллиламины: тербинафин — кожа/ногти.</li>
+<li>Эхинокандины: каспофунгин — тяжёлые системные микозы.</li>
+</ul>
+<h3>Спектр и показания</h3>
+<ul>
+<li>Кандидоз кожи/слизистых, вагинальный кандидоз.</li>
+<li>Дерматомикозы, онихомикозы.</li>
+<li>Системные микозы у тяжёлых пациентов — специальные препараты.</li>
+<li>Выбор зависит от локализации: местно или системно.</li>
+</ul>
+<h3>НЭ и противопоказания</h3>
+<ul>
+<li>Азолы: гепатотоксичность, много лекарственных взаимодействий.</li>
+<li>Амфотерицин B: нефротоксичность, инфузионные реакции.</li>
+<li>Тербинафин: влияние на печень, ЖКТ, кожные реакции.</li>
+<li>Противопоказания: гиперчувствительность; системные формы осторожно при болезнях печени, беременности.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Предметно-количественный учет лекарственных средств.</h2>
+    <p class="lead">Предметно-количественный учёт — строгий учёт движения отдельных лекарств: поступление, расход, остаток.</p>
+<h3>Что подлежит ПКУ</h3>
+<ul>
+<li>Наркотические и психотропные ЛП.</li>
+<li>Сильнодействующие/ядовитые и другие препараты из утверждённых перечней.</li>
+<li>Препараты с ограниченным оборотом по нормативам.</li>
+</ul>
+<h3>Как ведут</h3>
+<ul>
+<li>Журналы/электронные системы учёта.</li>
+<li>Отражают приход, расход, остатки.</li>
+<li>Проводят инвентаризацию.</li>
+<li>Хранят документы и обеспечивают ограниченный доступ.</li>
+</ul>
+<h3>Ответственность</h3>
+<ul>
+<li>Ошибки в ПКУ считаются серьёзным нарушением.</li>
+<li>Нельзя отпускать без оснований и документов.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 22</span><span class="bgrp">Раствор водно-глицериновый</span></div>
 <p class="lf">Водно-глицериновый раствор ихтиола для наружного применения (тампоны).</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Ichthyoli 2% — 10 ml</span><span class="ru">Возьми: раствора ихтиола 2% — 10 мл</span></div><div class="rx"><span class="lat">Glycerini 10,0</span><span class="ru">Глицерина 10,0 г</span></div><div class="rx"><span class="lat">Misce. Da. Signa: Для тампонов.</span><span class="ru">Смешай. Выдай. Обозначь: для тампонов</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Ихтиола: 2% × 10 мл = 0,2 г (в 10 мл воды). + глицерин 10,0.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Ихтиол растворить/растереть с водой очищенной (10 мл) — растворим в воде и глицерине.</li><li>Добавить глицерин 10,0, перемешать до однородности.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, тёмный цвет, запах ихтиола. «Наружное».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Грибы = эргостерол.</li><li>Местные/системные формы.</li><li>Системные азолы требуют контроля печени и взаимодействий.</li><li>ПКУ = приход/расход/остаток.</li><li>Строгие группы.</li><li>Документы и инвентаризация.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b23">
+
+<section class="ticket" id="b23">
+  <div class="section-label"><span class="num">[ билет 23 ]</span><span>Нестероидные противовоспалительные средства, классификация</span><span class="line"></span></div>
+  <h2>Билет №23. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Нестероидные противовоспалительные средства, классификация. Механизм действия, показания, противопоказания, нежелательные эффекты.</div>
+    <div><span>Вопрос 2</span>Продвижение товаров на фармацевтическом рынке.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Нестероидные противовоспалительные средства, классификация. Механизм действия, показания, противопоказания, нежелательные эффекты.</h2>
+    <p class="lead">НПВС подавляют воспаление, боль и жар через блокаду циклооксигеназы COX и уменьшение синтеза простагландинов.</p>
+<h3>Классификация</h3>
+<ul>
+<li>Неселективные COX-1/COX-2: ибупрофен, диклофенак, напроксен, индометацин.</li>
+<li>Преимущественно COX-2: мелоксикам, нимесулид.</li>
+<li>Селективные COX-2: целекоксиб, эторикоксиб.</li>
+<li>Отдельно: ацетилсалициловая кислота имеет антиагрегантный эффект в малых дозах.</li>
+</ul>
+<h3>Механизм и эффекты</h3>
+<ul>
+<li>Блок COX → меньше простагландинов.</li>
+<li>Эффекты: обезболивающий, жаропонижающий, противовоспалительный.</li>
+<li>Аспирин необратимо снижает агрегацию тромбоцитов.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: боль, лихорадка, воспалительные заболевания суставов, дисменорея.</li>
+<li>НЭ: гастропатия, язвы/кровотечения, нефротоксичность, повышение АД, бронхоспазм у чувствительных.</li>
+<li>Противопоказания: язвенная болезнь в обострении, кровотечения, тяжёлая почечная/печёночная недостаточность, аспириновая астма, III триместр беременности.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Продвижение товаров на фармацевтическом рынке.</h2>
+    <p class="lead">Продвижение в фармации должно увеличивать продажи, но не нарушать закон, этику и правила рекламы лекарств.</p>
+<h3>Инструменты</h3>
+<ul>
+<li>Реклама безрецептурных препаратов в рамках закона.</li>
+<li>Выкладка и мерчандайзинг.</li>
+<li>Акции на разрешённые товары.</li>
+<li>Информационные материалы, консультации, программы лояльности.</li>
+</ul>
+<h3>Ограничения</h3>
+<ul>
+<li>Нельзя вводить в заблуждение.</li>
+<li>Нельзя обещать гарантированное излечение.</li>
+<li>Рецептурные препараты нельзя рекламировать населению как OTC.</li>
+<li>Фармработник не должен подменять назначение врача продажей.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 23</span><span class="bgrp">Суспензия (микстура)</span></div>
 <p class="lf">Суспензия для приёма внутрь: висмута нитрат основной в воде не растворяется → взвесь.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Bismuthi subnitratis 4,0</span><span class="ru">Возьми: висмута нитрата основного 4,0 г</span></div><div class="rx"><span class="lat">Aquae purificatae 200 ml</span><span class="ru">Воды очищенной 200 мл</span></div><div class="rx"><span class="lat">Sirupi simplicis 10 ml</span><span class="ru">Сиропа простого 10 мл</span></div><div class="rx"><span class="lat">Glycerini 15,0</span><span class="ru">Глицерина 15,0 г</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 десертной ложке 3 раза в день.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 десертной ложке 3 раза в день</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Висмута нитрат 4,0 — нерастворим (суспензия). Объём ≈225 мл.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Висмута нитрат основной растереть в ступке с частью воды (или с глицерином как вспом. жидкостью) до тончайшей взвеси.</li><li>Постепенно добавить остальную воду, сироп и глицерин (повышает вязкость, стабилизирует взвесь).</li><li>Перенести во флакон.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность взвеси, ресуспендируемость. «Внутреннее», «Перед употреблением взбалтывать», «Хранить в прохладном».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>COX → простагландины.</li><li>Три эффекта: боль/жар/воспаление.</li><li>Главные риски: желудок, почки, бронхоспазм.</li><li>Продвижение разрешено, но ограничено.</li><li>OTC можно рекламировать по правилам.</li><li>Rx населению не продвигаем.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b24">
+
+<section class="ticket" id="b24">
+  <div class="section-label"><span class="num">[ билет 24 ]</span><span>Стероидные противовоспалительные средства (глюкокортикостероиды)</span><span class="line"></span></div>
+  <h2>Билет №24. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Стероидные противовоспалительные средства (глюкокортикостероиды). Номенклатура. Показания к применению, нежелательные эффекты.</div>
+    <div><span>Вопрос 2</span>Мерчандайзинг. Правила выкладки товара. Последовательность размещения отделов и оборудования в торговом зале.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Стероидные противовоспалительные средства (глюкокортикостероиды). Номенклатура. Показания к применению, нежелательные эффекты.</h2>
+    <p class="lead">Глюкокортикостероиды — мощные противовоспалительные и иммунодепрессивные средства. Они действуют через внутриклеточные рецепторы и меняют синтез белков воспаления.</p>
+<h3>Примеры</h3>
+<ul>
+<li>Гидрокортизон — ближе к естественному кортизолу.</li>
+<li>Преднизолон, метилпреднизолон.</li>
+<li>Дексаметазон, бетаметазон — сильные и длительные.</li>
+<li>Местные формы: мази, кремы, ингаляционные ГКС.</li>
+</ul>
+<h3>Показания</h3>
+<ul>
+<li>Аллергические реакции и анафилаксия как часть терапии.</li>
+<li>Бронхиальная астма, ХОБЛ.</li>
+<li>Аутоиммунные заболевания, ревматология.</li>
+<li>Кожные воспалительные заболевания, шоковые состояния, заместительная терапия при недостаточности коры надпочечников.</li>
+</ul>
+<h3>НЭ</h3>
+<ul>
+<li>При системном длительном применении: синдром Иценко-Кушинга, гипергликемия, остеопороз, язвы, задержка натрия/воды, гипертензия.</li>
+<li>Иммунодепрессия и риск инфекций.</li>
+<li>Подавление надпочечников — нельзя резко отменять после длительного курса.</li>
+<li>Местные: атрофия кожи, кандидоз при ингаляциях.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Мерчандайзинг. Правила выкладки товара. Последовательность размещения отделов и оборудования в торговом зале.</h2>
+    <p class="lead">Мерчандайзинг — организация торгового зала и выкладки, чтобы покупатель быстро находил товар, а аптека соблюдала правила отпуска.</p>
+<h3>Выкладка</h3>
+<ul>
+<li>Товары группируют по категориям и логике спроса.</li>
+<li>Рецептурные препараты не выкладывают в свободный доступ.</li>
+<li>OTC, косметика, медизделия — по зонам.</li>
+<li>Соблюдают условия хранения: свет, температура, влажность.</li>
+</ul>
+<h3>Торговый зал</h3>
+<ul>
+<li>Входная зона, зона ожидания, кассовая зона.</li>
+<li>Информационные материалы должны быть корректными.</li>
+<li>Ценники читаемые и соответствуют товару.</li>
+<li>Холодовая цепь и особые условия важнее красивой выкладки.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 24</span><span class="bgrp">Болтушка (суспензия наружная)</span></div>
 <p class="lf">Суспензия для наружного применения (болтушка) спирто-водная: сера не растворяется.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Sulfuris depurati 50,0</span><span class="ru">Возьми: серы очищенной 50,0 г</span></div><div class="rx"><span class="lat">Resorcini 2,0</span><span class="ru">Резорцина 2,0 г</span></div><div class="rx"><span class="lat">Spiritus aethylici 96% — 50 ml</span><span class="ru">Спирта этилового 96% — 50 мл</span></div><div class="rx"><span class="lat">Aquae purificatae 200 ml</span><span class="ru">Воды очищенной 200 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: Для протирания кожи лица.</span><span class="ru">Смешай. Выдай. Обозначь: для протирания кожи лица</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Сера очищенная 50,0 — нерастворима; твёрдая фаза значительно больше 3%, поэтому суспензию готовят <b>по массе</b>, а не как разбавленный раствор по объёму. Резорцин 2,0 растворим. Спирт 96% — 50 мл, вода — 200 мл; итог указывают как массу/объём по прописи, без пересчёта в условные «≈250 мл» как основного контроля.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Резорцин растворить в воде очищенной.</li><li>Серу очищенную как гидрофобное вещество тщательно растереть в ступке с частью спирта как смачивающей жидкостью до тончайшей пульпы.</li><li>Постепенно добавить раствор резорцина при растирании, затем оставшийся спирт.</li><li>Перенести во флакон, оформить как концентрированную суспензию для наружного применения.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, ресуспендируемость. «Наружное», «Перед употреблением взбалтывать», «Огнеопасно».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>ГКС = мощно против воспаления и иммунитета.</li><li>Показания широкие.</li><li>Главное: много системных побочек и отмена постепенно.</li><li>Выкладка помогает, но не нарушает режим отпуска.</li><li>Rx не в свободный доступ.</li><li>Хранение важнее маркетинга.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b25">
+
+<section class="ticket" id="b25">
+  <div class="section-label"><span class="num">[ билет 25 ]</span><span>Характеристика лекарственного растительного сырья, содержащего антрагликозиды</span><span class="line"></span></div>
+  <h2>Билет №25. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Характеристика лекарственного растительного сырья, содержащего антрагликозиды. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</div>
+    <div><span>Вопрос 2</span>Фармацевтический маркетинг и его особенности.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Характеристика лекарственного растительного сырья, содержащего антрагликозиды. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</h2>
+    <p class="lead">ЛРС с антрагликозидами действует как стимулирующее слабительное. Активные вещества раздражают рецепторы толстой кишки и усиливают перистальтику.</p>
+<h3>Сырьё и вещества</h3>
+<ul>
+<li>Лист сенны, кора крушины, корень ревеня.</li>
+<li>Действующие вещества: антрагликозиды/антраценпроизводные.</li>
+<li>Эффект обычно развивается через 8-12 часов, поэтому часто принимают на ночь.</li>
+</ul>
+<h3>Механизм и показания</h3>
+<ul>
+<li>В кишечнике превращаются в активные агликоны.</li>
+<li>Раздражают рецепторы толстой кишки и уменьшают всасывание воды.</li>
+<li>Показания: атонические запоры, подготовка к процедурам по назначению.</li>
+</ul>
+<h3>Противопоказания и побочки</h3>
+<ul>
+<li>НЭ: спазмы, боли в животе, диарея, потеря электролитов, привыкание при длительном применении.</li>
+<li>Противопоказания: кишечная непроходимость, острые воспалительные заболевания живота, кровотечения, беременность/лактация с осторожностью, дети — по возрасту.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Фармацевтический маркетинг и его особенности.</h2>
+    <p class="lead">Фармацевтический маркетинг учитывает особенность товара: лекарство влияет на здоровье, поэтому продвижение ограничено этикой и законом.</p>
+<h3>Особенности</h3>
+<ul>
+<li>Покупатель часто не специалист и нуждается в консультации.</li>
+<li>Спрос зависит от назначений врачей, сезонности, заболеваемости.</li>
+<li>Есть рецептурный режим и ограничения рекламы.</li>
+<li>Качество и безопасность важнее обычной коммерческой логики.</li>
+</ul>
+<h3>Элементы маркетинга</h3>
+<ul>
+<li>Ассортимент.</li>
+<li>Цена.</li>
+<li>Место продажи.</li>
+<li>Продвижение.</li>
+<li>Сервис и консультация.</li>
+<li>Анализ спроса и товарных остатков.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 25</span><span class="bgrp">Эмульсия масляная</span></div>
 <p class="lf">Масляная эмульсия для приёма внутрь, камфора растворена в масляной фазе.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Emulsi oleosi 120,0</span><span class="ru">Возьми: эмульсии масляной 120,0 г</span></div><div class="rx"><span class="lat">Camphorae 1,5</span><span class="ru">Камфоры 1,5 г</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 столовой ложке 3 раза в день.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 столовой ложке 3 раза в день</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Эмульсия масляная по умолчанию 10% (1:10): масла 12,0; эмульгатор (желатоза) 6,0 (½ от масла); вода для первичной эмульсии ≈9 мл; вода для разбавления — до 120,0. Камфору 1,5 растворяют в масле.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Камфору 1,5 растворить в отвешенном масле (12,0).</li><li>Приготовить первичную эмульсию (корпус): масло+камфора + желатоза 6,0 + вода ≈9 мл, растереть в ступке до характерного потрескивания.</li><li>Постепенно разбавить водой очищенной до 120,0 при перемешивании.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, отсутствие расслоения. «Внутреннее», «Перед употреблением взбалтывать», «Хранить в прохладном» (свежеприготовленная).</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Антрагликозиды = слабительное.</li><li>Работают в толстой кишке.</li><li>Не для постоянного ежедневного применения.</li><li>Маркетинг в аптеке не как в супермаркете.</li><li>Ограничения рекламы и рецептурности.</li><li>Сервис и доверие важны.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b26">
+
+<section class="ticket" id="b26">
+  <div class="section-label"><span class="num">[ билет 26 ]</span><span>Характеристика лекарственного растительного сырья, содержащего дубильные вещества</span><span class="line"></span></div>
+  <h2>Билет №26. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Характеристика лекарственного растительного сырья, содержащего дубильные вещества. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</div>
+    <div><span>Вопрос 2</span>Требования к рекламе лекарственных препаратов.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Характеристика лекарственного растительного сырья, содержащего дубильные вещества. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</h2>
+    <p class="lead">Дубильные вещества оказывают вяжущее действие: связывают белки поверхности тканей и образуют защитную плёнку.</p>
+<h3>Сырьё</h3>
+<ul>
+<li>Кора дуба, корневища змеевика, корневища лапчатки, листья черники, плоды черёмухи.</li>
+<li>Действующие вещества: таннины/дубильные вещества.</li>
+</ul>
+<h3>Механизм и действие</h3>
+<ul>
+<li>Осаждают белки на поверхности слизистой/кожи.</li>
+<li>Уменьшают воспаление, экссудацию, раздражение.</li>
+<li>Обладают умеренным противомикробным и кровоостанавливающим местным эффектом.</li>
+</ul>
+<h3>Показания и ограничения</h3>
+<ul>
+<li>Показания: диарея, стоматит, гингивит, фарингит для полосканий, мокнущие воспаления кожи.</li>
+<li>НЭ: запор при приёме внутрь, раздражение при высокой концентрации.</li>
+<li>Противопоказания: индивидуальная чувствительность; длительно внутрь нежелательно.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Требования к рекламе лекарственных препаратов.</h2>
+    <p class="lead">Реклама лекарств должна быть достоверной и не побуждать к опасному самолечению.</p>
+<h3>Общие требования</h3>
+<ul>
+<li>Реклама не должна гарантировать эффект и отсутствие побочек.</li>
+<li>Нельзя создавать впечатление, что консультация врача не нужна.</li>
+<li>Должно быть предупреждение о необходимости ознакомиться с инструкцией/проконсультироваться.</li>
+<li>Нельзя вводить в заблуждение составом, свойствами, безопасностью.</li>
+</ul>
+<h3>Ограничения</h3>
+<ul>
+<li>Рецептурные препараты не рекламируют населению.</li>
+<li>Наркотические/психотропные и отдельные группы имеют специальные запреты.</li>
+<li>Нельзя использовать образы медработников и рекомендации, если это запрещено форматом рекламы.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 26</span><span class="bgrp">Эмульсия семенная</span></div>
 <p class="lf">Семенная эмульсия (из семян тыквы). Эмульгатор — собственные белки семян.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Emulsi seminum Cucurbitae 80,0</span><span class="ru">Возьми: эмульсии семян тыквы 80,0 г</span></div><div class="rx"><span class="lat">Da. Signa: На один приём натощак.</span><span class="ru">Выдай. Обозначь: на один приём натощак</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Семенная эмульсия по умолчанию 1:10: семян тыквы 8,0 на 80,0 эмульсии. Дополнительный эмульгатор не нужен.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Семена тыквы очистить, растереть в ступке.</li><li>Постепенно, порциями, добавлять воду очищенную, продолжая растирать — образуется эмульсия.</li><li>Процедить, довести водой до 80,0.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность. «Внутреннее», свежеприготовленная (быстро портится), «Хранить в прохладном».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Дубильные = вяжущие.</li><li>Плёнка на слизистой.</li><li>Диарея и полоскания — типовые примеры.</li><li>Реклама = достоверность.</li><li>OTC населению можно по правилам.</li><li>Rx населению нельзя.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b27">
+
+<section class="ticket" id="b27">
+  <div class="section-label"><span class="num">[ билет 27 ]</span><span>Характеристика лекарственного растительного сырья, оказывающего желчегонное действие</span><span class="line"></span></div>
+  <h2>Билет №27. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Характеристика лекарственного растительного сырья, оказывающего желчегонное действие. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</div>
+    <div><span>Вопрос 2</span>Категории товаров аптечного ассортимента и виды их отпуска.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Характеристика лекарственного растительного сырья, оказывающего желчегонное действие. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</h2>
+    <p class="lead">Желчегонное ЛРС усиливает образование или выделение желчи. Важно различать холеретики и холекинетики.</p>
+<h3>Сырьё</h3>
+<ul>
+<li>Цветки бессмертника песчаного, кукурузные рыльца, плоды шиповника, листья мяты, цветки пижмы — по программе/методичке.</li>
+<li>Часто содержат флавоноиды, эфирные масла, горечи.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>Холеретики усиливают образование желчи печенью.</li>
+<li>Холекинетики усиливают сокращение желчного пузыря и выход желчи.</li>
+<li>Дополнительно возможны спазмолитический и противовоспалительный эффекты.</li>
+</ul>
+<h3>Показания и ограничения</h3>
+<ul>
+<li>Показания: хронический холецистит вне обострения, дискинезия желчевыводящих путей, гипомоторика.</li>
+<li>НЭ: аллергия, боли/спазмы, усиление желчеотделения.</li>
+<li>Противопоказания: желчнокаменная болезнь с риском закупорки, острый гепатит/холецистит, обтурационная желтуха.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Категории товаров аптечного ассортимента и виды их отпуска.</h2>
+    <p class="lead">Товары аптечного ассортимента шире лекарств: это медизделия, БАД, косметика, санитария, детские товары и др.</p>
+<h3>Категории</h3>
+<ul>
+<li>Лекарственные препараты.</li>
+<li>Медицинские изделия.</li>
+<li>БАД.</li>
+<li>Парфюмерно-косметическая продукция.</li>
+<li>Средства гигиены и ухода.</li>
+<li>Детское питание/товары, дезсредства и др. по ассортименту аптеки.</li>
+</ul>
+<h3>Виды отпуска</h3>
+<ul>
+<li>Рецептурный отпуск — по рецепту.</li>
+<li>Безрецептурный отпуск — OTC.</li>
+<li>Льготный отпуск — по специальным программам.</li>
+<li>Отпуск организациям/медорганизациям — по требованиям/договорам.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 27</span><span class="bgrp">Мазь комбинированная</span></div>
 <p class="lf">Мазь для наружного применения (нос): ментол + цинка оксид на вазелине.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Mentholi 0,1</span><span class="ru">Возьми: ментола 0,1 г</span></div><div class="rx"><span class="lat">Zinci oxydi 1,0</span><span class="ru">Цинка оксида 1,0 г</span></div><div class="rx"><span class="lat">Vaselini 8,0</span><span class="ru">Вазелина 8,0 г</span></div><div class="rx"><span class="lat">Misce fiat unguentum</span><span class="ru">Смешай, чтобы получилась мазь</span></div><div class="rx"><span class="lat">Da. Signa: Мазь для носа.</span><span class="ru">Выдай. Обозначь: мазь для носа</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Общая масса 9,1 г. Цинка оксид — суспензионный компонент (~11%), ментол — растворяется в основе.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Цинка оксид измельчить, растереть с частью основы (или с маслом вазелиновым) — суспензионная часть.</li><li>Ментол растворить в небольшом количестве слегка расплавленного вазелина.</li><li>Объединить с остальным вазелином, смешать до однородной мази.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность (нет крупинок), мягкая консистенция. «Наружное», «Хранить в прохладном».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Желчегонные: желчь образуется/выходит.</li><li>Назвать сырьё.</li><li>Камни и закупорка — опасно.</li><li>Ассортимент шире ЛП.</li><li>ЛП делятся Rx/OTC.</li><li>Льготный и организационный отпуск отдельно.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b28">
+
+<section class="ticket" id="b28">
+  <div class="section-label"><span class="num">[ билет 28 ]</span><span>Характеристика лекарственного растительного сырья, оказывающего диуретическое действие</span><span class="line"></span></div>
+  <h2>Билет №28. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Характеристика лекарственного растительного сырья, оказывающего диуретическое действие. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</div>
+    <div><span>Вопрос 2</span>Медицинская техника (тонометры, глюкометры, ингаляторы). Требования к качеству, маркировке, хранению, реализации.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Характеристика лекарственного растительного сырья, оказывающего диуретическое действие. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</h2>
+    <p class="lead">Диуретическое ЛРС увеличивает мочеотделение и часто дополнительно оказывает противовоспалительное/уроантисептическое действие.</p>
+<h3>Сырьё</h3>
+<ul>
+<li>Лист толокнянки, лист брусники, трава хвоща полевого, ортосифон тычиночный, почки берёзы.</li>
+<li>Действующие группы: флавоноиды, арбутин, сапонины, эфирные масла, соли калия.</li>
+</ul>
+<h3>Механизм и показания</h3>
+<ul>
+<li>Усиливают диурез, помогают выведению жидкости и продуктов обмена.</li>
+<li>Толокнянка/брусника дают уроантисептический эффект за счёт арбутина.</li>
+<li>Показания: лёгкие отёки, цистит/пиелит в составе терапии, мочекаменная болезнь вне обострения — по назначению.</li>
+</ul>
+<h3>Противопоказания и НЭ</h3>
+<ul>
+<li>НЭ: раздражение почек/ЖКТ, аллергия.</li>
+<li>Противопоказания: острые нефриты, выраженная почечная недостаточность, беременность для части сырья, крупные камни/обструкция.</li>
+<li>Нельзя заменять ими терапию серьёзных отёков при сердце/почках.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Медицинская техника (тонометры, глюкометры, ингаляторы). Требования к качеству, маркировке, хранению, реализации.</h2>
+    <p class="lead">Медицинская техника в аптеке — это изделия, а не лекарства. Для неё важны регистрация, исправность, инструкция и условия хранения.</p>
+<h3>Примеры</h3>
+<ul>
+<li>Тонометры.</li>
+<li>Глюкометры и тест-полоски.</li>
+<li>Ингаляторы/небулайзеры.</li>
+<li>Термометры, пульсоксиметры и др.</li>
+</ul>
+<h3>Требования</h3>
+<ul>
+<li>Регистрационное удостоверение медизделия.</li>
+<li>Целая упаковка, инструкция на русском языке.</li>
+<li>Гарантийные документы при необходимости.</li>
+<li>Маркировка: производитель, модель, серия, срок службы/годности для расходников.</li>
+</ul>
+<h3>Хранение и реализация</h3>
+<ul>
+<li>Соблюдать температуру/влажность.</li>
+<li>Не продавать повреждённые изделия.</li>
+<li>Пояснить покупателю базовые правила использования, но не ставить диагноз.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 28</span><span class="bgrp">Мазь (готовая, дозирование)</span></div>
 <p class="lf">Готовая цинковая мазь (официнальная 10%) — отвесить и оформить.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Unguenti Zinci 10,0</span><span class="ru">Возьми: мази цинковой 10,0 г</span></div><div class="rx"><span class="lat">Da. Signa: Смазывать поражённые места.</span><span class="ru">Выдай. Обозначь: смазывать поражённые места</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Цинковая мазь = цинка оксид 10% + вазелин 90%. Если готовить: цинка оксид 1,0 + вазелин 9,0 = 10,0.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Если есть готовая мазь — отвесить 10,0 в баночку.</li><li>Если готовить: цинка оксид 1,0 растереть с частью вазелина (или каплей масла вазелинового), добавить остальной вазелин до 10,0, смешать до однородности.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность. «Наружное».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Диуретическое сырьё = больше мочи.</li><li>Толокнянка/брусника = уроантисептики.</li><li>Острые почки и обструкция — осторожно.</li><li>Это медизделия.</li><li>Проверить РУ/маркировку/инструкцию.</li><li>Особенно важны тест-полоски и сроки.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b29">
+
+<section class="ticket" id="b29">
+  <div class="section-label"><span class="num">[ билет 29 ]</span><span>Характеристика лекарственного растительного сырья, оказывающего седативное действие</span><span class="line"></span></div>
+  <h2>Билет №29. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Характеристика лекарственного растительного сырья, оказывающего седативное действие. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</div>
+    <div><span>Вопрос 2</span>Понятие фармацевтической этики и деонтологии. Этический кодекс фармацевта.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Характеристика лекарственного растительного сырья, оказывающего седативное действие. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</h2>
+    <p class="lead">Седативное ЛРС мягко снижает возбуждение ЦНС, облегчает засыпание и уменьшает вегетативные проявления стресса.</p>
+<h3>Сырьё</h3>
+<ul>
+<li>Корневища с корнями валерианы, трава пустырника, трава пассифлоры, трава мелиссы, трава пиона уклоняющегося.</li>
+<li>Формы: настои, настойки, экстракты, сборы.</li>
+</ul>
+<h3>Механизм и действие</h3>
+<ul>
+<li>Усиливают тормозные процессы в ЦНС, снижают рефлекторную возбудимость.</li>
+<li>Валериана и пустырник также могут уменьшать сердцебиение функционального характера.</li>
+<li>Эффект мягкий, развивается не как у снотворных.</li>
+</ul>
+<h3>Показания и ограничения</h3>
+<ul>
+<li>Показания: раздражительность, лёгкая бессонница, неврозоподобные состояния, функциональная тахикардия.</li>
+<li>НЭ: сонливость, снижение внимания, аллергия.</li>
+<li>Противопоказания: гиперчувствительность; осторожно при вождении, алкоголе, сочетании с седативными.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Понятие фармацевтической этики и деонтологии. Этический кодекс фармацевта.</h2>
+    <p class="lead">Фармацевтическая этика — нормы поведения фармработника; деонтология — профессиональный долг и правила общения с пациентом.</p>
+<h3>Принципы</h3>
+<ul>
+<li>Не навреди.</li>
+<li>Конфиденциальность.</li>
+<li>Компетентность: не выходить за пределы знаний.</li>
+<li>Уважение к пациенту.</li>
+<li>Честность и отсутствие навязывания.</li>
+</ul>
+<h3>Этический кодекс</h3>
+<ul>
+<li>Корректное общение.</li>
+<li>Приоритет интересов пациента.</li>
+<li>Соблюдение законодательства.</li>
+<li>Недопустимость дискриминации.</li>
+<li>Профессиональное развитие.</li>
+</ul>
+<h3>На практике</h3>
+<ul>
+<li>Не обсуждать покупки пациента с посторонними.</li>
+<li>Не заменять врача.</li>
+<li>Предупреждать о важных рисках и способе применения.</li>
+<li>При красных флагах направлять к врачу.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 29</span><span class="bgrp">Мазь (ксероформ)</span></div>
 <p class="lf">Суспензионная мазь с ксероформом для наружного применения.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Unguenti Xeroformii 10,0</span><span class="ru">Возьми: мази ксероформа 10,0 г</span></div><div class="rx"><span class="lat">Da. Signa: Смазывать поражённые места.</span><span class="ru">Выдай. Обозначь: смазывать поражённые места</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Ксероформовая мазь по умолчанию официнальная <b>10%</b>: ксероформ 1,0 + вазелин 9,0 = 10,0. Если методичка требует 3%, это должно быть явно указано как отдельная концентрация.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Ксероформ измельчить, растереть с частью основы (вазелин) — суспензионный тип.</li><li>Добавить остальной вазелин до 10,0, смешать до однородности.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, жёлтый цвет. «Наружное».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Седативные травы = мягкое торможение ЦНС.</li><li>Валериана/пустырник — главные примеры.</li><li>Побочка: сонливость.</li><li>Этика = как правильно вести себя.</li><li>Деонтология = профессиональный долг.</li><li>Конфиденциальность и не навреди.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b30">
+
+<section class="ticket" id="b30">
+  <div class="section-label"><span class="num">[ билет 30 ]</span><span>Характеристика лекарственного растительного сырья, оказывающего общетонизирующее действие</span><span class="line"></span></div>
+  <h2>Билет №30. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Характеристика лекарственного растительного сырья, оказывающего общетонизирующее действие. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</div>
+    <div><span>Вопрос 2</span>Биологически активные добавки к пище. Номенклатура. Требования к качеству, маркировке, хранению, реализации.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Характеристика лекарственного растительного сырья, оказывающего общетонизирующее действие. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</h2>
+    <p class="lead">Общетонизирующее ЛРС, или адаптогены, повышает неспецифическую устойчивость организма и работоспособность при астении.</p>
+<h3>Сырьё</h3>
+<ul>
+<li>Корень женьшеня, корневища и корни элеутерококка, корневища родиолы розовой, плоды лимонника.</li>
+<li>Формы: настойки, экстракты, таблетки/капсулы.</li>
+</ul>
+<h3>Механизм и действие</h3>
+<ul>
+<li>Стимулируют ЦНС умеренно, повышают тонус и адаптацию к нагрузке.</li>
+<li>Могут улучшать работоспособность, снижать утомляемость.</li>
+<li>Не являются заменой сна, питания и лечения основной болезни.</li>
+</ul>
+<h3>Показания и ограничения</h3>
+<ul>
+<li>Показания: астения, переутомление, восстановление после болезней, гипотонические состояния.</li>
+<li>НЭ: бессонница, раздражительность, тахикардия, повышение АД.</li>
+<li>Противопоказания: гипертензия, бессонница, возбуждение, аритмии, беременность, детский возраст — по инструкции.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Биологически активные добавки к пище. Номенклатура. Требования к качеству, маркировке, хранению, реализации.</h2>
+    <p class="lead">БАД — не лекарственные препараты. Их используют как дополнительный источник веществ, но они не предназначены для лечения заболеваний.</p>
+<h3>Номенклатура</h3>
+<ul>
+<li>Витаминно-минеральные комплексы.</li>
+<li>Пробиотики/пребиотики.</li>
+<li>Растительные комплексы.</li>
+<li>Омега-3, аминокислоты, пищевые волокна и др.</li>
+</ul>
+<h3>Требования</h3>
+<ul>
+<li>Государственная регистрация/документы соответствия по категории.</li>
+<li>Маркировка: состав, способ применения, противопоказания, производитель, срок годности.</li>
+<li>Нельзя заявлять лечебные свойства как у лекарств.</li>
+<li>Хранение по условиям производителя.</li>
+</ul>
+<h3>Консультация</h3>
+<ul>
+<li>Объяснить: БАД не заменяет лекарство.</li>
+<li>Проверить возраст, беременность, хронические болезни, взаимодействия.</li>
+<li>Не обещать лечение.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 30</span><span class="bgrp">Суппозитории</span></div>
 <p class="lf">Суппозитории (ректальные свечи) на масле какао, метод выкатывания.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Anaesthesini 0,15</span><span class="ru">Возьми: анестезина 0,15 г</span></div><div class="rx"><span class="lat">Olei Cacao 1,0</span><span class="ru">Масла какао 1,0 г</span></div><div class="rx"><span class="lat">Misce fiat suppositorium</span><span class="ru">Смешай, чтобы получился суппозиторий</span></div><div class="rx"><span class="lat">Da tales doses numero 5</span><span class="ru">Выдай такие дозы числом 5</span></div><div class="rx"><span class="lat">Signa: По 1 суппозиторию 2 раза в день.</span><span class="ru">Обозначь: по 1 суппозиторию 2 раза в день</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">На 5 свечей: анестезин 0,15×5 = 0,75 г; масло какао 1,0×5 = 5,0 г. Масса 1 свечи ≈ 1,15 г.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Анестезин измельчить в мельчайший порошок.</li><li>Масло какао натереть (на тёрке), смешать с анестезином, добавить при необходимости несколько капель связующего, вымесить пластичную массу.</li><li>Выкатать стержень, разделить на 5 равных частей, сформировать суппозитории (метод выкатывания). Альтернатива — метод выливания в формы.</li><li>Завернуть каждую в вощёную бумагу.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность, одинаковая масса и форма, отсутствие воздушных полостей. Этикетки: «Наружное»/«Ректально», «Хранить в прохладном месте» (масло какао плавится), «Беречь от детей».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Адаптоген = тонус и устойчивость.</li><li>Принимать утром/днём.</li><li>Нельзя при гипертонии и бессоннице.</li><li>БАД ≠ лекарство.</li><li>Источник веществ, не лечение.</li><li>Маркировка и честная консультация.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b31">
+
+<section class="ticket" id="b31">
+  <div class="section-label"><span class="num">[ билет 31 ]</span><span>Характеристика лекарственного растительного сырья, оказывающего отхаркивающее действие</span><span class="line"></span></div>
+  <h2>Билет №31. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Характеристика лекарственного растительного сырья, оказывающего отхаркивающее действие. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</div>
+    <div><span>Вопрос 2</span>Соблюдения температурного режима при хранении лекарственных средств и других товаров аптечного ассортимента.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Характеристика лекарственного растительного сырья, оказывающего отхаркивающее действие. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</h2>
+    <p class="lead">Отхаркивающее ЛРС облегчает удаление мокроты из дыхательных путей. Часть средств действует рефлекторно через желудок, часть — за счёт слизи/сапонинов/эфирных масел.</p>
+<h3>Сырьё</h3>
+<ul>
+<li>Корень алтея, корень солодки, трава термопсиса, трава чабреца, листья мать-и-мачехи, плоды аниса.</li>
+<li>Действующие вещества: слизи, сапонины, эфирные масла.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>Рефлекторно усиливают секрецию бронхиальных желёз.</li>
+<li>Разжижают мокроту и улучшают мукоцилиарный клиренс.</li>
+<li>Слизи алтея дополнительно обволакивают слизистую.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: кашель с трудноотделяемой мокротой, бронхит, трахеит в составе терапии.</li>
+<li>НЭ: аллергия, тошнота, усиление кашля за счёт мокроты.</li>
+<li>Противопоказания: сухой кашель без мокроты, дети раннего возраста для некоторых средств, язвенная болезнь/беременность — по сырью.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Соблюдения температурного режима при хранении лекарственных средств и других товаров аптечного ассортимента.</h2>
+    <p class="lead">Температурный режим — ключ к сохранению качества. Нарушение температуры может сделать препарат неэффективным или опасным.</p>
+<h3>Режимы хранения</h3>
+<ul>
+<li>Комнатная температура — обычно по инструкции.</li>
+<li>Прохладное место.</li>
+<li>Холодильник 2-8 °C для термолабильных.</li>
+<li>Замораживание запрещено, если не указано производителем.</li>
+<li>Защита от света/влаги отдельно.</li>
+</ul>
+<h3>Контроль</h3>
+<ul>
+<li>Термометры/регистраторы.</li>
+<li>Журналы температуры.</li>
+<li>Контроль холодильников.</li>
+<li>Действия при отклонении: изоляция товара, оценка риска, документирование.</li>
+</ul>
+<h3>Холодовая цепь</h3>
+<ul>
+<li>Особенно важна для иммунобиологических препаратов, инсулинов, некоторых капель/свечей.</li>
+<li>При транспортировке нужны термоконтейнеры и контроль времени.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 31</span><span class="bgrp">Раствор глюкозы (внутрь, новорождённому)</span></div>
 <p class="lf">Водный раствор глюкозы для приёма внутрь новорождённому — повышенные требования к чистоте.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Glucosi 5% — 50 ml</span><span class="ru">Возьми: раствора глюкозы 5% — 50 мл</span></div><div class="rx"><span class="lat">Da. Signa: Для питья новорождённому.</span><span class="ru">Выдай. Обозначь: для питья новорождённому</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Глюкозы (безводной): 5% × 50 мл = 2,5 г. С учётом влаги (~10%): 2,5 × 1,11 ≈ 2,78 г водной глюкозы. Воды очищенной до 50 мл.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Глюкозу (с учётом влажности) растворить в части воды очищенной.</li><li>Профильтровать, довести водой до 50 мл.</li><li>Для новорождённого готовить в асептических условиях; раствор должен быть стерильным.</li><li><b>Режим стерилизации указать по действующей методичке/ОФС</b>; без режима разбор неполный.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность, бесцветность. Стерильность (для новорождённого). «Внутреннее», «Хранить в прохладном».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Отхаркивающее = мокрота выходит.</li><li>Не подавлять кашель, если мокрота есть.</li><li>Алтей/солодка/термопсис — примеры.</li><li>Смотреть инструкцию.</li><li>Контролировать и записывать температуру.</li><li>При отклонении товар не отпускать до решения.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b32">
+
+<section class="ticket" id="b32">
+  <div class="section-label"><span class="num">[ билет 32 ]</span><span>Характеристика лекарственного растительного сырья, содержащего аскорбиновую кислоту</span><span class="line"></span></div>
+  <h2>Билет №32. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Характеристика лекарственного растительного сырья, содержащего аскорбиновую кислоту. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</div>
+    <div><span>Вопрос 2</span>Парфюмерно-косметическая продукция. Номенклатура. Требования к качеству, маркировке, хранению, реализации.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Характеристика лекарственного растительного сырья, содержащего аскорбиновую кислоту. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</h2>
+    <p class="lead">ЛРС с аскорбиновой кислотой — источник витамина C. Он нужен для синтеза коллагена, сосудистой стенки, иммунных реакций и антиоксидантной защиты.</p>
+<h3>Сырьё</h3>
+<ul>
+<li>Плоды шиповника, плоды чёрной смородины, плоды рябины, листья крапивы как сопутствующий источник.</li>
+<li>Действующее вещество: аскорбиновая кислота; часто есть флавоноиды и каротиноиды.</li>
+</ul>
+<h3>Механизм и действие</h3>
+<ul>
+<li>Участвует в окислительно-восстановительных процессах.</li>
+<li>Нужна для синтеза коллагена и прочности сосудов.</li>
+<li>Антиоксидант, повышает неспецифическую сопротивляемость.</li>
+</ul>
+<h3>Показания и ограничения</h3>
+<ul>
+<li>Показания: гипо-/авитаминоз C, повышенная потребность, восстановление, кровоточивость дёсен как проявление дефицита.</li>
+<li>НЭ: аллергия, изжога, раздражение желудка, риск оксалатных камней при высоких дозах.</li>
+<li>Осторожно: мочекаменная болезнь, гиперацидный гастрит/язва, склонность к тромбозам для высоких доз.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Парфюмерно-косметическая продукция. Номенклатура. Требования к качеству, маркировке, хранению, реализации.</h2>
+    <p class="lead">Парфюмерно-косметическая продукция — товары для ухода, гигиены и внешнего вида, не предназначенные для лечения.</p>
+<h3>Номенклатура</h3>
+<ul>
+<li>Кремы, шампуни, гели, дезодоранты.</li>
+<li>Лечебно-косметические линии для ухода за проблемной кожей.</li>
+<li>Средства гигиены полости рта.</li>
+<li>Детская косметика, солнцезащитные средства.</li>
+</ul>
+<h3>Качество и маркировка</h3>
+<ul>
+<li>Декларация/документы соответствия по категории.</li>
+<li>Маркировка: название, назначение, состав, производитель, срок годности, условия хранения, способ применения.</li>
+<li>Упаковка должна быть целой.</li>
+<li>Нельзя приписывать лекарственное действие, если это косметика.</li>
+</ul>
+<h3>Хранение и реализация</h3>
+<ul>
+<li>Соблюдать температуру и защиту от света.</li>
+<li>Отдельно контролировать сроки после вскрытия, если указаны.</li>
+<li>Консультация — по уходу, не по лечению заболевания.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 32</span><span class="bgrp">Микстура детская · ПРОВЕРКА ДОЗ</span></div>
 <p class="lf">Раствор (микстура) для приёма внутрь ребёнку 11 мес. Содержит анальгин и димедрол (сп.Б).</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Analgini 5% — 200 ml</span><span class="ru">Возьми: раствора анальгина 5% — 200 мл</span></div><div class="rx"><span class="lat">Dimedroli 1,0</span><span class="ru">Димедрола 1,0 г</span></div><div class="rx"><span class="lat">Acidi ascorbinici 0,1</span><span class="ru">Кислоты аскорбиновой 0,1 г</span></div><div class="rx"><span class="lat">Sirupi simplicis 20 ml</span><span class="ru">Сиропа простого 20 мл</span></div><div class="rx"><span class="lat">Misce. Da. Signa: По 1 десертной ложке ребёнку 11 мес.</span><span class="ru">Смешай. Выдай. Обозначь: по 1 десертной ложке ребёнку 11 мес.</span></div></div>
@@ -339,30 +2298,235 @@ a{color:var(--ink);}
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Анальгина в 200 мл 5% раствора: 10,0 г. Сироп простой 20 мл даёт итоговый объём минимум ≈220 мл (без учёта КУО твёрдых веществ). Десертная ложка = 10 мл. На приём: анальгина ≈0,455 г (или 0,5 г при грубом расчёте на 200 мл); димедрола ≈0,045 г (или 0,05 г при грубом расчёте на 200 мл). В любом варианте нужна врачебная проверка доз.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>СНАЧАЛА проверить дозы — здесь требуется подтверждение врача.</li><li>Определить трактовку прописи: 200 мл уже готового 5% раствора анальгина или итоговый объём микстуры.</li><li>При письменном подтверждении и выбранной трактовке: растворить димедрол и аскорбиновую кислоту в растворе анальгина/воде, профильтровать, добавить сахарный сироп.</li><li>Не доводить механически «до 200 мл» после добавления сиропа, если первая строка рецепта означает готовый 5% раствор анальгина 200 мл.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность. «Внутреннее», «Обращаться осторожно», «Хранить в прохладном» (анальгин/аскорбинка окисляются).</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Витамин C = коллаген, сосуды, антиоксидант.</li><li>Шиповник — главный пример.</li><li>Высокие дозы не безобидны.</li><li>Косметика ≠ лекарство.</li><li>Маркировка и целая упаковка.</li><li>Не обещать лечение.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b33">
+
+<section class="ticket" id="b33">
+  <div class="section-label"><span class="num">[ билет 33 ]</span><span>Характеристика лекарственного растительного сырья, содержащего каротиноиды</span><span class="line"></span></div>
+  <h2>Билет №33. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Характеристика лекарственного растительного сырья, содержащего каротиноиды. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</div>
+    <div><span>Вопрос 2</span>Основные принципы организации хранения лекарственных средств в аптеке.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Характеристика лекарственного растительного сырья, содержащего каротиноиды. Механизм фармакологического действия. Показания к применению, противопоказания и побочное действие.</h2>
+    <p class="lead">Каротиноиды — провитамины A и антиоксиданты. Они важны для эпителия, зрения, кожи и заживления.</p>
+<h3>Сырьё</h3>
+<ul>
+<li>Плоды облепихи, цветки календулы, плоды рябины, морковь как пищевой источник.</li>
+<li>Действующие вещества: β-каротин и другие каротиноиды, часто токоферолы и жирные масла.</li>
+</ul>
+<h3>Механизм и действие</h3>
+<ul>
+<li>Каротиноиды могут превращаться в витамин A.</li>
+<li>Поддерживают эпителий кожи и слизистых.</li>
+<li>Антиоксидантное и репаративное действие, особенно у облепихового масла.</li>
+</ul>
+<h3>Показания и ограничения</h3>
+<ul>
+<li>Показания: гиповитаминоз A, кожные повреждения, ожоги/раны для облепихового масла, воспаления слизистых.</li>
+<li>НЭ: аллергия, диспепсия; при избытке — каротинодермия (желтоватая кожа).</li>
+<li>Осторожно при желчнокаменной болезни и заболеваниях печени для масляных форм.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Основные принципы организации хранения лекарственных средств в аптеке.</h2>
+    <p class="lead">Хранение в аптеке организуют так, чтобы сохранить качество, исключить путаницу и доступ посторонних.</p>
+<h3>Принципы</h3>
+<ul>
+<li>По условиям инструкции: температура, свет, влажность.</li>
+<li>По группам: рецептурные/безрецептурные, наружные/внутренние, пахучие, красящие, ЛРС, медизделия.</li>
+<li>Отдельно: наркотические, психотропные, ПКУ, термолабильные, огнеопасные.</li>
+<li>FEFO: первым отпускают товар с более ранним сроком годности.</li>
+</ul>
+<h3>Контроль</h3>
+<ul>
+<li>Термогигрометры.</li>
+<li>Журналы температуры.</li>
+<li>Проверка сроков годности.</li>
+<li>Карантинная зона для сомнительного/забракованного товара.</li>
+<li>Инвентаризация.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 33</span><span class="bgrp">Капли антибиотик (асептика)</span></div>
 <p class="lf">Раствор антибиотика (бензилпенициллин) — капли в нос, готовят асептически.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Benzylpenicillini-natrii 500 000 ED</span><span class="ru">Возьми: бензилпенициллина натриевой соли 500 000 ЕД</span></div><div class="rx"><span class="lat">Solutionis Natrii chloridi 0,9% q.s. ad 20 ml</span><span class="ru">Раствора натрия хлорида 0,9% сколько нужно до 20 мл</span></div><div class="rx"><span class="lat">Da. Signa: Капли в нос.</span><span class="ru">Выдай. Обозначь: капли в нос</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">500 000 ЕД в 20 мл → 25 000 ЕД/мл. Растворитель — изотонический раствор натрия хлорида 0,9% «сколько потребуется до 20 мл».</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Работа в АСЕПТИЧЕСКИХ условиях.</li><li>В стерильный флакон с бензилпенициллином добавить стерильный изотонический раствор натрия хлорида до 20 мл.</li><li>Осторожно растворить (не встряхивать сильно — пенится/инактивируется). НЕ нагревать и НЕ стерилизовать (пенициллин термолабилен — разрушается).</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, прозрачность. Свежеприготовленный. «Капли в нос» (наружное), «Хранить в прохладном/холодильнике».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Каротиноиды = провитамин A.</li><li>Облепиха/календула.</li><li>Кожа, слизистые, заживление.</li><li>Условия производителя.</li><li>Раздельное хранение.</li><li>Контроль сроков и температуры.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b34">
+
+<section class="ticket" id="b34">
+  <div class="section-label"><span class="num">[ билет 34 ]</span><span>Бронхолитики: бета2-адреномиметики и м-холиноблокаторы</span><span class="line"></span></div>
+  <h2>Билет №34. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Бронхолитики: бета2-адреномиметики и м-холиноблокаторы. Показания к применению, нежелательные эффекты, противопоказания. Комбинированное использование.</div>
+    <div><span>Вопрос 2</span>Особенности транспортировки, хранения и отпуска медицинских иммунобиологических лекарственных препаратов.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Бронхолитики: бета2-адреномиметики и м-холиноблокаторы. Показания к применению, нежелательные эффекты, противопоказания. Комбинированное использование.</h2>
+    <p class="lead">Бронхолитики расширяют бронхи. В билете две ключевые группы: β2-адреномиметики и М-холиноблокаторы; часто их комбинируют.</p>
+<h3>Группы и примеры</h3>
+<ul>
+<li>β2-агонисты короткого действия: сальбутамол, фенотерол.</li>
+<li>β2-агонисты длительного действия: формотерол, сальметерол.</li>
+<li>М-холиноблокаторы: ипратропий, тиотропий.</li>
+<li>Комбинации: фенотерол+ипратропий, LABA+LAMA при ХОБЛ.</li>
+</ul>
+<h3>Механизм</h3>
+<ul>
+<li>β2-агонисты расслабляют гладкие мышцы бронхов через β2-рецепторы.</li>
+<li>М-холиноблокаторы блокируют вагусное бронхосуживающее влияние.</li>
+<li>Комбинация даёт эффект через два разных механизма.</li>
+</ul>
+<h3>Показания и риски</h3>
+<ul>
+<li>Показания: бронхиальная астма, ХОБЛ, бронхоспазм.</li>
+<li>НЭ β2: тремор, тахикардия, гипокалиемия, нервозность.</li>
+<li>НЭ М-холиноблокаторов: сухость во рту, задержка мочи, риск при глаукоме.</li>
+<li>Важно: при астме базис часто требует противовоспалительной терапии, один бронхолитик не всегда достаточен.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Особенности транспортировки, хранения и отпуска медицинских иммунобиологических лекарственных препаратов.</h2>
+    <p class="lead">МИБП особенно чувствительны к температуре, поэтому для них главное — холодовая цепь от поставщика до пациента.</p>
+<h3>Что относится</h3>
+<ul>
+<li>Вакцины, иммуноглобулины, анатоксины, сыворотки и другие иммунобиологические препараты.</li>
+<li>Обычно требуют 2-8 °C, если инструкция не говорит иначе.</li>
+</ul>
+<h3>Транспортировка и хранение</h3>
+<ul>
+<li>Термоконтейнеры/холодильное оборудование.</li>
+<li>Контроль температуры на всех этапах.</li>
+<li>Запрет замораживания для многих вакцин.</li>
+<li>Документирование температурного режима.</li>
+</ul>
+<h3>Отпуск</h3>
+<ul>
+<li>Отпускают с соблюдением условий транспортировки до пациента/медорганизации.</li>
+<li>Покупателю объясняют, как довезти и хранить.</li>
+<li>При нарушении холодовой цепи препарат не используют до оценки пригодности.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 34</span><span class="bgrp">Раствор для инъекций (стерильный)</span></div>
 <p class="lf">Раствор натрия гидрокарбоната для внутривенного капельного введения — стерильная инъекционная ЛФ.</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Solutionis Natrii hydrocarbonatis 5% — 100 ml</span><span class="ru">Возьми: раствора натрия гидрокарбоната 5% — 100 мл</span></div><div class="rx"><span class="lat">Sterilisetur!</span><span class="ru">Простерилизуй!</span></div><div class="rx"><span class="lat">Da. Signa: Для внутривенного капельного введения.</span><span class="ru">Выдай. Обозначь: для внутривенного капельного введения</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Натрия гидрокарбоната: 5% × 100 мл = 5,0 г (марки «для инъекций»/х.ч.). Растворитель — вода для инъекций.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Растворять при 15–20 °C, НЕ нагревать (сода разлагается: NaHCO₃ → Na₂CO₃ + H₂O + CO₂↑).</li><li>Не взбалтывать сильно (потеря CO₂), использовать воду для инъекций.</li><li>Профильтровать (стерильный фильтр), флакон заполнить ДОВЕРХУ (без воздуха — меньше потерь CO₂ и сдвига pH), герметично укупорить.</li><li>Стерилизовать паром 120 °C — 8 мин.</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">Стерильность, прозрачность, отсутствие механических включений, pH, герметичность укупорки. «Для инъекций».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>Бронхи расширить двумя путями: β2 стимулировать или М блокировать.</li><li>SABA — быстро, LABA/LAMA — длительно.</li><li>Побочки: тремор/тахикардия и сухость.</li><li>МИБП = холодовая цепь.</li><li>2-8 °C чаще всего.</li><li>Заморозка часто губительна.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<section class="card" id="b35">
+
+<section class="ticket" id="b35">
+  <div class="section-label"><span class="num">[ билет 35 ]</span><span>Бета-адреноблокаторы: неселективные и селективные</span><span class="line"></span></div>
+  <h2>Билет №35. Полный разбор.</h2>
+  <div class="ticket-top">
+    <div><span>Вопрос 1</span>Бета-адреноблокаторы: неселективные и селективные. Номенклатура, фармакологические эффекты, показания к применению, нежелательные эффекты, противопоказания.</div>
+    <div><span>Вопрос 2</span>Организация учета в аптечной организации.</div>
+  </div>
+
+  <article class="qa">
+    <h2>01 · Бета-адреноблокаторы: неселективные и селективные. Номенклатура, фармакологические эффекты, показания к применению, нежелательные эффекты, противопоказания.</h2>
+    <p class="lead">Бета-адреноблокаторы блокируют β-рецепторы. Главный клинический эффект — снижение влияния симпатики на сердце: ЧСС, сила сокращений и потребность миокарда в кислороде уменьшаются.</p>
+<h3>Классификация</h3>
+<ul>
+<li>Неселективные β1+β2: пропранолол, надолол, тимолол.</li>
+<li>Кардиоселективные β1: метопролол, бисопролол, атенолол, небиволол.</li>
+<li>С дополнительными свойствами: карведилол блокирует ещё α1, небиволол влияет на NO.</li>
+</ul>
+<h3>Эффекты и показания</h3>
+<ul>
+<li>Снижают ЧСС, АД, проводимость, потребность миокарда в кислороде.</li>
+<li>Показания: гипертензия, стенокардия, тахиаритмии, ХСН для отдельных препаратов, постинфарктная терапия, глаукома местно.</li>
+<li>Неселективные могут вызывать бронхоспазм через β2-блокаду.</li>
+</ul>
+<h3>НЭ и противопоказания</h3>
+<ul>
+<li>НЭ: брадикардия, гипотензия, слабость, холодные конечности, бронхоспазм, нарушения сна.</li>
+<li>Нельзя резко отменять — риск синдрома отмены.</li>
+<li>Противопоказания: бронхиальная астма для неселективных, выраженная брадикардия, AV-блокада, декомпенсированная ХСН.</li>
+</ul>
+  </article>
+
+  <article class="qa">
+    <h2>02 · Организация учета в аптечной организации.</h2>
+    <p class="lead">Учёт в аптеке нужен для контроля товара, денег, рецептов, ПКУ, сроков годности и отчётности.</p>
+<h3>Виды учёта</h3>
+<ul>
+<li>Товарный учёт: приход, расход, остатки.</li>
+<li>Денежный учёт: касса, выручка.</li>
+<li>Предметно-количественный учёт отдельных ЛП.</li>
+<li>Учёт рецептов, льготного отпуска, требований медорганизаций.</li>
+<li>Учёт сроков годности, брака, списания.</li>
+</ul>
+<h3>Документы</h3>
+<ul>
+<li>Накладные.</li>
+<li>Журналы/электронные регистры.</li>
+<li>Акты списания и уничтожения.</li>
+<li>Инвентаризационные описи.</li>
+<li>Кассовые документы.</li>
+</ul>
+<h3>Зачем</h3>
+<ul>
+<li>Предотвращает недостачи и пересортицу.</li>
+<li>Подтверждает законность отпуска.</li>
+<li>Помогает контролировать запасы и сроки годности.</li>
+<li>Нужен для проверок.</li>
+</ul>
+  </article>
+
+  <article class="qa task3">
+    <h2>03 · Изготовление лекарственной формы</h2>
+    <div class="task3-card">
 <div class="card-head"><span class="bn">Билет 35</span><span class="bgrp">Мазь (готовая, дозирование)</span></div>
 <p class="lf">Готовая цинковая мазь (официнальная 10%) — отвесить и оформить. (То же, что билет 28.)</p>
 <div class="recipe"><div class="rx rx-head"><span class="lat">Recipe: Unguenti Zinci 10,0</span><span class="ru">Возьми: мази цинковой 10,0 г</span></div><div class="rx"><span class="lat">Da. Signa: Смазывать поражённые места.</span><span class="ru">Выдай. Обозначь: смазывать поражённые места</span></div></div>
 <div class="part"><div class="plbl">Расчёты</div><div class="pbody">Цинковая мазь = цинка оксид 10% + вазелин 90%. Если готовить: цинка оксид 1,0 + вазелин 9,0.</div></div>
 <div class="part"><div class="plbl">Технология</div><div class="pbody"><ol class="tech"><li>Отвесить 10,0 готовой цинковой мази в баночку (или приготовить: цинка оксид 1,0 растереть с вазелином до 10,0).</li></ol></div></div>
 <div class="part"><div class="plbl">Оценка качества</div><div class="pbody">ППК, однородность. «Наружное».</div></div>
+</div>
+  </article>
+
+  <article class="step-box">
+    <h3>Скелет ответа</h3>
+    <ol><li>β-блокатор = сердце работает спокойнее.</li><li>Селективные β1 безопаснее для бронхов, но не абсолютно.</li><li>Не отменять резко.</li><li>Учёт = приход/расход/остаток.</li><li>Особо строгий ПКУ.</li><li>Документы подтверждают законность.</li><li>Задание 3: латынь → тип ЛФ → расчёты → технология → качество.</li></ol>
+  </article>
 </section>
-<footer class="doc"><span>задание №3 · 35 билетов · v2 исправлено</span><span>нормативная база: Приказ №249н от 22.05.2023, ГФ X/XV, ФТ Краснюк</span><span>чистовая версия</span></footer>
-</div></body></html>
+
+<footer class="doc"><span>полная шпаргалка · v1</span><span>NickStr11/gia-task3-pharmacy</span><span>ГИА · 33.02.01 Фармация</span></footer>
+</div>
+</body>
+</html>
