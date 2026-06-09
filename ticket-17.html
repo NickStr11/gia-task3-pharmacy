@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Билет №17 · Шпаргалка к госэкзамену · Фармация</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-tint: #fafafa;
+    --ink: #0a0a0a;
+    --ink-2: #3a3a3a;
+    --ink-3: #6a6a6a;
+    --ink-4: #9a9a9a;
+    --line: #e6e6e6;
+    --line-strong: #cfcfcf;
+    --accent: #0F62FE;
+    --accent-soft: #e8efff;
+    --warn: #b25400;
+    --warn-soft: #fff4e6;
+    --ok: #0a7d4d;
+    --ok-soft: #e6f6ee;
+
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    --col: 880px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  .page {
+    max-width: var(--col);
+    margin: 0 auto;
+    padding: 96px 32px 160px;
+  }
+
+  /* ───── header ───── */
+  header.doc {
+    border-top: 1px solid var(--ink);
+    padding-top: 28px;
+    margin-bottom: 72px;
+  }
+  header.doc .meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+    letter-spacing: 0.02em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-bottom: 32px;
+  }
+  header.doc h1 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 0 0 12px;
+    letter-spacing: -0.015em;
+  }
+  header.doc .sub {
+    color: var(--ink-3);
+    font-size: 17px;
+    max-width: 660px;
+  }
+
+  /* ───── section ───── */
+  section { margin-top: 80px; }
+  section h2 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+  }
+  section h3 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.35;
+    margin: 32px 0 8px;
+    letter-spacing: -0.005em;
+  }
+  section h4 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 15px;
+    margin: 22px 0 4px;
+  }
+  section .lead {
+    color: var(--ink-3);
+    max-width: 660px;
+    margin: 0 0 28px;
+  }
+  section p { margin: 12px 0; }
+  section p strong { font-weight: 600; }
+  section ul { color: var(--ink-2); font-size: 15.5px; padding-left: 20px; }
+  section ul li { margin: 5px 0; }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .section-label .num { color: var(--ink); font-weight: 500; white-space: nowrap; }
+  .section-label > span:nth-child(2) { flex: 0 1 auto; min-width: 0; }
+  .section-label .line { flex: 1; height: 1px; background: var(--line); }
+
+  /* ───── term (объяснение слова) ───── */
+  .term {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .term:first-of-type { border-top: 1px solid var(--line); }
+  .term .w {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .term .w small {
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-4);
+    font-weight: 400;
+    margin-top: 2px;
+    letter-spacing: 0.02em;
+  }
+  .term .d { font-size: 14.5px; color: var(--ink-2); }
+
+  /* ───── tables ───── */
+  table.t {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 8px;
+    font-size: 14.5px;
+  }
+  table.t th, table.t td {
+    text-align: left;
+    vertical-align: top;
+    padding: 14px 14px 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  table.t th {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 500;
+    padding-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--ink);
+  }
+  table.t td.grp { font-weight: 600; color: var(--ink); width: 210px; }
+  table.t td.ex { color: var(--ink); }
+  table.t td.ex b { color: var(--accent); font-weight: 600; }
+
+  /* ───── facts grid ───── */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--line);
+    margin: 0 0 8px;
+  }
+  .facts .f { padding: 20px 28px 22px 28px; border-right: 1px solid var(--line); }
+  .facts .f:first-child { padding-left: 0; }
+  .facts .f:last-child { padding-right: 0; border-right: none; }
+  .facts .f .v { font-family: var(--mono); font-size: 19px; color: var(--ink); line-height: 1.1; margin-bottom: 8px; }
+  .facts .f .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+
+  /* ───── callouts ───── */
+  .callout {
+    border-left: 2px solid var(--accent);
+    padding: 12px 20px;
+    background: var(--accent-soft);
+    margin: 24px 0;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .callout.warn { border-left-color: var(--warn); background: var(--warn-soft); }
+  .callout.ok { border-left-color: var(--ok); background: var(--ok-soft); }
+  .callout .lbl {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .callout.warn .lbl { color: var(--warn); }
+  .callout.ok .lbl { color: var(--ok); }
+
+  /* ───── recipe block ───── */
+  .recipe {
+    border: 1px solid var(--ink);
+    padding: 24px 28px;
+    margin: 20px 0;
+    font-family: var(--mono);
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--ink);
+    background: var(--bg-tint);
+  }
+  .recipe .rx-line { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .recipe .rx-line .lat { color: var(--ink); }
+  .recipe .rx-line .rus { color: var(--ink-3); font-size: 13px; }
+  .recipe .rx-head { color: var(--accent); font-weight: 500; }
+
+  /* ───── steps ───── */
+  .steps { counter-reset: s; border-top: 1px solid var(--line); margin-top: 12px; }
+  .stp {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .stp .n {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    padding-top: 2px;
+  }
+  .stp .b { font-size: 15px; color: var(--ink-2); }
+  .stp .b strong { color: var(--ink); font-weight: 600; }
+
+  /* ───── skeleton (step-box) ───── */
+  .step-box { border: 1px solid var(--ink); padding: 28px 28px 30px; margin-top: 20px; }
+  .step-box h3 { margin-top: 0; font-size: 20px; }
+  .step-box ol { padding-left: 20px; margin: 14px 0 0; font-size: 15px; color: var(--ink-2); }
+  .step-box ol li { margin: 10px 0; }
+  .step-box ol li strong { color: var(--ink); }
+
+  footer.doc {
+    margin-top: 110px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-4);
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+  }
+
+  .mono { font-family: var(--mono); }
+  .muted { color: var(--ink-3); }
+  .hl { color: var(--accent); }
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* responsive */
+  @media (max-width: 720px) {
+    .page { padding: 44px 20px 80px; }
+    header.doc { padding-top: 22px; margin-bottom: 48px; }
+    header.doc h1 { font-size: 27px; line-height: 1.2; }
+    header.doc .sub { font-size: 15.5px; }
+    section { margin-top: 56px; }
+    section h2 { font-size: 21px; }
+    .facts { grid-template-columns: repeat(2, 1fr); }
+    .facts .f { padding: 16px 14px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .facts .f:nth-child(1) { padding-left: 0; }
+    .facts .f:nth-child(2) { padding-right: 0; border-right: none; }
+    .facts .f:nth-child(3) { padding-left: 0; border-bottom: none; }
+    .facts .f:nth-child(4) { padding-right: 0; border-right: none; border-bottom: none; }
+    .term { grid-template-columns: 1fr; gap: 4px; }
+    table.t td.grp { width: auto; }
+    .recipe .rx-line { grid-template-columns: 1fr; gap: 2px; }
+    .recipe .rx-line .rus { margin-bottom: 6px; }
+  }
+
+  /* print → PDF */
+  @media print {
+    @page { margin: 16mm 14mm; }
+    .page { padding: 0; max-width: 100%; }
+    header.doc { margin-bottom: 36px; }
+    section { margin-top: 40px; page-break-inside: avoid; }
+    .callout, .recipe, .step-box, .term, .stp, table.t tr { page-break-inside: avoid; }
+    h2, h3, h4 { page-break-after: avoid; }
+    footer.doc { margin-top: 48px; }
+    a { color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ─────────────────────── HEADER ─────────────────────── -->
+  <header class="doc">
+    <div class="meta">
+      <span>шпаргалка · бил.17/v1</span>
+      <span>ГИА · 33.02.01 Фармация</span>
+      <span>для: Никита</span>
+      <span>экзамен: 24.06.2026</span>
+    </div>
+    <h1>Билет №17. Пенициллины · персонал аптеки · капли с&nbsp;ментолом.</h1>
+    <p class="sub">Три задания билета, разобранные простым языком. Вся терминология объясняется по&nbsp;ходу. В&nbsp;конце&nbsp;— «скелет» ответа, чтобы не&nbsp;зубрить, а&nbsp;держать логику.</p>
+  </header>
+
+
+  <!-- ─────────────────────── 01 · пенициллины ─────────────────────── -->
+  <section>
+    <div class="section-label">
+      <span class="num">[ 01 ]</span>
+      <span>вопрос 1 · пенициллины</span>
+      <span class="line"></span>
+    </div>
+    <h2>Пенициллины: классификация, спектр, показания, побочки, противопоказания.</h2>
+    <p class="lead">Самый первый антибиотик в&nbsp;истории. Открыт Флемингом из&nbsp;плесени <em>Penicillium</em>&nbsp;— отсюда название. Это «рабочая лошадка», которую назначают чаще всего.</p>
+
+    <div class="facts">
+      <div class="f"><div class="v">β-лактам</div><div class="k">класс</div></div>
+      <div class="f"><div class="v">бактерицид</div><div class="k">убивает, не тормозит</div></div>
+      <div class="f"><div class="v">грам(+)</div><div class="k">основной спектр</div></div>
+      <div class="f"><div class="v">аллергия</div><div class="k">побочка №1</div></div>
+    </div>
+
+    <h3>Что это и&nbsp;как работает</h3>
+    <p>Пенициллины относятся к&nbsp;группе <strong>β-лактамных антибиотиков</strong> («бета-лактамных»). «β-лактам»&nbsp;— это название химического кольца внутри молекулы, которое делает всю работу. Запомни связку: <span class="hl">пенициллины = β-лактамы</span>.</p>
+    <p>Механизм: антибиотик <strong>ломает строительство клеточной стенки</strong> бактерии. Стенка&nbsp;— это жёсткая оболочка, которая держит форму бактерии. Без&nbsp;неё бактерия набирает воду и&nbsp;<strong>лопается</strong>. Поэтому пенициллины <strong>бактерицидные</strong> (убивают), а&nbsp;не&nbsp;бактериостатические (которые только тормозят размножение). Важно: бьют по&nbsp;тем бактериям, что&nbsp;<em>сейчас растут и&nbsp;делятся</em>&nbsp;— когда стенка как раз строится.</p>
+
+    <div class="term"><div class="w">β-лактам<small>beta-lactam</small></div><div class="d">Химическое кольцо в&nbsp;молекуле&nbsp;— общий признак пенициллинов и&nbsp;цефалоспоринов. Именно по&nbsp;нему бактерии «узнают» и&nbsp;разрушают антибиотик своим ферментом.</div></div>
+    <div class="term"><div class="w">Бактерицидный<small>-cidal = убивать</small></div><div class="d">Убивает бактерию. Противоположность&nbsp;— бактериостатический (только мешает размножаться, а&nbsp;добивает уже иммунитет).</div></div>
+    <div class="term"><div class="w">β-лактамаза<small>= пенициллиназа</small></div><div class="d">Фермент, который выделяют некоторые бактерии. Он&nbsp;разрезает β-лактамное кольцо&nbsp;— и&nbsp;антибиотик перестаёт работать. Защита от&nbsp;него&nbsp;— см.&nbsp;«ингибиторозащищённые» ниже.</div></div>
+
+    <h3>Классификация (группы с&nbsp;примерами)</h3>
+    <p>Главная часть ответа&nbsp;— называй группы с&nbsp;примерами. Делятся на&nbsp;<strong>природные</strong> (прямо из&nbsp;плесени) и&nbsp;<strong>полусинтетические</strong> (доработанные в&nbsp;лаборатории).</p>
+
+    <table class="t">
+      <thead>
+        <tr><th>группа</th><th>примеры</th><th>чем отличается</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="grp">Природные<br><span class="muted mono" style="font-size:11px;">биосинтетические</span></td>
+          <td class="ex"><b>Бензилпенициллин</b> (пенициллин&nbsp;G), <b>Феноксиметилпенициллин</b> (V), <b>Бициллины</b></td>
+          <td>Из&nbsp;плесени. Узкий спектр, грам(+). Бензилпенициллин&nbsp;— только в&nbsp;уколах (в&nbsp;желудке разрушается). Бициллины&nbsp;— длительного действия.</td>
+        </tr>
+        <tr>
+          <td class="grp">Пенициллиназо-<br>устойчивые</td>
+          <td class="ex"><b>Оксациллин</b></td>
+          <td>Не&nbsp;боятся фермента стафилококка. Антистафилококковые.</td>
+        </tr>
+        <tr>
+          <td class="grp">Аминопенициллины<br><span class="muted mono" style="font-size:11px;">расширенный спектр</span></td>
+          <td class="ex"><b>Ампициллин</b>, <b>Амоксициллин</b></td>
+          <td>Самые ходовые. Бьют шире&nbsp;— добавляются некоторые грам(−) бактерии.</td>
+        </tr>
+        <tr>
+          <td class="grp">Антисинегнойные<br><span class="muted mono" style="font-size:11px;">карбокси-/уреидо-</span></td>
+          <td class="ex"><b>Карбенициллин</b>, <b>Пиперациллин</b></td>
+          <td>Против тяжёлой синегнойной палочки.</td>
+        </tr>
+        <tr>
+          <td class="grp">Ингибиторо-<br>защищённые</td>
+          <td class="ex"><b>Амоксициллин + клавулановая кислота</b> (Амоксиклав / Аугментин), Ампициллин+сульбактам</td>
+          <td>К&nbsp;антибиотику добавлен «телохранитель», который связывает β-лактамазу. Антибиотик остаётся целым.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Спектр действия (кого убивают)</h3>
+    <p><strong>Спектр</strong>&nbsp;— это список бактерий, на&nbsp;которые антибиотик действует.</p>
+    <ul>
+      <li><strong>Природные</strong>&nbsp;— в&nbsp;основном <strong>грам(+)</strong>: стрептококки, пневмококки; плюс грам(−) кокки (менингококк, гонококк) и&nbsp;спирохеты (возбудитель сифилиса).</li>
+      <li><strong>Аминопенициллины</strong>&nbsp;— шире: то&nbsp;же + часть <strong>грам(−) палочек</strong> (кишечная палочка, гемофильная палочка, хеликобактер).</li>
+      <li><strong>Защищённые</strong>&nbsp;— ещё шире, берут даже тех, кто выделяет β-лактамазу.</li>
+    </ul>
+    <div class="callout">
+      <span class="lbl">грам(+) и грам(−) — что это</span>
+      Деление бактерий по&nbsp;окраске по&nbsp;Граму (метод покраски под&nbsp;микроскопом). Грам(+) красятся в&nbsp;фиолетовый&nbsp;— у&nbsp;них толстая стенка; грам(−)&nbsp;— в&nbsp;розовый, стенка тонкая. Тебе хватит: это два больших класса бактерий, и&nbsp;пенициллины по&nbsp;природе лучше всего бьют по&nbsp;грам(+).
+    </div>
+
+    <h3>Показания (когда назначают)</h3>
+    <p>Ангина/тонзиллит, пневмония, бронхит, отит (ухо), синусит (пазухи носа), инфекции кожи и&nbsp;мягких тканей, инфекции мочевыводящих путей; <strong>сифилис</strong> (бензилпенициллин&nbsp;— препарат выбора), профилактика ревматизма (бициллин), <strong>хеликобактер</strong> при&nbsp;язве желудка (амоксициллин в&nbsp;схеме лечения).</p>
+
+    <h3>Нежелательные эффекты (побочки)</h3>
+    <ul>
+      <li><strong>Аллергия&nbsp;— главное!</strong> От&nbsp;сыпи и&nbsp;крапивницы до&nbsp;<strong>анафилактического шока</strong> (резкое падение давления, угроза жизни). Поэтому всегда спрашивают про&nbsp;аллергию перед назначением.</li>
+      <li>ЖКТ: тошнота, понос, <strong>дисбактериоз</strong> (нарушение нормальной микрофлоры кишечника).</li>
+      <li><strong>Кандидоз</strong> (молочница)&nbsp;— грибок разрастается, когда антибиотик убил бактерий-конкурентов.</li>
+      <li>Редко, при&nbsp;очень больших дозах&nbsp;— судороги.</li>
+    </ul>
+
+    <h3>Противопоказания (когда нельзя)</h3>
+    <ul>
+      <li><strong>Аллергия на&nbsp;пенициллины</strong>&nbsp;— абсолютное «нельзя».</li>
+      <li>Осторожно при&nbsp;аллергии на&nbsp;<strong>цефалоспорины</strong>: у&nbsp;них похожее β-лактамное кольцо, бывает <strong>перекрёстная аллергия</strong> (среагировал на&nbsp;одно&nbsp;— может среагировать и&nbsp;на&nbsp;другое).</li>
+    </ul>
+  </section>
+
+
+  <!-- ─────────────────────── 02 · персонал ─────────────────────── -->
+  <section>
+    <div class="section-label">
+      <span class="num">[ 02 ]</span>
+      <span>вопрос 2 · требования к персоналу аптек</span>
+      <span class="line"></span>
+    </div>
+    <h2>Требования к&nbsp;персоналу аптечных организаций.</h2>
+    <p class="lead">Про&nbsp;то, кто и&nbsp;на&nbsp;каких условиях имеет право работать в&nbsp;аптеке. Идёшь по&nbsp;блокам: образование&nbsp;→ допуск&nbsp;→ здоровье&nbsp;→ санитария&nbsp;→ этика.</p>
+
+    <h3>Образование</h3>
+    <ul>
+      <li><strong>Фармацевт</strong>&nbsp;— среднее профессиональное образование по&nbsp;специальности «Фармация» (твой случай, 33.02.01).</li>
+      <li><strong>Провизор</strong>&nbsp;— высшее фармацевтическое образование.</li>
+      <li>Без&nbsp;профильного фармобразования к&nbsp;отпуску лекарств <strong>не&nbsp;допускают</strong>.</li>
+    </ul>
+
+    <h3>Допуск к&nbsp;работе</h3>
+    <ul>
+      <li><strong>Аккредитация специалиста</strong>&nbsp;— обязательный «пропуск» к&nbsp;работе (раньше назывался <strong>сертификат специалиста</strong>). Подтверждает право заниматься фармдеятельностью.</li>
+      <li>Подтверждается периодически (раз в&nbsp;5&nbsp;лет) через <strong>НМО</strong>&nbsp;— непрерывное мед./фарм. образование (баллы за&nbsp;курсы и&nbsp;обучение).</li>
+    </ul>
+
+    <h3>Должности (иерархия)</h3>
+    <p>Заведующий аптекой (обычно провизор + стаж)&nbsp;→ провизор&nbsp;→ фармацевт. У&nbsp;заведующего больше ответственности и&nbsp;требований к&nbsp;стажу.</p>
+
+    <h3>Здоровье</h3>
+    <ul>
+      <li><strong>Медосмотры</strong>: предварительный (при&nbsp;приёме) и&nbsp;регулярные периодические.</li>
+      <li><strong>Личная медицинская книжка</strong> с&nbsp;отметками об&nbsp;осмотрах и&nbsp;прививках.</li>
+      <li>Болеющих заразными болезнями к&nbsp;работе с&nbsp;лекарствами не&nbsp;допускают.</li>
+    </ul>
+
+    <h3>Санитария и&nbsp;этика</h3>
+    <ul>
+      <li><strong>Спецодежда</strong>: халат, шапочка, сменная обувь. В&nbsp;уличной одежде в&nbsp;производственные зоны нельзя. Гигиена рук.</li>
+      <li><strong>Фармацевтическая этика и&nbsp;деонтология</strong>&nbsp;— правила поведения с&nbsp;покупателями (вежливость, честность).</li>
+      <li><strong>Конфиденциальность</strong>&nbsp;— не&nbsp;разглашать, кто что покупает и&nbsp;чем болеет.</li>
+    </ul>
+
+    <div class="callout ok">
+      <span class="lbl">как держать в голове</span>
+      5&nbsp;блоков по&nbsp;порядку: <strong>образование&nbsp;→ аккредитация&nbsp;→ медосмотры&nbsp;→ спецодежда&nbsp;→ этика</strong>. По&nbsp;одной фразе на&nbsp;блок&nbsp;— и&nbsp;ответ собран.
+    </div>
+  </section>
+
+
+  <!-- ─────────────────────── 03 · рецепт ─────────────────────── -->
+  <section>
+    <div class="section-label">
+      <span class="num">[ 03 ]</span>
+      <span>вопрос 3 · приготовить лекарственную форму</span>
+      <span class="line"></span>
+    </div>
+    <h2>Рецепт: ментол 0,2 + вазелиновое масло 20,0. Капли в&nbsp;нос.</h2>
+    <p class="lead">Задание: перевести на&nbsp;латынь, посчитать, описать технологию и&nbsp;оценить качество. Форма простая&nbsp;— масляный раствор, 2&nbsp;компонента, без&nbsp;дозированных расчётов.</p>
+
+    <h3>1) На&nbsp;латыни</h3>
+    <div class="recipe">
+      <div class="rx-line"><span class="lat rx-head">Recipe:</span><span class="rus">возьми</span></div>
+      <div class="rx-line"><span class="lat">&nbsp;&nbsp;Mentholi 0,2</span><span class="rus">ментола 0,2</span></div>
+      <div class="rx-line"><span class="lat">&nbsp;&nbsp;Olei Vaselini 20,0</span><span class="rus">масла вазелинового 20,0</span></div>
+      <div class="rx-line"><span class="lat">&nbsp;&nbsp;Misce. Da.</span><span class="rus">смешай, выдай</span></div>
+      <div class="rx-line"><span class="lat">&nbsp;&nbsp;Signa: Капли в нос.</span><span class="rus">обозначь</span></div>
+    </div>
+    <p class="muted" style="font-size:13.5px;">Mentholum&nbsp;→ Mentholi, Oleum Vaselini&nbsp;→ Olei Vaselini&nbsp;— это родительный падеж («чего взять»). Recipe / Misce / Da / Signa&nbsp;— стандартные команды любого рецепта.</p>
+
+    <h3>2) Что это за&nbsp;лекарственная форма</h3>
+    <p>Жидкая лекарственная форма&nbsp;— <strong>раствор</strong>, точнее <strong>масляный раствор</strong> для наружного применения (капли в&nbsp;нос).</p>
+    <div class="term"><div class="w">Раствор</div><div class="d">Одно вещество полностью растворено в&nbsp;другом. Здесь <strong>ментол</strong>&nbsp;— что растворяем (лекарственное вещество), <strong>вазелиновое масло</strong>&nbsp;— в&nbsp;чём растворяем (растворитель, неводный/масляный).</div></div>
+    <div class="term"><div class="w">Почему масло</div><div class="d">Ментол в&nbsp;воде почти не&nbsp;растворяется, а&nbsp;в&nbsp;маслах&nbsp;— хорошо. Поэтому берут масляную основу.</div></div>
+
+    <h3>3) Расчёт</h3>
+    <div class="callout">
+      <span class="lbl">концентрация</span>
+      0,2&nbsp;г ментола на&nbsp;20&nbsp;г масла = <strong>1%</strong>&nbsp;&nbsp;(0,2&nbsp;÷&nbsp;20&nbsp;×&nbsp;100&nbsp;=&nbsp;1). Оба количества уже даны в&nbsp;граммах&nbsp;— больше считать нечего.
+    </div>
+
+    <h3>4) Технология (по&nbsp;шагам)</h3>
+    <div class="steps">
+      <div class="stp"><div class="n">01</div><div class="b">Отвешиваем <strong>вазелиновое масло 20,0</strong>.</div></div>
+      <div class="stp"><div class="n">02</div><div class="b">Слегка <strong>подогреваем масло</strong> на&nbsp;водяной бане (≈&nbsp;40–50&nbsp;°C)&nbsp;— в&nbsp;тёплом ментол растворяется быстрее.</div></div>
+      <div class="stp"><div class="n">03</div><div class="b">Добавляем <strong>ментол 0,2</strong> и&nbsp;перемешиваем <strong>до&nbsp;полного растворения</strong>.</div></div>
+      <div class="stp"><div class="n">04</div><div class="b">Фильтровать не&nbsp;нужно&nbsp;— ментол растворяется без&nbsp;остатка (получается прозрачная жидкость).</div></div>
+      <div class="stp"><div class="n">05</div><div class="b">Переливаем во&nbsp;<strong>флакон</strong>, укупориваем, оформляем этикеткой.</div></div>
+    </div>
+    <p class="muted" style="font-size:13.5px;">Это <strong>растворение</strong> (а&nbsp;не&nbsp;смешивание порошков и&nbsp;не&nbsp;суспензия)&nbsp;— потому что ментол реально растворяется в&nbsp;масле до&nbsp;прозрачной жидкости.</p>
+
+    <h3>5) Оценка качества</h3>
+    <ul>
+      <li><strong>Документация</strong>: правильно&nbsp;ли оформлен рецепт и&nbsp;<strong>ППК</strong> (паспорт письменного контроля&nbsp;— бумага, где расписано, что и&nbsp;сколько положили).</li>
+      <li><strong>Органолептика</strong> (что видно/чувствуется): жидкость <strong>прозрачная</strong>, без&nbsp;мути и&nbsp;посторонних частиц, запах ментола.</li>
+      <li><strong>Объём/масса</strong>&nbsp;— соответствует прописи.</li>
+      <li><strong>Упаковка и&nbsp;оформление</strong>: флакон, этикетка <strong>«Наружное»</strong>, плюс предупреждающие&nbsp;— «Хранить в&nbsp;прохладном, защищённом от&nbsp;света месте», «Беречь от&nbsp;детей».</li>
+    </ul>
+  </section>
+
+
+  <!-- ─────────────────────── 04 · скелет ─────────────────────── -->
+  <section>
+    <div class="section-label">
+      <span class="num">[ 04 ]</span>
+      <span>как отвечать · скелет, а не зубрёжка</span>
+      <span class="line"></span>
+    </div>
+    <div class="step-box">
+      <h3>Держи логику ответа, а&nbsp;не&nbsp;текст слово в&nbsp;слово.</h3>
+      <ol>
+        <li><strong>Пенициллины:</strong> что&nbsp;это (β-лактамный антибиотик) → как работает (ломает клеточную стенку, бактерицидно) → классификация (природные / полусинтетические с&nbsp;примерами) → спектр (в&nbsp;основном грам+) → показания → побочки (<span class="hl">аллергия!</span>) → противопоказания (аллергия + перекрёст с&nbsp;цефалоспоринами).</li>
+        <li><strong>Персонал аптеки:</strong> образование → аккредитация → медосмотры/санитария → этика. По&nbsp;фразе на&nbsp;пункт.</li>
+        <li><strong>Рецепт:</strong> латынь → это масляный раствор 1% → растворение (подогрел масло, растворил ментол, не&nbsp;фильтруем) → оценка качества (прозрачность, этикетка «Наружное»).</li>
+      </ol>
+      <p style="margin:22px 0 0; color:var(--ink-3); font-size:14px;">Если на&nbsp;экзамене сбился&nbsp;— возвращайся к&nbsp;этим трём цепочкам. Каждая часть билета&nbsp;= одна линия рассуждения, а&nbsp;не&nbsp;список фактов наизусть.</p>
+    </div>
+  </section>
+
+
+  <!-- ─────────────────────── FOOTER ─────────────────────── -->
+  <footer class="doc">
+    <span>шпаргалка · билет 17 · v1</span>
+    <span>33.02.01 Фармация · ГИА 24.06.2026</span>
+    <span>собрано из текста билета · проверь спорное у преподавателя</span>
+  </footer>
+
+</div>
+</body>
+</html>
