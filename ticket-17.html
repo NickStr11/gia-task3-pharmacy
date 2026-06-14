@@ -1001,7 +1001,7 @@
         <span class="line"></span>
       </div>
       <div class="recall-grid">
-        <div class="recall-card" data-recall data-answer="бета-лактам,β-лактам">
+        <div class="recall-card" data-recall data-answer="бета-лактамные,бета-лактам,β-лактамные,β-лактам">
           <label>Пенициллины = ____ антибиотики.</label>
           <div class="recall-row"><input type="text" autocomplete="off" /><button class="mini-btn" type="button">Проверить</button></div>
           <div class="recall-result"></div>
@@ -1161,7 +1161,13 @@
   });
   updateScore();
 
-  const normalize = (value) => value.toLowerCase().replaceAll('ё', 'е').replace(/[.,;%]/g, '').trim();
+  const normalize = (value) => value
+    .toLowerCase()
+    .replaceAll('ё', 'е')
+    .replace(/[.,;%]/g, '')
+    .replace(/[‐‑‒–—-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
   document.querySelectorAll('[data-recall]').forEach((card) => {
     const input = card.querySelector('input');
     const result = card.querySelector('.recall-result');
