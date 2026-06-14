@@ -78,6 +78,242 @@
     max-width: 660px;
   }
 
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--line);
+    margin: -28px 0 72px;
+  }
+  .tab-btn {
+    appearance: none;
+    border: 0;
+    border-right: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink-3);
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 16px 14px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .tab-btn:last-child { border-right: 0; }
+  .tab-btn:hover { color: var(--accent); }
+  .tab-btn.active {
+    background: var(--accent-soft);
+    color: var(--ink);
+  }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .trainer-head {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 28px;
+    align-items: end;
+    margin-bottom: 36px;
+  }
+  .trainer-head h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .trainer-score {
+    border-top: 1px solid var(--ink);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .trainer-score .score-cell {
+    border-right: 1px solid var(--line);
+    padding: 18px 18px 16px;
+  }
+  .trainer-score .score-cell:last-child { border-right: 0; }
+  .trainer-score b {
+    display: block;
+    font-family: var(--mono);
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .trainer-score span {
+    color: var(--ink-3);
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .quiz-grid {
+    display: grid;
+    gap: 16px;
+  }
+  .quiz-card {
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 44px 1fr;
+    padding: 18px 0 20px;
+  }
+  .quiz-card .q-num {
+    color: var(--accent);
+    font-family: var(--mono);
+    font-size: 13px;
+    padding-top: 2px;
+  }
+  .quiz-card .q-text {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+  .options {
+    display: grid;
+    gap: 8px;
+  }
+  .opt {
+    appearance: none;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 0;
+    color: var(--ink-2);
+    cursor: pointer;
+    font: inherit;
+    line-height: 1.35;
+    min-height: 44px;
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .opt:hover { border-color: var(--ink); }
+  .opt.correct {
+    background: var(--ok-soft);
+    border-color: var(--ok);
+    color: var(--ink);
+  }
+  .opt.wrong {
+    background: var(--warn-soft);
+    border-color: var(--warn);
+    color: var(--ink);
+  }
+  .feedback {
+    color: var(--ink-3);
+    font-size: 14px;
+    margin-top: 10px;
+    min-height: 20px;
+  }
+  .recall-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .recall-card {
+    border: 1px solid var(--line);
+    padding: 18px 18px 20px;
+  }
+  .recall-card label {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+  .recall-row {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr auto;
+  }
+  .recall-card input {
+    border: 1px solid var(--line-strong);
+    font: inherit;
+    min-width: 0;
+    padding: 10px 12px;
+  }
+  .mini-btn {
+    appearance: none;
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 10px 12px;
+    text-transform: uppercase;
+  }
+  .mini-btn.secondary {
+    background: transparent;
+    color: var(--ink);
+  }
+  .mini-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .mini-btn:not(.secondary):hover { background: var(--accent); color: #fff; }
+  .recall-result {
+    color: var(--ink-3);
+    font-size: 13.5px;
+    margin-top: 9px;
+    min-height: 18px;
+  }
+  .order-list {
+    counter-reset: step;
+    display: grid;
+    gap: 0;
+    margin-top: 16px;
+  }
+  .order-item {
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 44px 1fr;
+    padding: 13px 0;
+  }
+  .order-item::before {
+    color: var(--accent);
+    content: counter(step, decimal-leading-zero);
+    counter-increment: step;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  .exam-layout {
+    display: grid;
+    gap: 18px;
+  }
+  .exam-block {
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+  .exam-block h3 {
+    margin-top: 0;
+  }
+  .exam-block textarea {
+    border: 1px solid var(--line-strong);
+    color: var(--ink);
+    font: inherit;
+    min-height: 150px;
+    padding: 14px 16px;
+    resize: vertical;
+    width: 100%;
+  }
+  details.answer-key {
+    border: 1px solid var(--ink);
+    margin-top: 14px;
+    padding: 0;
+  }
+  details.answer-key summary {
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    list-style: none;
+    padding: 13px 16px;
+    text-transform: uppercase;
+  }
+  details.answer-key summary::-webkit-details-marker { display: none; }
+  details.answer-key .key-body {
+    border-top: 1px solid var(--line);
+    color: var(--ink-2);
+    font-size: 14.5px;
+    padding: 14px 16px 16px;
+  }
+
   /* ───── section ───── */
   section { margin-top: 80px; }
   section h2 {
@@ -286,6 +522,22 @@
     header.doc { padding-top: 22px; margin-bottom: 48px; }
     header.doc h1 { font-size: 27px; line-height: 1.2; }
     header.doc .sub { font-size: 15.5px; }
+    .tabs {
+      grid-template-columns: 1fr;
+      margin: -18px 0 48px;
+    }
+    .tab-btn {
+      border-bottom: 1px solid var(--line);
+      border-right: 0;
+      min-height: 46px;
+    }
+    .tab-btn:last-child { border-bottom: 0; }
+    .trainer-head { grid-template-columns: 1fr; }
+    .trainer-head h2 { font-size: 24px; }
+    .trainer-score .score-cell { padding: 14px 12px; }
+    .quiz-card { grid-template-columns: 34px 1fr; }
+    .recall-grid { grid-template-columns: 1fr; }
+    .recall-row { grid-template-columns: 1fr; }
     section { margin-top: 56px; }
     section h2 { font-size: 21px; }
     .facts { grid-template-columns: repeat(2, 1fr); }
@@ -304,6 +556,8 @@
   @media print {
     @page { margin: 16mm 14mm; }
     .page { padding: 0; max-width: 100%; }
+    .tabs { display: none; }
+    .tab-panel { display: block; }
     header.doc { margin-bottom: 36px; }
     section { margin-top: 40px; page-break-inside: avoid; }
     .callout, .recipe, .step-box, .term, .stp, table.t tr { page-break-inside: avoid; }
@@ -329,6 +583,13 @@
     <p class="sub">Три задания билета, разобранные простым языком. Вся терминология объясняется по&nbsp;ходу. В&nbsp;конце&nbsp;— «скелет» ответа, чтобы не&nbsp;зубрить, а&nbsp;держать логику.</p>
   </header>
 
+  <nav class="tabs" aria-label="Режимы работы с билетом">
+    <button class="tab-btn active" type="button" data-tab="sheet" aria-controls="sheet" aria-selected="true">Шпаргалка</button>
+    <button class="tab-btn" type="button" data-tab="training" aria-controls="training" aria-selected="false">Тренировка</button>
+    <button class="tab-btn" type="button" data-tab="exam" aria-controls="exam" aria-selected="false">Экзамен</button>
+  </nav>
+
+  <main class="tab-panel active" id="sheet" data-panel="sheet">
 
   <!-- ─────────────────────── 01 · пенициллины ─────────────────────── -->
   <section>
@@ -537,15 +798,354 @@
       <p style="margin:22px 0 0; color:var(--ink-3); font-size:14px;">Если на&nbsp;экзамене сбился&nbsp;— возвращайся к&nbsp;этим трём цепочкам. Каждая часть билета&nbsp;= одна линия рассуждения, а&nbsp;не&nbsp;список фактов наизусть.</p>
     </div>
   </section>
+  </main>
+
+  <main class="tab-panel" id="training" data-panel="training">
+    <div class="trainer-head">
+      <div>
+        <div class="section-label">
+          <span class="num">[ T ]</span>
+          <span>active recall · билет 17</span>
+          <span class="line"></span>
+        </div>
+        <h2>Тренировка без подглядывания.</h2>
+        <p class="lead">Сначала отвечаешь по памяти, потом открываешь проверку. Ошибки здесь полезнее, чем перечитывание текста глазами.</p>
+      </div>
+      <div class="trainer-score" aria-live="polite">
+        <div class="score-cell"><b id="score-correct">0</b><span>верно</span></div>
+        <div class="score-cell"><b id="score-total">0</b><span>проверено</span></div>
+        <div class="score-cell"><b id="score-left">10</b><span>осталось</span></div>
+      </div>
+    </div>
+
+    <section>
+      <div class="section-label">
+        <span class="num">[ 01 ]</span>
+        <span>блиц · выбрать ответ</span>
+        <span class="line"></span>
+      </div>
+      <div class="quiz-grid" id="quiz-list">
+        <article class="quiz-card" data-quiz>
+          <div class="q-num">01</div>
+          <div>
+            <div class="q-text">Пенициллины относятся к какой большой группе антибиотиков?</div>
+            <div class="options">
+              <button class="opt" type="button" data-correct="true" data-note="Да. Главное слово: β-лактамное кольцо.">β-лактамные</button>
+              <button class="opt" type="button" data-note="Нет. Макролиды — это другая группа, например азитромицин.">Макролиды</button>
+              <button class="opt" type="button" data-note="Нет. НПВС — это обезбол/воспаление, не антибиотики.">НПВС</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-quiz>
+          <div class="q-num">02</div>
+          <div>
+            <div class="q-text">Почему пенициллины называют бактерицидными?</div>
+            <div class="options">
+              <button class="opt" type="button" data-note="Нет. Это бактериостатическое действие.">Тормозят размножение бактерий</button>
+              <button class="opt" type="button" data-correct="true" data-note="Да. Они ломают клеточную стенку, бактерия погибает.">Убивают бактерии</button>
+              <button class="opt" type="button" data-note="Нет. С вирусами пенициллины не работают.">Уничтожают вирусы</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-quiz>
+          <div class="q-num">03</div>
+          <div>
+            <div class="q-text">Главная побочка, которую нужно назвать первой?</div>
+            <div class="options">
+              <button class="opt" type="button" data-note="Нет. Может быть, но это не главный экзаменационный акцент.">Сонливость</button>
+              <button class="opt" type="button" data-correct="true" data-note="Да. От сыпи до анафилактического шока.">Аллергия</button>
+              <button class="opt" type="button" data-note="Нет. Это не ключевая побочка пенициллинов.">Повышение давления</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-quiz>
+          <div class="q-num">04</div>
+          <div>
+            <div class="q-text">Что делает клавулановая кислота в Амоксиклаве?</div>
+            <div class="options">
+              <button class="opt" type="button" data-note="Нет. Она не обезболивает и не лечит симптомы.">Снимает воспаление</button>
+              <button class="opt" type="button" data-note="Нет. Дозировку так не объясняют.">Уменьшает дозу амоксициллина</button>
+              <button class="opt" type="button" data-correct="true" data-note="Да. Связывает β-лактамазу и защищает антибиотик.">Защищает антибиотик от β-лактамазы</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-quiz>
+          <div class="q-num">05</div>
+          <div>
+            <div class="q-text">Какая связка по персоналу аптеки самая короткая для ответа?</div>
+            <div class="options">
+              <button class="opt" type="button" data-correct="true" data-note="Да. Это скелет второго вопроса.">Образование → аккредитация → медосмотры → спецодежда → этика</button>
+              <button class="opt" type="button" data-note="Нет. Это скорее складская тема, не требования к персоналу.">Остатки → поставщики → выкладка → заявки</button>
+              <button class="opt" type="button" data-note="Нет. Тут смешаны не те блоки.">Рецепт → дозировка → упаковка → отпуск</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-quiz>
+          <div class="q-num">06</div>
+          <div>
+            <div class="q-text">Почему ментол растворяют в вазелиновом масле?</div>
+            <div class="options">
+              <button class="opt" type="button" data-correct="true" data-note="Да. В воде плохо, в маслах хорошо.">Ментол хорошо растворяется в маслах</button>
+              <button class="opt" type="button" data-note="Нет. Тут не стерильность, а растворимость.">Так получается стерильный раствор</button>
+              <button class="opt" type="button" data-note="Нет. Вода как раз не подходит.">Ментол хорошо растворяется в воде</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-quiz>
+          <div class="q-num">07</div>
+          <div>
+            <div class="q-text">0,2 г ментола на 20,0 г масла — какая концентрация?</div>
+            <div class="options">
+              <button class="opt" type="button" data-note="Нет. Проверь: 0,2 / 20 × 100.">0,1%</button>
+              <button class="opt" type="button" data-correct="true" data-note="Да. 0,2 ÷ 20 × 100 = 1.">1%</button>
+              <button class="opt" type="button" data-note="Нет. Это было бы 2 г на 20 г.">10%</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-quiz>
+          <div class="q-num">08</div>
+          <div>
+            <div class="q-text">Нужно ли фильтровать масляный раствор ментола?</div>
+            <div class="options">
+              <button class="opt" type="button" data-note="Нет. По этому билету акцент другой.">Да, обязательно через бумажный фильтр</button>
+              <button class="opt" type="button" data-correct="true" data-note="Да. Ментол растворяется без остатка, раствор прозрачный.">Нет, если растворение полное</button>
+              <button class="opt" type="button" data-note="Нет. Кипячение здесь не нужно.">Только после кипячения</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-quiz>
+          <div class="q-num">09</div>
+          <div>
+            <div class="q-text">Какая этикетка логична для этих капель?</div>
+            <div class="options">
+              <button class="opt" type="button" data-correct="true" data-note="Да. Это наружное применение.">Наружное</button>
+              <button class="opt" type="button" data-note="Нет. Это не внутрь.">Внутреннее</button>
+              <button class="opt" type="button" data-note="Нет. Не инъекционная форма.">Стерильно</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </article>
+
+        <article class="quiz-card" data-quiz>
+          <div class="q-num">10</div>
+          <div>
+            <div class="q-text">Что обязательно назвать в оценке качества?</div>
+            <div class="options">
+              <button class="opt" type="button" data-note="Нет. Цвет упаковки не критерий.">Цвет флакона как главный критерий</button>
+              <button class="opt" type="button" data-correct="true" data-note="Да. Прозрачность, отсутствие частиц, масса/объём, оформление.">Прозрачность, отсутствие частиц, соответствие прописи и этикетка</button>
+              <button class="opt" type="button" data-note="Нет. Цена не относится к качеству лекарственной формы.">Цена препарата</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">
+        <span class="num">[ 02 ]</span>
+        <span>пропуски · короткий ответ</span>
+        <span class="line"></span>
+      </div>
+      <div class="recall-grid">
+        <div class="recall-card" data-recall data-answer="бета-лактам,β-лактам">
+          <label>Пенициллины = ____ антибиотики.</label>
+          <div class="recall-row"><input type="text" autocomplete="off" /><button class="mini-btn" type="button">Проверить</button></div>
+          <div class="recall-result"></div>
+        </div>
+        <div class="recall-card" data-recall data-answer="аллергия,анафилаксия,анафилактический шок">
+          <label>Побочка №1 у пенициллинов: ____.</label>
+          <div class="recall-row"><input type="text" autocomplete="off" /><button class="mini-btn" type="button">Проверить</button></div>
+          <div class="recall-result"></div>
+        </div>
+        <div class="recall-card" data-recall data-answer="1,1%,один процент">
+          <label>0,2 на 20,0 = ____.</label>
+          <div class="recall-row"><input type="text" autocomplete="off" /><button class="mini-btn" type="button">Проверить</button></div>
+          <div class="recall-result"></div>
+        </div>
+        <div class="recall-card" data-recall data-answer="наружное,наружно">
+          <label>Этикетка для капель в нос: ____.</label>
+          <div class="recall-row"><input type="text" autocomplete="off" /><button class="mini-btn" type="button">Проверить</button></div>
+          <div class="recall-result"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">
+        <span class="num">[ 03 ]</span>
+        <span>порядок · технология капель</span>
+        <span class="line"></span>
+      </div>
+      <p class="lead">Проговори шаги вслух, потом сверяйся.</p>
+      <div class="order-list">
+        <div class="order-item">Отвесить вазелиновое масло 20,0.</div>
+        <div class="order-item">Слегка подогреть масло на водяной бане.</div>
+        <div class="order-item">Добавить ментол 0,2 и перемешать до полного растворения.</div>
+        <div class="order-item">Убедиться, что раствор прозрачный, без частиц.</div>
+        <div class="order-item">Перелить во флакон, укупорить, оформить этикеткой.</div>
+      </div>
+    </section>
+  </main>
+
+  <main class="tab-panel" id="exam" data-panel="exam">
+    <div class="trainer-head">
+      <div>
+        <div class="section-label">
+          <span class="num">[ E ]</span>
+          <span>ответ без подсказок</span>
+          <span class="line"></span>
+        </div>
+        <h2>Экзаменационный прогон.</h2>
+        <p class="lead">Сначала набросай ответ как на экзамене. Потом открой ключ и проверь, какие опорные точки выпали.</p>
+      </div>
+      <div class="step-box" style="margin-top:0;">
+        <h3>Мини-правило</h3>
+        <ol>
+          <li>Не писать идеально.</li>
+          <li>Сначала скелет.</li>
+          <li>Потом добить термины и примеры.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="exam-layout">
+      <div class="exam-block">
+        <h3>1. Пенициллины</h3>
+        <textarea data-save="exam-penicillin" placeholder="β-лактамы → механизм → классификация → спектр → показания → побочки → противопоказания"></textarea>
+        <details class="answer-key">
+          <summary>Показать ключ</summary>
+          <div class="key-body">
+            β-лактамные антибиотики; нарушают синтез клеточной стенки, бактерицидные; природные и полусинтетические; ампициллин/амоксициллин, оксациллин, амоксициллин+клавулановая кислота; спектр в основном грам(+), у аминопенициллинов шире; показания: ангина, пневмония, отит, синусит, кожа, ИМП, сифилис; побочки: аллергия, ЖКТ, дисбактериоз, кандидоз; противопоказание: аллергия, осторожно с цефалоспоринами.
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-block">
+        <h3>2. Персонал аптеки</h3>
+        <textarea data-save="exam-staff" placeholder="образование → аккредитация → медосмотры → санитария → этика"></textarea>
+        <details class="answer-key">
+          <summary>Показать ключ</summary>
+          <div class="key-body">
+            Фармацевт — среднее фармобразование, провизор — высшее; нужен допуск через аккредитацию специалиста; повышение квалификации/НМО; предварительные и периодические медосмотры, медкнижка; спецодежда, гигиена; фармацевтическая этика, конфиденциальность.
+          </div>
+        </details>
+      </div>
+
+      <div class="exam-block">
+        <h3>3. Капли с ментолом</h3>
+        <textarea data-save="exam-drops" placeholder="латынь → форма → расчёт → технология → качество"></textarea>
+        <details class="answer-key">
+          <summary>Показать ключ</summary>
+          <div class="key-body">
+            Recipe: Mentholi 0,2; Olei Vaselini 20,0; Misce. Da. Signa: Капли в нос. Это масляный раствор для наружного применения. Концентрация 1%. Технология: отвесить масло, слегка подогреть, растворить ментол, не фильтровать при полном растворении, перелить во флакон. Качество: прозрачность, отсутствие частиц, запах ментола, соответствие массе/объёму, этикетка «Наружное», хранить прохладно и защищать от света.
+          </div>
+        </details>
+      </div>
+    </div>
+  </main>
 
 
   <!-- ─────────────────────── FOOTER ─────────────────────── -->
   <footer class="doc">
-    <span>шпаргалка · билет 17 · v1</span>
+    <span>шпаргалка + тренировка · билет 17 · v2</span>
     <span>33.02.01 Фармация · ГИА 24.06.2026</span>
     <span>собрано из текста билета · проверь спорное у преподавателя</span>
   </footer>
 
 </div>
+<script>
+(() => {
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  const setTab = (name) => {
+    tabs.forEach((tab) => {
+      const isActive = tab.dataset.tab === name;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', String(isActive));
+    });
+    panels.forEach((panel) => panel.classList.toggle('active', panel.dataset.panel === name));
+    const url = new URL(window.location.href);
+    url.hash = name === 'sheet' ? '' : name;
+    history.replaceState(null, '', url.pathname + url.search + url.hash);
+  };
+
+  tabs.forEach((tab) => tab.addEventListener('click', () => setTab(tab.dataset.tab)));
+  const initial = window.location.hash.replace('#', '');
+  if (initial === 'training' || initial === 'exam') setTab(initial);
+
+  const quizCards = [...document.querySelectorAll('[data-quiz]')];
+  const correctEl = document.getElementById('score-correct');
+  const totalEl = document.getElementById('score-total');
+  const leftEl = document.getElementById('score-left');
+  const updateScore = () => {
+    const checked = quizCards.filter((card) => card.dataset.done === 'true');
+    const correct = checked.filter((card) => card.dataset.correct === 'true');
+    correctEl.textContent = correct.length;
+    totalEl.textContent = checked.length;
+    leftEl.textContent = Math.max(0, quizCards.length - checked.length);
+  };
+
+  quizCards.forEach((card) => {
+    const feedback = card.querySelector('.feedback');
+    card.querySelectorAll('.opt').forEach((button) => {
+      button.addEventListener('click', () => {
+        card.querySelectorAll('.opt').forEach((item) => {
+          item.classList.remove('correct', 'wrong');
+          item.disabled = true;
+        });
+        const isCorrect = button.dataset.correct === 'true';
+        button.classList.add(isCorrect ? 'correct' : 'wrong');
+        const right = card.querySelector('[data-correct="true"]');
+        if (right) right.classList.add('correct');
+        feedback.textContent = button.dataset.note || '';
+        card.dataset.done = 'true';
+        card.dataset.correct = String(isCorrect);
+        updateScore();
+      });
+    });
+  });
+  updateScore();
+
+  const normalize = (value) => value.toLowerCase().replaceAll('ё', 'е').replace(/[.,;%]/g, '').trim();
+  document.querySelectorAll('[data-recall]').forEach((card) => {
+    const input = card.querySelector('input');
+    const result = card.querySelector('.recall-result');
+    const answers = card.dataset.answer.split(',').map(normalize);
+    const check = () => {
+      const value = normalize(input.value);
+      const ok = value && answers.some((answer) => value.includes(answer) || answer.includes(value));
+      result.textContent = ok ? 'Да, зачёт.' : `Мимо. Опора: ${card.dataset.answer.split(',')[0]}.`;
+      result.style.color = ok ? 'var(--ok)' : 'var(--warn)';
+    };
+    card.querySelector('button').addEventListener('click', check);
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') check();
+    });
+  });
+
+  document.querySelectorAll('[data-save]').forEach((field) => {
+    const key = `ticket17:${field.dataset.save}`;
+    field.value = localStorage.getItem(key) || '';
+    field.addEventListener('input', () => localStorage.setItem(key, field.value));
+  });
+})();
+</script>
 </body>
 </html>
