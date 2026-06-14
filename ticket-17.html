@@ -178,6 +178,21 @@
   .tab-panel[data-panel="training"] section + section {
     margin-top: 12px;
   }
+  .tab-panel[data-panel="training"] .trainer-head {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .tab-panel[data-panel="training"] .trainer-head > div:first-child {
+    max-width: 720px;
+  }
+  .tab-panel[data-panel="training"] .trainer-head .lead {
+    max-width: 720px;
+  }
+  .tab-panel[data-panel="training"] .trainer-score {
+    justify-self: end;
+    margin-top: -4px;
+    width: 316px;
+  }
   .quiz-card .q-num {
     color: var(--accent);
     font-family: var(--mono);
