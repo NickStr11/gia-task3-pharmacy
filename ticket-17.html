@@ -6,24 +6,26 @@
 <title>Билет №17 · Шпаргалка к госэкзамену · Фармация</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --bg: #ffffff;
-    --bg-tint: #fafafa;
-    --ink: #0a0a0a;
-    --ink-2: #3a3a3a;
-    --ink-3: #6a6a6a;
-    --ink-4: #9a9a9a;
-    --line: #e6e6e6;
-    --line-strong: #cfcfcf;
+    --bg: #f7f2ea;
+    --bg-tint: #fffaf2;
+    --paper: #fffdf8;
+    --ink: #11100e;
+    --ink-2: #39352f;
+    --ink-3: #756f66;
+    --ink-4: #a39b90;
+    --line: #ded4c7;
+    --line-strong: #b9aa99;
     --accent: #0F62FE;
-    --accent-soft: #e8efff;
+    --accent-soft: #e7eefc;
     --warn: #b25400;
     --warn-soft: #fff4e6;
     --ok: #0a7d4d;
     --ok-soft: #e6f6ee;
 
+    --serif: 'Noto Serif', Georgia, serif;
     --sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
@@ -44,14 +46,14 @@
   .page {
     max-width: var(--col);
     margin: 0 auto;
-    padding: 96px 32px 160px;
+    padding: 80px 32px 140px;
   }
 
   /* ───── header ───── */
   header.doc {
     border-top: 1px solid var(--ink);
     padding-top: 28px;
-    margin-bottom: 72px;
+    margin-bottom: 52px;
   }
   header.doc .meta {
     font-family: var(--mono);
@@ -65,12 +67,12 @@
     margin-bottom: 32px;
   }
   header.doc h1 {
-    font-family: var(--sans);
-    font-weight: 500;
-    font-size: 40px;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 44px;
     line-height: 1.15;
     margin: 0 0 12px;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
   }
   header.doc .sub {
     color: var(--ink-3);
@@ -83,7 +85,8 @@
     grid-template-columns: repeat(3, 1fr);
     border-top: 1px solid var(--ink);
     border-bottom: 1px solid var(--line);
-    margin: -28px 0 72px;
+    background: var(--paper);
+    margin: -12px 0 68px;
   }
   .tab-btn {
     appearance: none;
@@ -102,8 +105,8 @@
   .tab-btn:last-child { border-right: 0; }
   .tab-btn:hover { color: var(--accent); }
   .tab-btn.active {
-    background: var(--accent-soft);
-    color: var(--ink);
+    background: var(--ink);
+    color: #fff;
   }
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
@@ -116,11 +119,14 @@
     margin-bottom: 36px;
   }
   .trainer-head h2 {
-    font-size: 32px;
+    font-family: var(--serif);
+    font-size: 36px;
+    font-weight: 600;
     margin-bottom: 10px;
   }
   .trainer-score {
     border-top: 1px solid var(--ink);
+    background: var(--paper);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -153,7 +159,7 @@
     display: grid;
     gap: 14px;
     grid-template-columns: 44px 1fr;
-    padding: 18px 0 20px;
+    padding: 22px 0 24px;
   }
   .quiz-card .q-num {
     color: var(--accent);
@@ -162,8 +168,8 @@
     padding-top: 2px;
   }
   .quiz-card .q-text {
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     line-height: 1.35;
     margin-bottom: 12px;
   }
@@ -173,7 +179,7 @@
   }
   .opt {
     appearance: none;
-    background: var(--bg);
+    background: var(--paper);
     border: 1px solid var(--line);
     border-radius: 0;
     color: var(--ink-2);
@@ -208,6 +214,7 @@
   }
   .recall-card {
     border: 1px solid var(--line);
+    background: var(--paper);
     padding: 18px 18px 20px;
   }
   .recall-card label {
@@ -284,6 +291,7 @@
     margin-top: 0;
   }
   .exam-block textarea {
+    background: var(--paper);
     border: 1px solid var(--line-strong);
     color: var(--ink);
     font: inherit;
@@ -317,11 +325,11 @@
   /* ───── section ───── */
   section { margin-top: 80px; }
   section h2 {
-    font-family: var(--sans);
-    font-weight: 500;
+    font-family: var(--serif);
+    font-weight: 600;
     font-size: 26px;
     line-height: 1.25;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     margin: 0 0 6px;
   }
   section h3 {
@@ -492,6 +500,7 @@
 
   /* ───── skeleton (step-box) ───── */
   .step-box { border: 1px solid var(--ink); padding: 28px 28px 30px; margin-top: 20px; }
+  .step-box { background: var(--paper); }
   .step-box h3 { margin-top: 0; font-size: 20px; }
   .step-box ol { padding-left: 20px; margin: 14px 0 0; font-size: 15px; color: var(--ink-2); }
   .step-box ol li { margin: 10px 0; }
@@ -570,11 +579,18 @@
 <body>
 
 <div class="page">
+  <!--
+    Huashu Design pass:
+    - output type: HTML-native study prototype, not production app
+    - direction: Warm Editorial + exam workbench
+    - constraints: keep the original ticket content, improve active-recall tabs,
+      avoid dashboard/landing-page tropes, verify with browser screenshots
+  -->
 
   <!-- ─────────────────────── HEADER ─────────────────────── -->
   <header class="doc">
     <div class="meta">
-      <span>шпаргалка · бил.17/v1</span>
+      <span>шпаргалка · бил.17/v2</span>
       <span>ГИА · 33.02.01 Фармация</span>
       <span>для: Никита</span>
       <span>экзамен: 24.06.2026</span>
@@ -1084,6 +1100,7 @@
     const url = new URL(window.location.href);
     url.hash = name === 'sheet' ? '' : name;
     history.replaceState(null, '', url.pathname + url.search + url.hash);
+    if (window.scrollY > 0) window.scrollTo(0, 0);
   };
 
   tabs.forEach((tab) => tab.addEventListener('click', () => setTab(tab.dataset.tab)));
