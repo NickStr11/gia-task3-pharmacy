@@ -28,6 +28,7 @@ ul{padding-left:20px;color:var(--ink-2);font-size:15px;} li{margin:5px 0;}
 .part{display:grid;grid-template-columns:132px 1fr;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);} .plbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);padding-top:3px;} .pbody{font-size:14.5px;color:var(--ink-2);} .tech{margin:0;padding-left:18px;}
 .task3-card .card-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;} .task3-card .bn{font-weight:600;font-size:20px;} .task3-card .bgrp{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);} .task3-card .lf{color:var(--ink-2);font-size:15px;margin:4px 0 16px;}
 .step-box{border:1px solid var(--ink);padding:22px 24px;margin-top:32px;} .step-box h3{margin-top:0;font-size:18px;} .step-box ol{padding-left:20px;margin-bottom:0;font-size:15px;color:var(--ink-2);}
+.practice-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;} .practice-links a{border:1px solid var(--line-strong);padding:8px 12px;border-radius:3px;color:var(--accent);text-decoration:none;font-size:14px;} .practice-links a:hover{border-color:var(--accent);} .pharmacy-practice{scroll-margin-top:20px;} .pharmacy-practice details{margin-top:18px;font-size:14px;} .pharmacy-practice summary{cursor:pointer;font-weight:500;} .pharmacy-practice details p{margin:10px 0;}
 footer.doc{margin-top:90px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--ink-4);letter-spacing:.05em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;}
 @media(max-width:720px){.page{width:100%;max-width:100%;padding:42px 18px 80px;} .meta{display:grid;grid-template-columns:1fr;gap:8px;} h1{font-size:26px;max-width:100%;} h2{font-size:21px;max-width:100%;} .sub{font-size:15.5px;} .section-label span:nth-child(2){display:none;} .navchip{width:30px;margin-right:2px;} .ticket-top{grid-template-columns:1fr;} .part{grid-template-columns:1fr;gap:4px;} .recipe{padding:14px 14px;} .recipe .rx{grid-template-columns:1fr;gap:2px;}}
 @media print{@page{margin:14mm 12mm;} .page{padding:0;max-width:100%;} .navwrap{display:none;} .ticket{page-break-before:always;margin-top:0;} .ticket:first-of-type{page-break-before:auto;} .qa,.callout,.recipe,.part,.step-box{page-break-inside:avoid;}}
@@ -36,11 +37,17 @@ footer.doc{margin-top:90px;padding-top:24px;border-top:1px solid var(--line);fon
 <body>
 <div class="page">
 <header class="doc">
-<div class="meta"><span>ГИА · 33.02.01 Фармация</span><span>35 билетов · полная шпаргалка</span><span>обновлено: 2026-06-08</span></div>
+<div class="meta"><span>ГИА · 33.02.01 Фармация</span><span>35 билетов · полная шпаргалка</span><span>билеты: 08.06.2026 · практика: 05.10.2026</span></div>
 <h1>35 билетов ГИА по фармации.</h1>
 <p class="sub">Формат как в примере билета 17: развёрнутый первый вопрос, правовой/организационный второй вопрос, изготовление лекарственной формы и короткий скелет ответа. Нормативная база для изготовления ЛП: Приказ Минздрава РФ №249н от 22.05.2023, ГФ и учебники аптечной технологии.</p>
 <div class="navwrap"><span class="navlbl">Билеты:</span> <a class="navchip" href="#b1">1</a> <a class="navchip" href="#b2">2</a> <a class="navchip" href="#b3">3</a> <a class="navchip" href="#b4">4</a> <a class="navchip" href="#b5">5</a> <a class="navchip" href="#b6">6</a> <a class="navchip" href="#b7">7</a> <a class="navchip" href="#b8">8</a> <a class="navchip" href="#b9">9</a> <a class="navchip" href="#b10">10</a> <a class="navchip" href="#b11">11</a> <a class="navchip" href="#b12">12</a> <a class="navchip" href="#b13">13</a> <a class="navchip" href="#b14">14</a> <a class="navchip" href="#b15">15</a> <a class="navchip" href="#b16">16</a> <a class="navchip" href="#b17">17</a> <a class="navchip" href="#b18">18</a> <a class="navchip" href="#b19">19</a> <a class="navchip" href="#b20">20</a> <a class="navchip" href="#b21">21</a> <a class="navchip" href="#b22">22</a> <a class="navchip" href="#b23">23</a> <a class="navchip" href="#b24">24</a> <a class="navchip" href="#b25">25</a> <a class="navchip" href="#b26">26</a> <a class="navchip" href="#b27">27</a> <a class="navchip" href="#b28">28</a> <a class="navchip" href="#b29">29</a> <a class="navchip" href="#b30">30</a> <a class="navchip" href="#b31">31</a> <a class="navchip" href="#b32">32</a> <a class="navchip" href="#b33">33</a> <a class="navchip" href="#b34">34</a> <a class="navchip" href="#b35">35</a></div>
 </header>
+<aside class="callout" aria-label="Как учить для работы в аптеке">
+<span class="lbl">Для работы в нашей аптеке</span>
+<p><strong>Теория → наши препараты → разговор с покупателем.</strong> В билетах №12 и №23 после первого вопроса добавлена практика на примерах из нашего ассортимента. Аллергия — отдельное дополнение.</p>
+<p>Прочитай теорию, разбери ситуацию и попробуй ответить покупателю своими словами. В конце каждого блока открой «Проверить себя» и сравни ответ.</p>
+<nav class="practice-links" aria-label="Практические разборы"><a href="#practice-b23">Боль · билет 23</a><a href="#practice-b12">Периндоприл · билет 12</a><a href="#practice-allergy">Аллергия · дополнение</a></nav>
+</aside>
 <section class="ticket" id="b1">
 <div class="section-label"><span class="num">[ билет 01 ]</span><span>Пути введения лекарственных средств</span><span class="line"></span></div>
 <h2>Билет №1</h2>
@@ -468,6 +475,21 @@ footer.doc{margin-top:90px;padding-top:24px;border-top:1px solid var(--line);fon
 <p><strong>Нежелательные эффекты.</strong> иАПФ — <strong>сухой кашель</strong>, повышение калия, редко <strong>ангионевротический отёк</strong>; сартаны — те же плюсы, но без кашля.</p>
 <p><strong>Противопоказания.</strong> <strong>Беременность</strong> (категорически!), двусторонний стеноз почечных артерий, высокий калий.</p>
 <div class="callout"><span class="lbl">термины</span><strong>РААС</strong> — гормональная система регуляции давления. <strong>Ангиотензин II</strong> — вещество, сужающее сосуды. <strong>Ангионевротический отёк</strong> — быстрый отёк лица/гортани.</div></article>
+<article class="qa pharmacy-practice" id="practice-b12" aria-labelledby="practice-b12-title">
+<h2 id="practice-b12-title">В нашей аптеке · периндоприл и Престариум А</h2>
+<p class="lead"><strong>Ситуация:</strong> «Почему у меня периндоприл 4 мг, а у знакомого Престариум 5 мг? Можно взять его?»</p>
+<p><strong>Наши позиции:</strong> Периндоприл Биохимик 4 и 8 мг; Престариум А 5 и 10 мг. Начни с упаковки и назначения, затем сравни состав и форму.</p>
+<h3>Почему различаются цифры</h3>
+<p>Периндоприл Биохимик 4 мг содержит <strong>4 мг соли эрбумина</strong> — это 3,338 мг самого периндоприла. Престариум А 5 мг содержит <strong>5 мг аргининовой соли</strong> — это 3,395 мг периндоприла. Цифры отражают массу разных солей; их нельзя сравнивать как одинаковые миллиграммы одного состава.</p>
+<div class="callout warn"><span class="lbl">При выборе замены</span>Близкое количество самого периндоприла не подтверждает взаимозаменяемость конкретных упаковок. Сверь точный препарат, соль, дозировку, форму и назначение. Взаимозаменяемость этих двух продуктов по действующему реестру в этом разборе не проверена.</div>
+<h3>Что спросить у покупателя</h3>
+<ul><li>Покажите старую упаковку и назначение: что именно и в какой дозе принимаете?</li><li>Продолжаете постоянное лечение или начинаете впервые? Замену предложил врач?</li><li>Есть заболевания почек, выраженное головокружение? Какие ещё лекарства принимаете?</li></ul>
+<h3>Как объяснить</h3>
+<p>«У этих препаратов разные соли периндоприла, поэтому дозировки на упаковках отличаются. Давайте сверим ваш препарат и назначение, чтобы сохранить правильную схему».</p>
+<div class="callout warn"><span class="lbl">Когда нужна медицинская помощь</span>Начало лечения, изменение дозы и выраженное снижение давления требуют клинической оценки. При подборе терапии учитывают функцию почек и калий. Отёк языка или горла, затруднение дыхания — повод для экстренной помощи.</div>
+<details><summary>Проверить себя: что нужно узнать до обсуждения замены?</summary><p>Точное название старого препарата, соль, дозировку, форму и назначенную схему. Одного слова «периндоприл» и числа миллиграммов недостаточно.</p></details>
+<details><summary>Источники · проверено 5 октября 2026</summary><ul><li><a href="https://medi.ru/instrukciya/perindopril_26046/">Инструкция Периндоприла Биохимик, РУ ЛП-001215 — копия на МЕДИ РУ</a></li><li><a href="https://servier.ru/wp-content/uploads/2023/09/20240730_spc-ru_prestarium-a_rus.pdf">Сервье: общая характеристика Престариума А</a></li></ul></details>
+</article>
 <article class="qa"><h2>02 · Отпуск лекарственных препаратов по рецептам врачей. Сроки обслуживания выписанных рецептов.</h2>
 <p class="lead">Рецептурные препараты отпускают только по рецепту и в установленные сроки обслуживания.</p>
 <p><strong>Порядок:</strong> проверка рецепта (оформление, бланк, срок действия, подпись/печать); отпуск строго в назначенной форме и дозировке, отметка на бланке; если препарата нет — отсроченное обслуживание в нормированные сроки.</p>
@@ -910,6 +932,20 @@ footer.doc{margin-top:90px;padding-top:24px;border-top:1px solid var(--line);fon
 <p><strong>Нежелательные эффекты.</strong> <strong>Гастропатия и язвы ЖКТ</strong> (главное!), риск кровотечений, влияние на почки, «аспириновая астма».</p>
 <p><strong>Противопоказания.</strong> Язвенная болезнь, кровотечения, тяжёлые болезни почек/печени, 3-й триместр беременности.</p>
 <div class="callout"><span class="lbl">термины</span><strong>ЦОГ (циклооксигеназа)</strong> — фермент, образующий простагландины. <strong>Простагландины</strong> — вещества, запускающие боль и воспаление.</div></article>
+<article class="qa pharmacy-practice" id="practice-b23" aria-labelledby="practice-b23-title">
+<h2 id="practice-b23-title">В нашей аптеке · Пенталгин и ибупрофен</h2>
+<p class="lead"><strong>Ситуация:</strong> «Выпил Пенталгин, не помог. Дайте ещё ибупрофен».</p>
+<p><strong>Наши позиции:</strong> Ибупрофен Синтез 400 мг №20; обычный Пенталгин №12 и №24. Здесь важно проверить уже принятые лекарства, а не выбирать по торговому названию.</p>
+<h3>Что скрывается за названиями</h3>
+<p>Ибупрофен — НПВС. В обычном Пенталгине уже есть <strong>напроксен, тоже НПВС</strong>, а также парацетамол, кофеин, дротаверин и фенирамин. Добавление ибупрофена создаёт сочетание двух системных НПВС и повышает риск осложнений, включая язвы. Другие препараты линейки «Пенталгин» проверяй по их собственному составу.</p>
+<h3>Что спросить у покупателя</h3>
+<ul><li>Где и как давно болит? Кому нужен препарат, есть ли беременность?</li><li>Что уже принимали, когда и сколько? Уточни точное название или попроси упаковку.</li><li>Была язва или желудочно-кишечное кровотечение, есть заболевание почек?</li><li>Принимаете антикоагулянт, аспирин или другие обезболивающие?</li></ul>
+<h3>Как объяснить</h3>
+<p>«В Пенталгине уже есть противовоспалительное обезболивающее — напроксен. Самостоятельно добавлять ибупрофен не нужно: риск побочных эффектов увеличится. Сначала уточним, что вы приняли и что именно болит».</p>
+<div class="callout warn"><span class="lbl">Когда нужна медицинская помощь</span>Рвота кровью или чёрный дегтеобразный стул требуют срочной медицинской оценки. Подбор ещё одного обезболивающего не должен её задерживать.</div>
+<details><summary>Проверить себя: какой компонент Пенталгина дублирует группу ибупрофена?</summary><p>Напроксен. Оба относятся к НПВС. Поэтому сначала уточняем состав и уже принятые препараты.</p></details>
+<details><summary>Источники · проверено 5 октября 2026</summary><ul><li><a href="https://otcpharm.ru/medicaments/pentalgin/">Отисифарм: состав обычного Пенталгина</a></li><li><a href="https://www.nhs.uk/medicines/ibuprofen-for-adults/">NHS: ибупрофен, сочетания с другими НПВС и нежелательные реакции</a></li></ul></details>
+</article>
 <article class="qa"><h2>02 · Продвижение товаров на фармацевтическом рынке.</h2>
 <p class="lead">Как информируют о товарах и стимулируют их сбыт — с учётом строгих ограничений для лекарств.</p>
 <p><strong>Что включает:</strong> реклама (для населения — только безрецептурных ЛП), работа медицинских представителей с врачами и аптеками, выкладка и акции в аптеке (мерчандайзинг), программы лояльности, информационные материалы. Реклама рецептурных ЛП населению <strong>запрещена</strong>.</p>
@@ -1501,7 +1537,23 @@ footer.doc{margin-top:90px;padding-top:24px;border-top:1px solid var(--line);fon
 <article class="step-box"><h3>Скелет ответа</h3>
 <ol><li><strong>В1:</strong> β-адреноблокаторы → механизм (блок β-рецепторов сердца → реже/слабее) → классификация (неселективные/кардиоселективные) → показания (гипертония, ИБС, аритмии) → НЭ (брадикардия, бронхоспазм) → противопоказания (астма! не отменять резко).</li><li><strong>В2:</strong> учёт → поступление/реализация/остатки → ПКУ для отдельных групп → товароучётные программы + маркировка.</li><li><strong>В3:</strong> цинковая мазь 10% → цинка оксид 1,0 + вазелин 9,0 → 0,5 вазелина по Дерягину → «Мазь», «Наружное».</li></ol></article>
 </section>
-<footer class="doc"><span>полная шпаргалка · v1</span><span>NickStr11/gia-task3-pharmacy</span><span>ГИА · 33.02.01 Фармация</span></footer>
+<section class="ticket pharmacy-practice" id="practice-allergy" aria-labelledby="practice-allergy-title">
+<div class="section-label"><span class="num">[ практика ]</span><span>Дополнение к экзаменационным билетам</span><span class="line"></span></div>
+<h2 id="practice-allergy-title">В нашей аптеке · цетиризин и Цетрин</h2>
+<p class="lead"><strong>Ситуация:</strong> «Чем Цетрин отличается от цетиризина? Можно принять оба?»</p>
+<p><strong>Наши позиции:</strong> Цетиризин Реплекфарм 10 мг №20; Цетрин 10 мг №20. Это отдельное дополнение для работы за кассой: среди первых вопросов 35 билетов темы антигистаминных нет.</p>
+<h3>С чего начать сравнение</h3>
+<p><strong>Цетрин содержит цетиризин</strong>: в таблетке — 10 мг цетиризина дигидрохлорида. У позиции Реплекфарм в заявке указано «Цетиризин 10 мг»; перед конкретной заменой сверь инструкцию упаковки. Первичный листок именно этой позиции Реплекфарм в этом разборе не подтверждён.</p>
+<p>При совпадении действующего вещества не воспринимай эти названия как два разных средства для самостоятельного совместного приёма. Состав, дозировку и форму проверяют у конкретных упаковок.</p>
+<h3>Что спросить у покупателя</h3>
+<ul><li>Кому нужен препарат, какие симптомы и когда они начались?</li><li>Что от аллергии уже принимали сегодня?</li><li>Есть заболевания почек, беременность или грудное вскармливание?</li><li>Нужно водить машину? Принимаете снотворные или другие седативные средства?</li></ul>
+<h3>Как объяснить</h3>
+<p>«Цетрин — торговое название препарата с цетиризином. Сверим состав, дозировку и форму второго препарата. Возможна сонливость: если она появилась, за руль нельзя. При заболеваниях почек дозу может потребоваться изменить с врачом».</p>
+<div class="callout warn"><span class="lbl">Когда нужна экстренная помощь</span>Внезапный отёк языка или горла, затруднение дыхания, обморок — экстренная помощь. Продажа таблетки от аллергии не должна задерживать её вызов.</div>
+<details><summary>Проверить себя: что сравнивать вместо цены и названия бренда?</summary><p>Действующее вещество, дозировку, форму и особенности инструкции конкретной упаковки. Затем — ограничения покупателя и уже принятые лекарства.</p></details>
+<details><summary>Источники · проверено 5 октября 2026</summary><ul><li><a href="https://cetrine.ru/instruction/">Цетрин: официальный листок-вкладыш</a></li><li><a href="https://www.nhs.uk/medicines/cetirizine/common-questions-about-cetirizine/">NHS: цетиризин, сонливость и сочетания антигистаминных</a></li><li><a href="https://www.nhs.uk/conditions/allergies/">NHS: признаки тяжёлой аллергической реакции</a></li></ul></details>
+</section>
+<footer class="doc"><span>полная шпаргалка · практика добавлена 05.10.2026</span><span>NickStr11/gia-task3-pharmacy</span><span>ГИА · 33.02.01 Фармация</span></footer>
 </div>
 </body>
 </html>
